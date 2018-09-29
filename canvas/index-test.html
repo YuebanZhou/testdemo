@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="chart" width="600px" height="400px">
+        您的浏览器不支持canvas
+    </canvas>
+    <script>
+        //获取canvas元素
+        var canvas = document.getElementById("chart");
+        //渲染上下文
+        var ctx = null;
+        if (canvas.getContext) {
+            //获取canvas画布的上下文
+            ctx = canvas.getContext("2d")
+        }
+        // ctx.font="italic 35px 黑体";
+        ctx.fillStyle="black";
+        ctx.fillText("绘制填充文字",30,60,200);
+        ctx.font="bold 35px 宋体";
+        //从(10,10)出发
+        ctx.moveTo(10,10);
+        //直线终点
+        ctx.lineTo(500,10);
+        //终点向左上画线
+        ctx.lineTo(495,5);
+        ctx.lineTo(495,15);
+        ctx.lineTo(500,10);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

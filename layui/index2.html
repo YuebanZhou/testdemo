@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/layui.css">
+<body>
+  
+  <i class="layui-icon">&#xe60c</i>
+  <i class="layui-icon">&#xe677</i>
+</body>
+
+
+<script src="./layui.js"></script>
+<script src="./global.js"></script>
+<script>
+  layui.use(['common', 'element'], function () {
+    var common = layui.common;
+    var element = layui.element;
+    // 引用提前封装好的ajax方法
+    common.ajax('http://route.showapi.com/32-9', 'post', 'json', {
+      'showapi_appid': 28043,
+      'showapi_sign': 'fd5ce066f69441bfa078c0ad16129b15',
+      'q': 'hello'
+    }, function (res) {
+      // alert(JSON.stringify(res))
+
+    })
+  })
+
+</script>
+
+</html>

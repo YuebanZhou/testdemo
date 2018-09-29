@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* #chart {
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+} */

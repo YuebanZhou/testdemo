@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+/* 所有元素居中显示 */
+body {
+    /* body设置成弹性布局 */
+    display: flex;
+    /* 项目在主轴上的对齐方式 */
+    justify-content: center;
+    /* 项目在交叉轴上的对齐方式 */
+    align-items: center;
+    background: #1e577e;
+    overflow: hidden;
+}
+
+.main {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+/* 盒子全部定位到中心 */
+.main>div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.center {
+    cursor: pointer;
+}
+
+/* CSS3放大特效 */
+
+.circle {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    opacity: 0;
+}
+/* 元素动画的相关设定 */
+.circle.go {
+    /*animation: change 1s linear infinite;*/
+    animation-name: change;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /*animation-delay: 1s;*/
+}
+/* 动画在0%的时候，透明度是0.4，不放大
+动画在100%的时候，透明度是0，放大4倍 */
+@keyframes change {
+    0% {
+        transform: scale(1, 1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(4, 4);
+        opacity: 0;
+    }
+}

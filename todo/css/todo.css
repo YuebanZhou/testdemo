@@ -1,0 +1,90 @@
+body {
+  background-color: #fcfcfc;
+  font-family: "华文新魏";
+}
+h3 {
+  padding: 5px;
+  border-bottom: 2px solid #aaa;
+}
+h4 {
+  padding: 5px;
+}
+.container {
+  width: 800px;
+  /* background-color: #eee; */
+  margin: 0 auto;
+}
+.container .add input {
+  width: 70%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+.container .add .time {
+  height: 30px;
+}
+.container .dec {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.container .dec span {
+  color: red;
+}
+.container .con {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.container .con ul {
+  list-style: none;
+  padding-left: 0px;
+}
+.container .con li {
+  height: 40px;
+  line-height: 40px;
+  /* border: 1px solid #fff; */
+  padding: 0 20px;
+  position: relative;
+  border-radius: 5px;
+}
+.container .con li:hover {
+  background-color: #bbb;
+}
+.container .con ul li .button {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+}
+.bac {
+  /* position: relative;
+  top: 11px;
+  left: 0;
+ */
+  background-color: skyblue!important
+}
+/* .bac:after {
+  content: "\2715";
+  position: relative;
+  top: -11px;
+  left: 1px;
+} */
+.container .con ul li .close {
+  cursor: pointer;
+  float: right;
+  color: red;
+}
+.container .con ul li .righttime {
+  float: right;
+  margin-right: 20px;
+}
+.container .con ul li .change {
+  width: 400px;
+  height: 30px;
+  line-height: 20px;
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  display: none;
+}

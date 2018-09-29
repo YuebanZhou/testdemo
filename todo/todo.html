@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="./css/todo.css">
+<script src="./js/jquery-3.1.0.js"></script>
+
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h3>任务列表</h3>
+    </div>
+    <div class="add">
+      <h4>添加今天的任务</h4>
+      <input type="text" placeholder="输入目标，敲击回车添加内容" class="addtext">
+    </div>
+    <div class="dec">
+      共有
+      <span class="d d1">d1</span>个目标，已完成
+      <span class="d d2">d2</span>个，还有
+      <span class="d d3">d3</span>条未完成
+    </div>
+    <div class="radio">
+      <input type="radio" name="chooseType" checked="true" class="all">所有目标
+      <input type="radio" name="chooseType" class="end">已完成目标
+      <input type="radio" name="chooseType" class="noend">未完成目标
+    </div>
+    <div class="con">
+      <ul></ul>
+    </div>
+  </div>
+  <script src="./js/todo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.canvas {
+    margin: 100px auto 0;
+    display: block;
+}
+
+#clear,
+#clear1 {
+    /* 隐藏当前画板 */
+    display: block;
+    padding: 5px 10px;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #eee;
+    background: #e1e1e1;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    cursor: pointer;
+}

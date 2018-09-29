@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hero - Admin</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+  <header>
+    <div class="page-header container">
+      <h1>
+        <a href="/">亡者农药</a>
+        <small>英雄管理器</small>
+      </h1>
+    </div>
+  </header>
+  <div class="container hero-list">
+    <p>
+      <strong>Id:</strong>{{id}}</p>
+    <p>
+      <strong>姓名:</strong>{{name}}</p>
+    <p>
+      <strong>性别:</strong>{{gender}}</p>
+    <p>
+      <strong>添加时间:</strong>{{ctime | dateFormat}}</p>
+  </div>
+</body>
+
+</html>

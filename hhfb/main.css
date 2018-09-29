@@ -1,0 +1,74 @@
+.con {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 630px;
+    top: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 2px #aaa solid;
+    box-shadow: 2px 2px 10px #000;
+}
+
+.con div {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #fff;
+    /* background-color: #000; */
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.top {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%)
+}
+
+.bottom {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%)
+}
+
+.left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.msgblock {
+    position: absolute;
+    /* width: 200px; */
+    /* height: 100px; */
+    left: 400px;
+    top: 290px;
+    color: #fff;
+}
+
+.btnzu {}
+
+.btnzu span {
+    width: 30px;
+    height: 30px;
+}
+
+.btnzu span img {
+    width: 30px;
+    height: 30px;
+}
+
+.play {
+    display: none;
+}

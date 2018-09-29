@@ -1,0 +1,37 @@
+[{
+    "pro_name": "产品1",
+    "pro_brand": "品牌1",
+    "pro_place": "产地1",
+    "pro_purity": "规格1",
+    "pro_min": "起定量1",
+    "pro_depot": "仓储1",
+    "pro_num": 1,
+    "pro_img": "./himg.jpg",
+    "pro_price": 800,
+    "select": true
+  },
+  {
+    "pro_name": "产品2",
+    "pro_brand": "品牌2",
+    "pro_place": "产地2",
+    "pro_purity": "规格2",
+    "pro_min": "起定量2",
+    "pro_depot": "仓储2",
+    "pro_num": 1,
+    "pro_img": "./himg.jpg",
+    "pro_price": 600,
+    "select": true
+  },
+  {
+    "pro_name": "产品3",
+    "pro_brand": "品牌3",
+    "pro_place": "产地3",
+    "pro_purity": "规格3",
+    "pro_min": "起定量3",
+    "pro_depot": "仓储3",
+    "pro_num": 1,
+    "pro_img": "./himg.jpg",
+    "pro_price": 900,
+    "select": true
+  }
+]

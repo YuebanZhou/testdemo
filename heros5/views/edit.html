@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hero - Admin</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+  <header>
+    <div class="page-header container">
+      <h1>
+        <a href="/">亡者农药</a>
+        <small>英雄管理器</small>
+      </h1>
+    </div>
+  </header>
+  <div class="container hero-list">
+    <form id="form">
+      <!-- 使用隐藏域 存储不能让用户看到的Id值 -->
+      <input type="hidden" name="id" value="{{id}}">
+      <!-- 使用隐藏域 存储不能让用户看到的ctime值 -->
+      <input type="hidden" name="ctime" value="{{ctime}}">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">英雄名称</label>
+        <div class="col-sm-10">
+          <input type="text" name="name" class="form-control" value="{{name}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">性别</label>
+        <div class="col-sm-10">
+          <label class="radio-inline">
+            <input type="radio" value="男" name="gender" {{gender=='男' ? 'checked': ''}}> 男
+          </label>
+          <label class="radio-inline">
+            <input type="radio" value="女" name="gender" {{gender=='女' ? 'checked': ''}}> 女
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">创建时间</label>
+        <div class="col-sm-10">
+          {{ctime | dateFormat}}
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">保存修改</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script>
+    $(function () {
+      $('#form').on('submit', function (e) {
+        e.preventDefault();
+
+        $.ajax({
+          url: '/edit',
+          type: 'post',
+          data: $(this).serialize(),
+          dataType: 'json',
+          success: function (result) {
+            //  { err_code: 0, msg: '' }
+            // console.log(result)
+            if (result.err_code == 0) {
+              location.href = '/'
+            } else {
+              alert(result.msg)
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

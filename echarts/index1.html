@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script src="./echarts.js"></script>
+<script src="./jquery-3.1.0.min.js"></script>
+<style>
+  #chart2 {
+    display: none;
+  }
+</style>
+
+<body>
+  <div class="f">
+    <div id="chart1" style="width:100%;height:300px"></div>
+    <div id="chart2" style="width:100%;height:300px"></div>
+  </div>
+  <div class="btnzu">
+    <span class="btn1">chart1</span>
+    <span class="btn2">chart2</span>
+  </div>
+</body>
+<script>
+  $(".btn1").click(function () {
+    $("#chart1").show();
+    $("#chart2").hide();
+  })
+  $(".btn2").click(function () {
+    $("#chart2").show();
+    $("#chart1").hide();
+  })
+  // 最外层父元素的宽度不会发生改变，将两个chart的宽度定死
+  $("#chart1").css('width',$(".f").width());
+  $("#chart2").css('width',$(".f").width());
+  // 初始化实例
+  var chart1 = echarts.init(document.getElementById("chart1"));
+  // 进行设置
+  var option1 = {
+    xAxis: {
+      // x轴类型是类目轴
+      type: 'category',
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+      // y轴类型是数值型
+      type: 'value'
+    },
+    series: [{
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      // 数据类型是line，折线图
+      type: 'line'
+    }]
+  };
+  // 绘制chart应用设置
+  chart1.setOption(option1);
+
+  // 初始化实例
+  var chart2 = echarts.init(document.getElementById("chart2"));
+  // 进行设置
+  var option2 = {
+    xAxis: {
+      type: 'category',
+      // 坐标轴两边留白策略
+      boundaryGap: false,
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [{
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      type: 'line',
+      areaStyle: {}
+    }]
+  };
+  // 绘制chart应用设置
+  chart2.setOption(option2);
+
+</script>
+
+</html>
