@@ -1,0 +1,161 @@
+#game {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #9DA5C3;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.scoreShow {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.model {
+    text-decoration: none;
+    color: white;
+    background-color: #bbada0;
+    font-size: 36px;
+    border-radius: 10px;
+}
+
+.head {
+    width: 480px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+#gridPanel {
+    width: 480px;
+    height: 480px;
+    margin: 0 auto;
+    background-color: #bbada0;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.grid,
+.cell {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.grid {
+    background-color: #ccc0b3;
+    float: left;
+    margin: 16px 0 0 16px;
+}
+
+.cell {
+    position: absolute;
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+}
+
+.n2 {
+    background-color: #eee3da
+}
+
+.n4 {
+    background-color: #ede0c8
+}
+
+.n8 {
+    background-color: #f2b179
+}
+
+.n16 {
+    background-color: #f59563
+}
+
+.n32 {
+    background-color: #f67c5f
+}
+
+.n64 {
+    background-color: #f65e3b
+}
+
+.n128 {
+    background-color: #edcf72
+}
+
+.n256 {
+    background-color: #edcc61
+}
+
+.n512 {
+    background-color: #9c0
+}
+
+.n1024 {
+    background-color: #33b5e5
+}
+
+.n2048 {
+    background-color: #09c
+}
+
+.n4096 {
+    background-color: #a6c
+}
+
+.n8192 {
+    background-color: #93c
+}
+
+.n2,
+.n4 {
+    color: #776e65
+}
+
+#gameover {
+    width: 100%;
+    display: none;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 148px;
+    width: 220px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: -110px;
+    text-align: center;
+    z-index: 5;
+}
+
+#gameover>a {
+    display: inline-block;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #9F8D77;
+    color: white;
+    font-size: 36px;
+}

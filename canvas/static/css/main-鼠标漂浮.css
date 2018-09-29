@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+ol, ul ,li{list-style: none;}
+canvas{
+    border: 1px solid #000;
+}
