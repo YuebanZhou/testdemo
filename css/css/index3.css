@@ -4,115 +4,58 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(var(--status-color) 5vh, #ccc 5vh);
+  background: linear-gradient(skyblue, navy);
 }
 
-.detector {
-  width: 40em;
-  height: 14em;
-  font-size: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #333;
-}
-
-.detector > * {
-  position: relative;
-  box-sizing: border-box;
-}
-
-.detector > *::before,
-.detector > *::after {
-  content: '';
-  position: absolute;
-  box-sizing: border-box;
-}
-
-.client {
-  width: 17em;
-  height: 10em;
-  border: 0.5em solid;
-  border-radius: 0.5em;
+ul {
+  padding: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -4em;
 }
 
-.client::before {
-  width: 1.5em;
-  height: 3em;
-  background-color: currentColor;
-  top: 9.5em;
-}
-
-.client::after {
-  width: 5em;
-  height: 1em;
-  background-color: currentColor;
-  border-radius: 0.3em;
-  top: 12.5em;
-}
-
-.signal,
-.signal::before,
-.signal::after {
-  width: 1em;
-  height: 1em;
-  background-color: var(--status-color);
-  border-radius: 50%;
-  animation: blink 0.6s infinite;
-}
-
-.signal::before {
-  right: 2.5em;
-  animation-delay: var(--second-signal-delay);
-}
-
-.signal::after {
-  left: 2.5em;
-  animation-delay: var(--third-signal-delay);
-}
-
-@keyframes blink {
-  50% {
-    filter: opacity(0.1);
-  }
-}
-
-.server {
-  width: 7em;
-  height: 14em;
-  border: 0.5em solid;
-  border-radius: 0.5em;
-}
-
-.server::before {
-  width: 5em;
-  height: 1em;
-  background-color: currentColor;
-  border-radius: 0.2em;
-  top: 8em;
-  left: 0.5em;
-  box-shadow: 0 1.5em 0;
-}
-
-.server::after {
-  width: 0.6em;
-  height: 0.6em;
-  background-color: currentColor;
-  border-radius: 50%;
-  right: 1.5em;
-  bottom: 0.5em;
-  box-shadow: 1em 0 0 0.1em;
-}
-
-p {
-  position: absolute;
-  bottom: 1em;
-  text-align: center;
+ul li {
+  color: #ddd;
+  font-size: 25px;
   font-family: sans-serif;
-  letter-spacing: 1px;
-  color: #333;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0.5em;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: tomato;
+  left: -100%;
+  transition: 0.4s ease-out;
+}
+
+ul li:hover::before {
+  left: 100%;
+}
+
+ul li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  background: tomato;
+  bottom: 0;
+  left: 100%;
+  transition: 0.4s 0.3s ease-out;
+}
+
+ul li:hover::after {
+  left: 0%;
+}
+
+ul li:hover {
+  color: #fff;
 }

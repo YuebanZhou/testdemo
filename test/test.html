@@ -8,14 +8,29 @@
   <title>Document</title>
 </head>
 <style>
-
+  .fa {
+    border: 2px solid #ccc;
+    display: inline-block;
+  }
 </style>
 
 <body>
-  
-  <script src="./jquery-3.1.0.min.js"></script>
+  <canvas width="600" height="600" id="myCanvas"></canvas>
   <script>
-    
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = new Image()
+    img.src = "./test.png"
+    img.onload = function () {
+      ctx.drawImage(img, 0, 0);
+      ctx.strokeStyle = "red";
+      ctx.moveTo(0, 0);
+      ctx.lineTo(138, 0);
+      ctx.lineTo(138, 61);
+      ctx.lineTo(0, 61);
+      ctx.closePath();
+      ctx.stroke();
+    }
   </script>
 </body>
 
