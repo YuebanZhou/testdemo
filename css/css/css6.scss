@@ -1,0 +1,61 @@
+html,
+body {
+    height: 100%;
+    // 伸缩布局，上下左右居中
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: navy;
+}
+// 定义四种颜色
+:root {
+    --color1: deepskyblue;
+    --color2: steelblue;
+    --color3: royalblue;
+    --color4: dodgerblue;
+}
+
+.diamond {
+    // 网格线布局
+    display: grid;
+    // 第一列1fr 第二列1fr
+    grid-template-columns: 1fr 1fr;
+    // 整个元素旋转45度
+    transform: rotate(45deg);
+}
+// 设置border宽度占满span元素，设置四种颜色，形成三角样式
+.diamond span {
+    border-width: 50px;
+    border-style: solid;
+    border-color: var(--color1) var(--color2) var(--color3) var(--color4);
+}
+// 最上面元素的两个边框颜色设置为透明色
+.diamond span:first-child {
+    border-color: transparent var(--color2) var(--color3) transparent;
+}
+
+.diamond span:not(:first-child) {
+    animation: animate 2s linear infinite;
+}
+// 除了第一个元素，其他元素全部变色
+@keyframes animate {
+    0% {
+        border-color: var(--color1) var(--color2) var(--color3) var(--color4);
+    }
+
+    25% {
+        border-color: var(--color4) var(--color1) var(--color2) var(--color3);
+    }
+
+    50% {
+        border-color: var(--color3) var(--color4) var(--color1) var(--color2);
+    }
+
+    75% {
+        border-color: var(--color2) var(--color3) var(--color4) var(--color1);
+    }
+
+    100% {
+        border-color: var(--color1) var(--color2) var(--color3) var(--color4);
+    }
+}

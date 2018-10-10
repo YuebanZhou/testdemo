@@ -1,0 +1,49 @@
+html,body {
+    height: 100%;
+    // 弹性布局，上下左右居中
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: papayawhip;
+}
+.box {
+    width: 200px;
+    height: 60px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+// 原本的元素设置为蓝色
+.box span {
+    display: inline-block;
+    color: blue;
+    transition: 0.5s;
+}
+// 错位分别向上划出向下划出
+.box span:nth-child(odd){
+    transform: translateY(-100%);
+}
+.box span:nth-child(even){
+    transform: translateY(100%);
+}
+// 伪元素设置为红色
+.box span::before{
+    // 伪元素的内容是自定义属性data-text的内容
+    content:attr(data-text);
+    position: absolute;
+    color: red;
+}
+// 伪元素和实际元素的划出方向相反（相对于蓝色字母）
+.box span:nth-child(odd)::before{
+    transform: translateY(100%);
+}
+.box span:nth-child(even)::before{
+    transform: translateY(-100%);
+}
+// 悬浮到span上的时候，蓝色字母回归
+.box:hover span {
+    transform: translateY(0);
+}
