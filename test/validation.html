@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./jquery-3.1.0.min.js"></script>
+    <script src="./jquery-validation.js"></script>
+    <script src="./jquery-validation-msgzh.js"></script>
+    <script>
+        $.validator.setDefaults({
+            submitHandler:function(){
+                
+            }
+        });
+        $().ready(function(){
+            $("#commentForm").validate();
+        })
+    </script>
+    <form action="" class="cmxform" id="commentForm" method="get">
+        <fieldset>
+            <legend>输入您的名字，邮箱，URL，备注</legend>
+            <p>
+                <label for="cname">Name(必需，最小两个字母)</label>
+                <input type="text" id="cname" name="name" minlength="2" required>
+            </p>
+            <p>
+                <label for="cemail">E-mail(必需)</label>
+                <input type="text" id="cemail" name="email" required>
+            </p>
+            <p>
+                <label for="curl">URL(可选)</label>
+                <input type="url" id="curl" name="url">
+            </p>
+            <p>
+                <label for="ccomment">备注(必需)</label>
+                <textarea id="ccomment" name="comment" required></textarea>
+            </p>
+            <p>
+                <input type="submit" class="submit" value="Submit">
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
