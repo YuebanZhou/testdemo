@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./jquery-3.1.0.min.js"></script>
+    <div class="qwe">qwe</div>
+    <script>
+        $(".qwe").click(function () {
+            var qwe=$(this).text()
+            $.ajax({
+                type: "post",
+                url: "https://www.easy-mock.com/mock/5bbd5f3add1a97432d9d8c90/YuebanZhou/YuebanZhou",
+                dataType: "json",
+                data:{
+                    qwe:qwe
+                },
+                success: function (msg) {
+                    console.log(msg);
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>
