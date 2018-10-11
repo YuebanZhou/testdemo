@@ -1,0 +1,73 @@
+html,
+body,
+.loader {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.loader {
+  width: 10em;
+  height: 10em;
+  font-size: 28px;
+  position: relative;
+}
+
+.loader span {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.3);
+  box-sizing: border-box;
+  border: 0.5em solid;
+  border-color: white rgba(255, 255, 255, 0.2);
+  width: calc(20% + 20% * (5 - var(--n)));
+  height: calc(20% + 20% * (5 - var(--n)));
+  animation: animate 5s ease-in-out infinite alternate;
+  animation-delay: calc(0.2s * (5 - var(--n)));
+}
+
+.loader span:nth-child(1) {
+  --n: 1;
+}
+
+.loader span:nth-child(2) {
+  --n: 2;
+}
+
+.loader span:nth-child(3) {
+  --n: 3;
+}
+
+.loader span:nth-child(4) {
+  --n: 4;
+}
+
+.loader span:nth-child(5) {
+  --n: 5;
+}
+
+@keyframes animate {
+  0% {
+    /* red */
+    background-color: rgba(255, 0, 0, 0.3);
+    transform: rotate(0deg);
+  }
+  25% {
+    /* yellow */
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+  50% {
+    /* green */
+    background-color: rgba(0, 255, 0, 0.3);
+  }
+  75% {
+    /* blue */
+    background-color: rgba(0, 0, 255, 0.3);
+  }
+  100% {
+    /* purple */
+    background-color: rgba(255, 0, 255, 0.3);
+    transform: rotate(720deg);
+  }
+}

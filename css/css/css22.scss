@@ -1,0 +1,85 @@
+html,
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.rainbow {
+    color: transparent;
+    font-size: 300px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 1em;
+    position: relative;
+}
+// 四个span都有before和after伪元素，内容为web
+.rainbow span::before,
+.rainbow span::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    animation: animate 0.8s infinite alternate;
+    filter: opacity(0);
+    // 层级不同，遮盖
+    z-index: var(--n);
+    // 高度不同
+    height: calc(100% - 10% * var(--n));
+    // 颜色变化的动画延迟不同
+    animation-delay: calc(0.8s - 0.1s * var(--n));
+}
+
+.rainbow span:nth-child(1)::before {
+    color: orchid;
+    --n: 1;
+}
+
+.rainbow span:nth-child(1)::after {
+    color: mediumpurple;
+    --n: 2;
+}
+
+.rainbow span:nth-child(2)::before {
+    color: deepskyblue;
+    --n: 3;
+}
+
+.rainbow span:nth-child(2)::after {
+    color: cyan;
+    --n: 4;
+}
+
+.rainbow span:nth-child(3)::before {
+    color: mediumspringgreen;
+    --n: 5;
+}
+
+.rainbow span:nth-child(3)::after {
+    color: yellow;
+    --n: 6;
+}
+
+.rainbow span:nth-child(4)::before {
+    color: gold;
+    --n: 7;
+}
+
+.rainbow span:nth-child(4)::after {
+    color: tomato;
+    --n: 8;
+}
+
+@keyframes animate {
+    from {
+        filter: opacity(0);
+    }
+
+    to {
+        filter: opacity(1);
+    }
+}
