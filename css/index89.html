@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css89.css">
+</head>
+
+<body>
+    <section class="container"></section>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        const PARTICLES_PER_CIRCLE = 14;
+        const CIRCLES = 4;
+        const COUNT_OF_PARTICLES = PARTICLES_PER_CIRCLE * CIRCLES;
+
+        d3.select('.container')
+            .style('--particles-per-circle', PARTICLES_PER_CIRCLE)
+            .style('--circles', CIRCLES)
+            .selectAll('div')
+            .data(d3.range(COUNT_OF_PARTICLES))
+            .enter()
+            .append('div')
+            .style('--n', (d) => d + 1)
+            .append('span');
+    </script>
+</body>
+
+</html>
