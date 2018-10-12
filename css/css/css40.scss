@@ -51,7 +51,7 @@ body {
     transform: scaleX(0);
     backface-visibility: hidden;
 }
-
+// 五个span执行不同的动画效果，页内五行
 .book .page span:nth-child(1) {
     animation-name: stroke-1;
 }
@@ -71,7 +71,7 @@ body {
 .book .page span:nth-child(5) {
     animation-name: stroke-5;
 }
-
+// transform: scaleX(1)通过设置x轴的值来定义缩放旋转
 @keyframes stroke-1 {
     0% {
         transform: scaleX(0);
@@ -126,7 +126,7 @@ body {
         transform: scaleX(1);
     }
 }
-
+// 页面翻动效果
 @keyframes flip {
     55% {
         transform: rotateY(0) translateX(0) skewY(0);

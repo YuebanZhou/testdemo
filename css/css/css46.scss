@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.loader {
+    width: 10em;
+    height: 3em;
+    border: 0.3em solid silver;
+    border-radius: 3em;
+    font-size: 20px;
+    border-left-color: hotpink;
+    border-right-color: dodgerblue;
+    position: relative;
+    animation: spin 3s linear infinite;
+}
+// 实际元素本身执行旋转动画
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+// 伪元素小圆球，执行移动动画，变色动画
+.loader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    animation: shift 3s linear infinite,
+        change-color 3s linear infinite;
+}
+
+@keyframes shift {
+    50% {
+        left: 7em;
+    }
+}
+
+@keyframes change-color {
+
+    0%,
+    55% {
+        background-color: dodgerblue;
+    }
+
+    5%,
+    50% {
+        background-color: hotpink;
+    }
+}

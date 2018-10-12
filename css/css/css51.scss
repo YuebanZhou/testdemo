@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    height: 100vh;
+    // 伸缩盒子居中
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // 背景色渐变
+    background: radial-gradient(circle at center, silver, black);
+}
+
+.radar {
+    width: calc(8em + 1.5em);
+    height: calc(8em + 1.5em);
+    font-size: 28px;
+    position: relative;
+    background:
+        linear-gradient(90deg,
+        transparent 49.75%,
+        darkgreen 49.75%,
+        darkgreen 50.25%,
+        transparent 50.25%),
+        linear-gradient(transparent 49.75%,
+        darkgreen 49.75%,
+        darkgreen 50.25%,
+        transparent 50.25%),
+        repeating-radial-gradient(transparent 0,
+        transparent 0.95em,
+        darkgreen 0.95em,
+        darkgreen 1em),
+        linear-gradient(black, black);
+    border-radius: 50%;
+}
+// 伪元素内容为空，定位执行动画，旋转的中心点在(100% 100%)
+.radar::before {
+    content: '';
+    position: absolute;
+    width: calc(8em / 2);
+    height: calc(8em / 2);
+    top: calc(1.5em / 2);
+    left: calc(1.5em / 2);
+    /*border: 1px solid white;*/
+    // 背景色渐变
+    background: linear-gradient(45deg,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 192, 0, 1) 100%);
+    border-radius: 100% 0 0 0;
+    animation:
+        scaning 5s linear infinite;
+    transform-origin: 100% 100%;
+}
+// 旋转一整圈
+@keyframes scaning {
+    to {
+        transform: rotate(360deg);
+    }
+}
