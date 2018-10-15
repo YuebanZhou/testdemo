@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text span {
+    width: 100%;
+    color: darkslategray;
+    font-family: serif;
+    font-size: 12vmin;
+    text-shadow: 1px 1px 1px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+// 奇数元素和偶数元素线性渐变的方向相反
+.text span:nth-child(odd) {
+    background: linear-gradient(to bottom,
+        rgba(127, 140, 141, 0.2) 0%,
+        rgba(127, 140, 141, 0) 33%,
+        rgba(127, 140, 141, 0.7) 66%,
+        rgba(127, 140, 141, 0.2) 100%);
+}
+
+.text span:nth-child(even) {
+    background: linear-gradient(to top,
+        rgba(127, 140, 141, 0.2) 0%,
+        rgba(127, 140, 141, 0) 33%,
+        rgba(127, 140, 141, 0.7) 66%,
+        rgba(127, 140, 141, 0.2) 100%);
+}
+// 除了第一个元素，剩下的元素都有左边的黑色边框
+.text span:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 90%;
+    background-color: black;
+    left: -5px;
+    border-left: 1px solid white;
+    border-radius: 50%;
+}
+// 偶数元素和奇数元素定位不同，形成3D效果
+.text span:not(:first-child):nth-child(odd)::before {
+    top: 2%;
+}
+
+.text span:not(:first-child):nth-child(even)::before {
+    bottom: 2%;
+}

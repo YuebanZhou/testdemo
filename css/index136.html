@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css136.css">
+</head>
+
+<body>
+    <div class="loader"></div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+        const HUE_DEG = 12;
+        const COUNT = 360 / HUE_DEG;
+
+        d3.select('.loader')
+            .selectAll('span')
+            .data(d3.range(COUNT).map(d => d + 1))
+            .enter()
+            .append('span')
+            .style('background-color', (d) => d % 2 === 1 ?
+                `hsl(${d * HUE_DEG}, 100%, 65%)` :
+                'black');
+
+        let animation = new TimelineMax({
+            repeat: -1
+        });
+        animation.staggerFrom('.loader span', 0.5, {
+            scaleX: 0
+        }, 0.4);
+    </script>
+</body>
+
+</html>

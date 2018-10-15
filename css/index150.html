@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css150.css">
+</head>
+
+<body>
+    <figure class="container"></figure>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        const COLUMNS = 6;
+
+        d3.select('.container')
+            .style('--columns', COLUMNS)
+            .selectAll('div')
+            .data(d3.range(COLUMNS * COLUMNS))
+            .enter()
+            .append('div')
+            .attr('class', 'square')
+            .selectAll('span')
+            .data(d3.range(4))
+            .enter()
+            .append('span');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css115.css">
+</head>
+
+<body>
+    <div class="pi"></div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+        const PI =
+            '3141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067';
+
+        d3.select('.pi')
+            .selectAll('span')
+            .data(PI)
+            .enter()
+            .append('span')
+            .attr('class', (d) => `d${d}`)
+            .style('--d', (d) => d)
+            .text((d) => d);
+
+        function show() {
+            d3.selectAll(`.pi span.d${number % 10}`)
+                .classed('show', true);
+            d3.selectAll(`.pi span.d${(number-1) % 10}`)
+                .classed('show', false);
+            number++;
+        }
+
+        let number = 1;
+        setInterval(show, 500);
+    </script>
+</body>
+
+</html>
