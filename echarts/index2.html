@@ -19,13 +19,17 @@
   <div id="chart" style="width:100%;height:300px"></div>
 </body>
 <script>
+  var data = {
+    value: [820, 932, 901, 934, 1290, 1330, 1320],
+    result: [(1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2)]
+  }
   // 初始化实例
   var chart = echarts.init(document.getElementById("chart"));
   // 进行设置
   var option = {
-    title:{
-      text:'类目',
-      color:'#aaa'
+    title: {
+      text: '类目',
+      color: '#aaa'
     },
     xAxis: {
       // x轴类型是类目轴
@@ -37,15 +41,21 @@
       type: 'value'
     },
     series: [{
-      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      data: data.value,
       // 数据类型是line，折线图
       type: 'line'
-    }]
+    }],
+    tooltip: {
+      show: true,
+      trigger: 'item',
+      // formatter: function (parames) {
+      //   console.log(parames);
+        
+      // }
+    }
   };
   // 绘制chart应用设置
   chart.setOption(option);
-
-
 </script>
 
 </html>
