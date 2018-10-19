@@ -10,6 +10,7 @@ body {
 .box {
   background: linear-gradient(to right, gold, darkorange);
   color: white;
+  /* 定义在box中的变量 */
   --width: 250px;
   --height: calc(var(--width) / 3);
   width: var(--width);

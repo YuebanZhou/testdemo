@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  /* 伸缩盒子布局，居中显示 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,15 +15,17 @@ html, body {
   font-size: 30px;
   line-height: 60px;
   font-family: sans-serif;
+  /* 超出盒子部分隐藏 */
   overflow: hidden;
 }
 
 .box span {
+  /* 实际元素为蓝色 */
   display: inline-block;
   color: blue;
   transition: 0.5s;
 }
-
+/* 实际元素的奇元素偶元素定位不同 */
 .box span:nth-child(odd) {
   transform: translateY(-100%);
 }
@@ -30,13 +33,15 @@ html, body {
 .box span:nth-child(even) {
   transform: translateY(100%);
 }
-
+/* 伪元素为红色，内容为标签中自定义属性的内容 */
 .box span::before {
   content: attr(data-text);
   position: absolute;
   color: red;
 }
-
+/* 伪元素的奇元素和偶元素定位不同 */
+/* 伪元素的定位是相对于实际元素的 */
+/* 实际元素时-100%，伪元素加上100%的位移就相当于在原来的位置没改变 */
 .box span:nth-child(odd)::before {
   transform: translateY(100%);
 }
@@ -44,7 +49,8 @@ html, body {
 .box span:nth-child(even)::before {
   transform: translateY(-100%);
 }
-
+/* 悬浮的时候定位回到原始位置 */
+/* 实际元素回到原来的位置，伪元素相对于实际元素是有位移的，移出了box */
 .box:hover span {
   transform: translateY(0);
 }

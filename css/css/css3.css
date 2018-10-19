@@ -11,6 +11,7 @@ body,
 .box {
   width: 300px;
   height: 300px;
+  /* 线性渐变 */
   background: linear-gradient(-45deg, white 0%, white 25%, hotpink 25%, hotpink 50%, white 50%, white 75%, hotpink 75%, hotpink 100%);
   background-size: 10%;
   box-sizing: border-box;
@@ -40,7 +41,8 @@ body,
 .box .content p {
   color: dimgray;
 }
-
+/* 背景定位改变 */
+/* 第一个值表示水平位置，第二个值表示竖直位置 */
 @keyframes animate {
   from {
     background-position: 0;
