@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #bgimg {
+        display: none;
+        width: 1168px;
+        height: 704px;
+    }
+
+    .position {
+        position: absolute;
+        /* background-color: red; */
+        width: 45px;
+        height: 45px;
+        /* border-radius: 50%; */
+        cursor: pointer;
+    }
+
+    .zd37 {
+        left: 400px;
+        top: 360px;
+    }
+
+    .zd40 {
+        left: 555px;
+        top: 375px;
+    }
+
+    .zd41 {
+        left: 630px;
+        top: 360px;
+    }
+
+    .block {
+        width: 250px;
+        height: 105px;
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        display: none;
+    }
+</style>
+<!-- <img src="./map.jpg" alt="" id="bgimg"> -->
+<canvas id="myCanvas" width="1168" height="704" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+</canvas>
+<div class="block">
+    <div class="msg">
+        <span>站点信息：</span><span class="msg msg1">msgmsg</span><br>
+        <span>上游信息：</span><span class="msg msg2">msgmsg</span><br>
+        <span>距离上游：</span><span class="msg msg3">msgmsg</span><br>
+        <span>下游信息：</span><span class="msg msg4">msgmsg</span><br>
+        <span>距离下游：</span><span class="msg msg5">msgmsg</span>
+    </div>
+</div>
+
+<div>
+    <div class="position zd37"></div>
+    <div class="position zd40"></div>
+    <div class="position zd41"></div>
+</div>
+
+<body>
+    <script src="./jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+            var $my_canvas = $("#myCanvas");
+            var my_canvas = $my_canvas[0];
+            var context = my_canvas.getContext("2d");
+            preImage("map.jpg", function () {
+                context.drawImage(this, 0, 0, 1168, 704);
+            });
+        });
+
+        function preImage(url, callback) {
+            var img = new Image(); //创建一个Image对象，实现图片的预下载  
+            img.src = url;
+            if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数  
+                callback.call(img);
+                return; // 直接返回，不用再处理onload事件  
+            }
+            img.onload = function () { //图片下载完毕时异步调用callback函数。  
+                callback.call(img); //将回调函数的this替换为Image对象  
+            };
+        }
+
+        function drawline(that) {
+            var $my_canvas = $("#myCanvas");
+            var my_canvas = $my_canvas[0];
+            var context = my_canvas.getContext("2d");
+            my_canvas.height = my_canvas.height;
+            preImage("map.jpg", function () {
+                context.drawImage(this, 0, 0, 1168, 704);
+            });
+            //本站点
+            var startx = that.offset().left + that.width() / 2 - 10;
+            var starty = that.offset().top + that.height() - 10;
+            //结束点
+            var endx = that.offset().left + that.width() / 2 - 10
+            var endy = that.offset().top + that.height() + 40
+
+            //本线条
+            context.moveTo(startx, starty); //设置起点状态
+            context.lineTo(endx, endy); //设置末端状态
+            context.lineWidth = 5; //设置线宽状态
+            context.strokeStyle = "red" //设置线的颜色状态
+            context.stroke(); //进行绘制
+
+            //前一个站点
+            var prev = that.prev();
+            console.log(prev);
+            if (prev.offset()) {
+                var startxp = prev.offset().left + prev.width() / 2 - 10;
+                var startyp = prev.offset().top + prev.height() - 10;
+                //前面的线条
+                context.moveTo(startxp, startyp); //设置起点状态
+                context.lineTo(endx, endy); //设置末端状态
+                context.lineWidth = 5; //设置线宽状态
+                context.strokeStyle = "red" //设置线的颜色状态
+                context.stroke(); //进行绘制
+            }
+            //后一个站点
+            var next = that.next();
+            if (next.offset()) {
+                var startxn = next.offset().left + next.width() / 2 - 10;
+                var startyn = next.offset().top + next.height() - 10;
+                //后面的线条
+                context.moveTo(startxn, startyn); //设置起点状态
+                context.lineTo(endx, endy); //设置末端状态
+                context.lineWidth = 5; //设置线宽状态
+                context.strokeStyle = "red" //设置线的颜色状态
+                context.stroke(); //进行绘制
+            }
+        }
+
+        function drawbox(that) {
+            $(".block").show();
+            var blockleft = that.offset().left + that.width()/2 - $(".block").width()/2;
+            var blocktop = that.offset().top + that.height() + 50;
+            $(".block").css({
+                "left": blockleft + "px",
+                "top": blocktop + "px"
+            });
+        }
+        $(".zd37").on('click', function () {
+            var that = $(this);
+            drawline(that);
+            drawbox(that);
+        })
+        $(".zd40").on('click', function () {
+            var that = $(this);
+            drawline(that);
+            drawbox(that);
+        })
+        $(".zd41").on('click', function () {
+            var that = $(this);
+            drawline(that);
+            drawbox(that);
+        })
+    </script>
+
+</body>
+
+</html>
