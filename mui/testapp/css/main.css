@@ -1,0 +1,30 @@
+.ym {
+	background: url('../img/img.png');
+	color: #000;
+	font-weight: bolder;
+}
+
+.dialog {
+	width: 10rem;
+	height: 5rem;
+	background-color: #333;
+	margin-bottom: 1rem;
+}
+
+.pr {
+	padding-right: 1rem;
+}
+
+
+/*点击变蓝色高亮*/
+
+.mui-table-view-cell.mui-active {
+	background-color: #0062CC;
+}
+
+.mask {
+	width: 10rem;
+	height: 5rem;
+	background-color: #333;
+	margin-bottom: 1rem;
+}

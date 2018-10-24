@@ -85,12 +85,12 @@
             var that = $(this);
             draw(that);
         });
-        // $(".clear").click(function () {
-        //     cc();
-        //     preImage("map.jpg", function () {
-        //         ctx.drawImage(this, 0, 0, 1168, 704);
-        //     });
-        // });
+        $(".clear").click(function () {
+            cc();
+            preImage("map.jpg", function () {
+                ctx.drawImage(this, 0, 0, 1168, 704);
+            });
+        });
 
         function preImage(url, callback) {
             var img = new Image(); //创建一个Image对象，实现图片的预下载  
@@ -102,12 +102,10 @@
             img.onload = function () { //图片下载完毕时异步调用callback函数。  
                 callback.call(img); //将回调函数的this替换为Image对象  
             };
-            console.log("drawimg");
         }
 
         function cc() {
             ctx.clearRect(0, 0, c.width, c.height);
-            console.log("clear");
         }
 
         function draw(that) {
@@ -140,8 +138,18 @@
                 //前面的线条
                 ctx.beginPath();
                 ctx.moveTo(startxp, startyp); //设置起点状态
-                ctx.lineTo(endx, endy); //设置末端状态
+                //第一段，向下直线
+                ctx.lineTo(startxp, startyp + 20);
+                //第二段，左下角圆弧
+                ctx.arc(startxp + 15, startyp + 20, 15, PI(90), PI(180), false)
+                //第三段，向右直线
+                ctx.moveTo(startxp + 15, startyp + 35);
+                ctx.lineTo(endx - 15, endy - 15);
+                //第四段，右上角圆弧
+                ctx.arc(endx - 15, endy, 15, PI(-90), PI(0), false)
+
                 ctx.stroke(); //进行绘制
+
             }
             //后一个站点
             var next = that.next();
@@ -151,10 +159,18 @@
                 //后面的线条
                 ctx.beginPath();
                 ctx.moveTo(startxn, startyn); //设置起点状态
-                ctx.lineTo(endx, endy); //设置末端状态
+                //第一段，向下直线
+                ctx.lineTo(startxn, startyn + 20);
+                //第二段，右下角圆弧
+                ctx.arc(startxn - 15, startyn + 20, 15, PI(0), PI(90), false)
+                //第三段，向左直线
+                 ctx.moveTo(startxn - 15, startyn + 35);
+                ctx.lineTo(endx + 15, endy - 15);
+                //第四段，左上角圆弧
+                ctx.arc(endx + 15, endy, 15, PI(-180), PI(-90), false)
                 ctx.stroke(); //进行绘制
             }
-            console.log("drawline");
+
             $(".block").show();
             var blockleft = that.offset().left + that.width() / 2 - $(".block").width() / 2;
             var blocktop = that.offset().top + that.height() + 50;
@@ -163,6 +179,10 @@
                 "top": blocktop + "px"
             });
 
+        }
+
+        function PI(deg) {
+            return deg / 180 * Math.PI;
         }
     </script>
 </body>

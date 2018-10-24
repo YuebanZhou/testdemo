@@ -52,9 +52,12 @@
     }
 </style>
 <!-- <img src="./map.jpg" alt="" id="bgimg"> -->
-<canvas id="myCanvas" width="1168" height="704" style="border:1px solid #c3c3c3;">
-    Your browser does not support the canvas element.
-</canvas>
+<div id="contain">
+    <canvas id="myCanvas" width="1168" height="704" style="border:1px solid #c3c3c3;">
+        Your browser does not support the canvas element.
+    </canvas>
+
+</div>
 <div class="block">
     <div class="msg">
         <span>站点信息：</span><span class="msg msg1">msgmsg</span><br>
@@ -98,8 +101,14 @@
         function drawline(that) {
             var $my_canvas = $("#myCanvas");
             var my_canvas = $my_canvas[0];
+            var contain = document.getElementById("contain");
             var context = my_canvas.getContext("2d");
-            my_canvas.height = my_canvas.height;
+            //方法1，不兼容IE
+            contain.removeChild(my_canvas);
+            context.clearRect(0, 0, 1168, 704);
+            contain.appendChild(my_canvas);
+            //方法2，不兼容IE
+            //my_canvas.height = my_canvas.height;
             preImage("map.jpg", function () {
                 context.drawImage(this, 0, 0, 1168, 704);
             });
@@ -146,7 +155,7 @@
 
         function drawbox(that) {
             $(".block").show();
-            var blockleft = that.offset().left + that.width()/2 - $(".block").width()/2;
+            var blockleft = that.offset().left + that.width() / 2 - $(".block").width() / 2;
             var blocktop = that.offset().top + that.height() + 50;
             $(".block").css({
                 "left": blockleft + "px",

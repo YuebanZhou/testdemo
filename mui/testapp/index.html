@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/main.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">testapp</h1>
+		</header>
+
+		<div class="mui-content">
+			<!--折叠面板 start-->
+			<div id="">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">折叠面板1</a>
+						<div class="mui-collapse-content">
+							<p>这里是折叠面板1的内容</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">折叠面板2</a>
+						<div class="mui-collapse-content">
+							<p>这里是折叠面板2的内容</p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">折叠面板3</a>
+						<div class="mui-collapse-content">
+							<p>这里是折叠面板3的内容</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--折叠面板 end-->
+
+			<!--数字角标start-->
+			<div id="">
+				<span class="mui-badge">1</span>
+				<span class="mui-badge mui-badge-primary mui-badge-inverted">12不加底色</span>
+				<span class="mui-badge mui-badge-success">123</span>
+				<span class="mui-badge mui-badge-warning">3</span>
+				<span class="mui-badge mui-badge-danger">45</span>
+				<span class="mui-badge mui-badge-purple">456</span>
+			</div>
+			<!--数字角标end-->
+
+			<!--按钮start-->
+			<div id="">
+				<button type="button" class="mui-btn">默认</button>
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">蓝色</button>
+				<button type="button" class="mui-btn mui-btn-success">绿色</button>
+				<button type="button" class="mui-btn mui-btn-warning">黄色</button>
+				<button type="button" class="mui-btn mui-btn-danger">红色</button>
+				<button type="button" class="mui-btn mui-btn-royal">紫色</button>
+
+				<button type="button" data-loading-icon="mui-spinner mui-spinner-custom" class="mui-btn mui-btn-primary">确认</button>
+				<button type="button" data-loading-text="提交中" class="mui-btn">确认</button>
+				<button type="button" data-loading-icon-position="right" class="mui-btn">确认</button>
+			</div>
+			<!--按钮end-->
+			<!--卡片视图start-->
+			<div id="">
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media ym">页眉</div>
+					<div class="mui-card-header mui-card-media ym">
+						<!--页眉中的图片，大小被mui设定-->
+						<img src="./img/img.png" />
+						<div class="mui-media-body">
+							小M
+							<p>发表于 2016-06-30 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">
+						<ul>
+							<li>list1</li>
+							<li>list2</li>
+							<li>list3</li>
+							<li>list4</li>
+							<li>list5</li>
+						</ul>
+					</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer">页脚</div>
+				</div>
+			</div>
+			<!--卡片视图end-->
+			<!--复选框start-->
+			<div id="">
+				<div class="mui-input-row mui-checkbox">
+					<label>checkbox示例</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label>checkbox示例</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked>
+				</div>
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label>checkbox示例</label>
+					<input name="checkbox1" value="Item 1" type="checkbox" checked disabled>
+				</div>
+			</div>
+			<!--复选框end-->
+			<!--消息框start-->
+			<div id="">
+				<div class="dialog alert">alert</div>
+				<div class="dialog confirm">confirm</div>
+				<div class="dialog prompt">prompt</div>
+				<div class="dialog toast">toast</div>
+			</div>
+			<!--消息框end-->
+		</div>
+		<!--轮播start-->
+		<div id="">
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!--支持循环，需要重复图片节点-->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img src="./img/ban3.png" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="./img/ban1.png" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="./img/ban2.png" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="./img/ban3.png" /></a>
+					</div>
+					<!--支持循环，需要重复图片节点-->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img src="./img/ban1.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--轮播end-->
+		<!--栅格start-->
+		<div id="">
+			<div class="mui-content">
+				<div class="mui-row">
+					<!--屏幕分辨率大的时候，占6列，一行两个。-->
+					<!--屏幕分辨率小的时候，占12列，一行一个-->
+					<div class="mui-col-sm-6 mui-col-xs-12 pr">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								Item 1
+							</a>
+						</li>
+					</div>
+					<div class="mui-col-sm-6 mui-col-xs-12">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								Item 1
+							</a>
+						</li>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--栅格end-->
+		<!--图标start-->
+		<div id="">
+			<span class="mui-icon mui-icon-weixin"></span>
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-icon mui-icon-weibo"></span>
+			<span class="mui-icon mui-icon-pengyouquan"></span>
+			<span class="mui-icon mui-icon-qq"></span>
+			<span class="mui-icon mui-icon-camera"></span>
+			<span class="mui-icon mui-icon-trash"></span>
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-icon mui-icon-arrowup"></span>
+			<span class="mui-icon mui-icon-location"></span>
+		</div>
+		<!--图标end-->
+		<!--表单start-->
+		<div id="">
+			<form class="mui-input-group">
+				<!--组件放进input-row或者button-row中，自动排列-->
+				<div class="mui-input-row">
+					<label>用户名</label>
+					<!--存在input-clear类名的时候，可以出发快速删除-->
+					<input type="text" class="mui-input-clear" placeholder="请输入用户名">
+				</div>
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input type="password" class="mui-input-password" placeholder="请输入密码">
+				</div>
+				<div class="mui-input-row mui-search">
+					<input type="search" class="mui-input-clear" placeholder="">
+				</div>
+				<div class="mui-button-row">
+					<button type="button" class="mui-btn mui-btn-primary">确认</button>
+					<button type="button" class="mui-btn mui-btn-danger">取消</button>
+					<button type="button" class="mui-btn mui-btn-message">取消</button>
+				</div>
+			</form>
+		</div>
+		<!--表单end-->
+		<!--列表start-->
+		<div id="">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">Item 1</li>
+				<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right">Item 2</a>
+				</li>
+				<li class="mui-table-view-cell">Item 3
+					<span class="mui-badge mui-badge-primary">1</span>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="./img/img.png">
+						<div class="mui-media-body">
+							幸福
+							<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-right" src="./img/img.png">
+						<div class="mui-media-body">
+							木屋
+							<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="./img/img.png">
+						<div class="mui-media-body">
+							CBD
+							<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--列表end-->
+		<!--遮罩start-->
+		<div id="">
+			<div class="mask">
+				显示遮罩层
+			</div>
+		</div>
+		<!--遮罩end-->
+		<!--数字输入框start-->
+
+		<div class="mui-numbox">
+			<!-- "-"按钮，点击可减小当前数值 -->
+			<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+			<input class="mui-numbox-input" type="number" />
+			<!-- "+"按钮，点击可增大当前数值 -->
+			<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+		</div>
+		<!--设定加的步长和减的步长，设置最大值最小值-->
+		<div class="mui-numbox" data-numbox-step='10' data-numbox-min='0' data-numbox-max='100'>
+			<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+			<input class="mui-numbox-input" type="number" />
+			<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+		</div>
+		</div>
+		<!--数字输入框end-->
+		<!--菜单start-->
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 菜单容器 -->
+				<aside class="mui-off-canvas-left">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<!-- 菜单具体展示内容 -->
+							菜单具体展示内容
+						</div>
+					</div>
+				</aside>
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+					<h1 class="mui-title">标题</h1>
+				</header>
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						主界面具体展示内容，菜单和主界面都移动
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-left">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						菜单具体展示内容
+					</div>
+				</div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+					<h1 class="mui-title">标题</h1>
+				</header>
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						主界面具体展示内容，主界面移动，菜单内容不动
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--菜单end-->
+		<!--弹出菜单start-->
+		<div id="">
+			<a href="#popover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block">打开弹出菜单</a>
+			<div id="popover" class="mui-popover">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#">Item1</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">Item2</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">Item3</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">Item4</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">Item5</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!--弹出菜单end-->
+		<!--进度条start-->
+		<div id="demo1" class="mui-progressbar">
+			<span>进度条</span>
+		</div>
+		<!--进度条end-->
+		<!--单选start-->
+		<ul class="mui-table-view mui-table-view-radio">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">Item 1</a>
+			</li>
+			<li class="mui-table-view-cell mui-selected">
+				<a class="mui-navigate-right">Item 2</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">Item 3</a>
+			</li>
+		</ul>
+		<!--单选end-->
+		<!--滑块start-->
+		<div class="mui-input-row mui-input-range">
+			<label>Range</label>
+			<input type="range" min="0" max="100">
+		</div>
+		<!--滑块end-->
+		<!--区域滚动start-->
+		<div id="">
+			<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll">
+					<a class="mui-control-item mui-active">
+						推荐
+					</a>
+					<a class="mui-control-item">
+						热点
+					</a>
+					<a class="mui-control-item">
+						北京
+					</a>
+					<a class="mui-control-item">
+						社会
+					</a>
+					<a class="mui-control-item">
+						娱乐
+					</a>
+					<a class="mui-control-item">
+						科技
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--区域滚动end-->
+		<!--轮播组件start-->
+		<div id="">
+			<div class="mui-slider">
+				<div class="mui-slider-group">
+					<!--第一个内容区容器-->
+					<div class="mui-slider-item">
+						第一个内容区
+					</div>
+					<!--第二个内容区-->
+					<div class="mui-slider-item">
+						第二个内容区
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--轮播组件end-->
+		<!--开关start-->
+		<div id="">
+			<div class="mui-switch">
+				<div class="mui-switch-handle"></div>
+			</div>
+			<!-- 开关打开状态，多了一个.mui-active类 -->
+			<div class="mui-switch mui-active">
+				<div class="mui-switch-handle"></div>
+			</div>
+			<!-- 简洁模式开关关闭状态 -->
+			<div class="mui-switch mui-switch-mini">
+				<div class="mui-switch-handle"></div>
+			</div>
+			<!-- 简洁模式开关打开状态 -->
+			<div class="mui-switch mui-switch-mini mui-active">
+				<div class="mui-switch-handle"></div>
+			</div>
+			<!-- 蓝色开关关闭状态 -->
+			<div class="mui-switch mui-switch-blue">
+				<div class="mui-switch-handle"></div>
+			</div>
+			<!-- 蓝色开关打开状态 -->
+			<div class="mui-switch mui-switch-blue mui-active">
+				<div class="mui-switch-handle"></div>
+			</div>
+		</div>
+		<!--开关end-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+
+</html>

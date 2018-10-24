@@ -4,38 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>Document</title>
 </head>
 <style>
-    #bgimg {
-        display: none;
+    .bgimg {
         width: 1168px;
         height: 704px;
+        /* border: 2px solid #ccc; */
     }
 
-    .position {
-        position: absolute;
-        /* background-color: red; */
-        width: 45px;
-        height: 45px;
-        /* border-radius: 50%; */
-        cursor: pointer;
+    .area1 {
+        background-color: red;
     }
 
-    .zd37 {
-        left: 400px;
-        top: 360px;
+    .area2 {
+        background-color: green;
     }
 
-    .zd40 {
-        left: 555px;
-        top: 375px;
-    }
-
-    .zd41 {
-        left: 630px;
-        top: 360px;
+    .area3 {
+        background-color: yellow;
     }
 
     .block {
@@ -50,12 +38,46 @@
         background-color: #fff;
         display: none;
     }
+
+    .iconimg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 50px;
+        width: 30px;
+    }
+
+    .iconimg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #contain {
+        display: none;
+    }
+
+    canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    map area {
+        outline: none;
+    }
 </style>
 
 <body>
+    <img src="./map.jpg" usemap="#map" alt="" class="bgimg" hidefocus="true">
+    <map name="map">
+        <area class="area1" shape="rect" coords="390,350,440,400" href="javascript:void(0);" alt="">
+        <area class="area2" shape="rect" coords="550,360,590,410" href="javascript:void(0);" alt="">
+        <area class="area3" shape="rect" coords="620,350,670,400" href="javascript:void(0);" alt="">
+    </map>
     <div id="contain">
         <canvas height="704" width="1168" id="canvas"></canvas>
     </div>
+
     <div class="block">
         <div class="msg">
             <span>站点信息：</span><span class="msg msg1">msgmsg</span><br>
@@ -65,63 +87,46 @@
             <span>距离下游：</span><span class="msg msg5">msgmsg</span>
         </div>
     </div>
-
-    <div>
-        <div class="position zd37"></div>
-        <div class="position zd40"></div>
-        <div class="position zd41"></div>
-    </div>
-    <!-- <div class="clear">clear</div> -->
     <!-- <script src="./jquery-3.1.0.min.js"></script> -->
     <script src="./jquery-1.12.1.js"></script>
     <script>
         var c = document.getElementById("canvas");
         var ctx = c.getContext("2d");
-        preImage("map.jpg", function () {
-            ctx.drawImage(this, 0, 0, 1168, 704);
-        });
 
-        $(".position").click(function () {
+        //点击画布本身的时候，隐藏画布
+        $("canvas").click(function () {
+            $(".block").hide();
+            $("#contain").hide();
+        });
+        $("area").click(function () {
             var that = $(this);
+            $(".block").show();
+            $("#contain").show();
             draw(that);
         });
-        // $(".clear").click(function () {
-        //     cc();
-        //     preImage("map.jpg", function () {
-        //         ctx.drawImage(this, 0, 0, 1168, 704);
-        //     });
-        // });
-
-        function preImage(url, callback) {
-            var img = new Image(); //创建一个Image对象，实现图片的预下载  
-            img.src = url;
-            if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数  
-                callback.call(img);
-                return; // 直接返回，不用再处理onload事件  
-            }
-            img.onload = function () { //图片下载完毕时异步调用callback函数。  
-                callback.call(img); //将回调函数的this替换为Image对象  
-            };
-            console.log("drawimg");
-        }
 
         function cc() {
             ctx.clearRect(0, 0, c.width, c.height);
-            console.log("clear");
         }
 
         function draw(that) {
             cc();
-            preImage("map.jpg", function () {
-                ctx.drawImage(this, 0, 0, 1168, 704);
-            });
+            var arr = that.attr('coords').split(",").map(Number);
+            var arrprev = [];
+            var arrnext = [];
+            if (that.prev().attr('coords')) {
+                arrprev = that.prev().attr('coords').split(",").map(Number);
+            }
+            if (that.next().attr('coords')) {
+                arrnext = that.next().attr('coords').split(",").map(Number);
+            }
 
             //本站点
-            var startx = that.offset().left + that.width() / 2 - 10;
-            var starty = that.offset().top + that.height() - 10;
+            var startx = (arr[0] + arr[2]) / 2;
+            var starty = arr[3];
             //结束点
-            var endx = that.offset().left + that.width() / 2 - 10
-            var endy = that.offset().top + that.height() + 40
+            var endx = (arr[0] + arr[2]) / 2
+            var endy = arr[3] + 50;
             //线条样式
             ctx.lineWidth = 5; //设置线宽状态
             ctx.strokeStyle = "red" //设置线的颜色状态
@@ -135,8 +140,8 @@
             //前一个站点
             var prev = that.prev();
             if (prev.offset()) {
-                var startxp = prev.offset().left + prev.width() / 2 - 10;
-                var startyp = prev.offset().top + prev.height() - 10;
+                var startxp = (arrprev[0] + arrprev[2]) / 2;
+                var startyp = arrprev[3];
                 //前面的线条
                 ctx.beginPath();
                 ctx.moveTo(startxp, startyp); //设置起点状态
@@ -146,18 +151,16 @@
             //后一个站点
             var next = that.next();
             if (next.offset()) {
-                var startxn = next.offset().left + next.width() / 2 - 10;
-                var startyn = next.offset().top + next.height() - 10;
+                var startxn = (arrnext[0] + arrnext[2]) / 2;
+                var startyn = arrnext[3];
                 //后面的线条
                 ctx.beginPath();
                 ctx.moveTo(startxn, startyn); //设置起点状态
                 ctx.lineTo(endx, endy); //设置末端状态
                 ctx.stroke(); //进行绘制
             }
-            console.log("drawline");
-            $(".block").show();
-            var blockleft = that.offset().left + that.width() / 2 - $(".block").width() / 2;
-            var blocktop = that.offset().top + that.height() + 50;
+            var blockleft = (arr[0] + arr[2]) / 2 - $(".block").width() / 2;
+            var blocktop = arr[3] + 50;
             $(".block").css({
                 "left": blockleft + "px",
                 "top": blocktop + "px"

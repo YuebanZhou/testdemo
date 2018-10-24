@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+</head>
+<style>
+    .bgimg {
+        width: 1168px;
+        height: 704px;
+        /* border: 2px solid #ccc; */
+    }
+
+    .area1 {
+        background-color: red;
+    }
+
+    .area2 {
+        background-color: green;
+    }
+
+    .area3 {
+        background-color: yellow;
+    }
+
+    .block {
+        width: 250px;
+        height: 105px;
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        display: none;
+    }
+
+    .iconimg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 50px;
+        width: 30px;
+    }
+
+    .iconimg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    canvas {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    map area {
+        outline: none;
+    }
+</style>
+
+<body>
+    <img src="./map.jpg" usemap="#map" alt="" class="bgimg" hidefocus="true">
+    <map name="map">
+        <area class="area1" shape="rect" coords="390,350,440,400" href="javascript:void(0);" alt="">
+        <area class="area2" shape="rect" coords="550,360,590,410" href="javascript:void(0);" alt="">
+        <area class="area3" shape="rect" coords="620,350,670,400" href="javascript:void(0);" alt="">
+    </map>
+    <div id="contain">
+        <canvas height="704" width="1168" id="canvas"></canvas>
+    </div>
+
+    <div class="block">
+        <div class="msg">
+            <span>站点信息：</span><span class="msg msg1">msgmsg</span><br>
+            <span>上游信息：</span><span class="msg msg2">msgmsg</span><br>
+            <span>距离上游：</span><span class="msg msg3">msgmsg</span><br>
+            <span>下游信息：</span><span class="msg msg4">msgmsg</span><br>
+            <span>距离下游：</span><span class="msg msg5">msgmsg</span>
+        </div>
+    </div>
+    <!-- <script src="./jquery-3.1.0.min.js"></script> -->
+    <script src="./jquery-1.12.1.js"></script>
+    <script>
+        //点击画布本身的时候，隐藏画布
+        $("canvas").click(function () {
+            var contain=document.getElementById("contain");
+            var canvas = document.querySelector('canvas');
+            var ctx = canvas.getContext('2d');
+            //方法1，不兼容IE
+            contain.removeChild(canvas);
+            ctx.clearRect(0,0,1168,704);
+            contain.appendChild(canvas);
+            //方法2，不兼容IE
+            // canvas.height = canvas.height
+            // canvas.width = canvas.width
+            $(".block").hide();
+            $(this).hide();
+        })
+        $(".area1").click(function () {
+            var that = $(this)
+            creatB(that);
+            drawLine(that);
+        })
+        $(".area2").click(function () {
+            var that = $(this)
+            creatB(that);
+            drawLine(that);
+        })
+        $(".area3").click(function () {
+            var that = $(this)
+            creatB(that);
+            drawLine(that);
+        })
+
+        function creatB(that) {
+            $(".block").show();
+            var arr = that.attr('coords').split(",");
+            var blockleft = (parseInt(arr[0]) + parseInt(arr[2]) - parseInt($(".block").width())) / 2;
+            var blocktop = parseInt(arr[3]) + 50;
+            $(".block").css({
+                "left": blockleft + "px",
+                "top": blocktop + "px"
+            });
+        }
+
+        function drawLine(that) {
+
+            var arr = that.attr('coords').split(",");
+            var arrprev = [];
+            var arrnext = [];
+            if (that.prev().attr('coords')) {
+                arrprev = that.prev().attr('coords').split(",");
+            }
+            if (that.next().attr('coords')) {
+                arrnext = that.next().attr('coords').split(",");
+            }
+
+            var canvas = document.querySelector('canvas');
+            var ctx = canvas.getContext('2d');
+            
+            canvas.height = canvas.height
+            canvas.width = canvas.width
+
+
+            //原始点
+            var beginx = (parseInt(arr[0]) + parseInt(arr[2])) / 2;
+            var beginy = parseInt(arr[3]);
+            //前一个
+            var beginxp = (parseInt(arrprev[0]) + parseInt(arrprev[2])) / 2;
+            var beginyp = parseInt(arrprev[3]);
+            //后一个
+            var beginxn = (parseInt(arrnext[0]) + parseInt(arrnext[2])) / 2;
+            var beginyn = parseInt(arrnext[3]);
+            //结束点
+            var endx = (parseInt(arr[0]) + parseInt(arr[2])) / 2;
+            var endy = parseInt(arr[3]) + 50;
+            //第一条
+            ctx.moveTo(beginx, beginy);
+            ctx.lineWidth = 3;
+            ctx.lineTo(endx, endy);
+            ctx.strokeStyle = 'red';
+            ctx.stroke();
+            //第二条
+            ctx.moveTo(beginxp, beginyp);
+            ctx.lineWidth = 3;
+            ctx.lineTo(endx, endy);
+            ctx.strokeStyle = 'red';
+            ctx.stroke();
+
+            //第三条
+            ctx.moveTo(beginxn, beginyn);
+            ctx.lineWidth = 3;
+            ctx.lineTo(endx, endy);
+            ctx.strokeStyle = 'red';
+            ctx.stroke();
+            $("canvas").show();
+        }
+    </script>
+</body>
+
+</html>
