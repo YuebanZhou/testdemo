@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src='stream.js'></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script type="text/javascript">
+			// if (!/Mobile/i.test(navigator.userAgent) && !(self != top)) {
+			// 	window.location = 'down.html'
+			// }
+		</script>
+		<style>
+			#downloadBar {
+				width: 100%;
+				position: fixed;
+				top: 0;
+				color: #fff;
+				font-size: 12px;
+				box-sizing: border-box;
+				z-index: 99999;
+			}
+			
+			#downloadBar {
+				top: auto!important;
+				bottom: 0;
+				height: 40px
+			}
+			
+			#downloadBar span {
+				display: block;
+				width: 100%;
+				height: 40px;
+				padding-left: 76px;
+				line-height: 40px;
+				background-color: #000;
+				opacity: 0.7;
+			}
+			
+			#downloadBar .bar-item {
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			#downloadBar .bar-item.downloadbar-close {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 36px;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAQAAACQEyoRAAAABGdBTUEAALGPC/xhBQAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAtAAAALQCOyvEOAAACeklEQVRIx7WXv27aUBSHf45UGBnoYBgY0jfAL9CosZAqyM4DpGNoJ3iETnRNhrxEKnVgahZY6JaFoVMk0oFK6RIJkPg6+GJhY/uaJL6b7z3389G5568jy8JVR57qqquuqv5qrrnm+qXvzh/b3XRogz5jNiSvDWP6NA7HVhmyxL6WDKkmM5wEbFlfNFDFfK71Uz/0W3M9aKG3qqmud/qo93pjJP7pq745S7u+LpNQp1u6VFLkKnS5DSUnuDZwk3sjfEc7h+Ha3Bn5e5pZgmc8AbDmgqOcr3JEjzUAT5ylCXkGvOAkHza8ecLCwJM0xzWmmHF8GFiSOGZmzBK3OWXzeIvngA18YR60HD0YGBsfaIqYWQKbD3Y3qzwCcPF8sCTRA+BxJ4gYGneLeAU+LZwMkIPPh8jOkXHF4XajYUI64secAnCdBsfhGgA/sts24R/kFvpB5MWu+iYUEuEhGFqxkyBC+8FH4Bvd1Mt78MyzbuAnknDZAKv9XJEGyAJLVFgBG1zxCYBRpj13INlgSWIEwLm4AqBneSwDsoNDF7wSNwB0pDxwO1iiA8CNmALgSTngMztYwgNgKuYA1KRccCtYogbAXCZcSpIFPgs1dyyypSBsitC6vtW6QFsX6CGXr+7XnwG4FOfFRWNxOaSgzDcOPpLzdStnvvZjJ5F8nVxlfMtjbeHREhatMqm18RTfUhtbsfIVr407Fb2nF62Eil5gH1Jo91RgzydJNAvqVKVn99cX1v5akvBeMBV4NuGiZhlJoszA+DnAihE9OnjUKFHDo0OPEatQ4pHBnldk4F9hbszCN+gzyZh2J9nTrmP9gaszeapFZvQHTe0z+n8avfP8qB6kSQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNi0wMy0zMVQxNzoxNzoyNCswODowMObcYeUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTYtMDMtMzFUMTc6MTc6MjQrMDg6MDCXgdlZAAAAAElFTkSuQmCC);
+				background-size: 50%;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			
+			#downloadBar .bar-item.downloadbar-logo {
+				position: absolute;
+				left: 46px;
+				top: 0;
+				width: 26px;
+				background-image: url(//img-cdn-qiniu.dcloud.net.cn/icon3.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			
+			#downloadBar .bar-item.downloadbar-open {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 70px;
+				background-color: #D74B28;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			#J_JHSDownloadMask {
+				z-index: 10000;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0, 0, 0, 0.7);
+				pointer-events: all;
+			}
+			
+			#J_JHSDownloadMask .mask-content {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 240px;
+				height: 330px;
+				margin-left: -120px;
+				margin-top: -165px;
+				padding: 16px;
+				background-color: #fff;
+				border-radius: 4px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+				box-sizing: border-box;
+			}
+			
+			#J_JHSDownloadMask .mask-content .title {
+				color: #e61414;
+				font-size: 16px;
+				text-align: center;
+				height: 2.25em;
+			}
+			
+			#J_JHSDownloadMask .mask-content .desc img {
+				display: block;
+				width: 100%;
+				border: 0;
+			}
+			
+			#J_JHSDownloadMask .mask-content .btn {
+				position: absolute;
+				font-size: 14px;
+				text-align: center;
+				border-radius: 4px;
+				height: 40px;
+				width: 210px;
+				line-height: 40px;
+			}
+			
+			#J_JHSDownloadMask .mask-content .btn.go {
+				bottom: 66px;
+				background-color: #e61414;
+				border: 1px solid #e61414;
+				color: #fff;
+			}
+			
+			#J_JHSDownloadMask .mask-content .btn.close {
+				bottom: 16px;
+				border: 1px solid #e61414;
+				color: #e61414;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+			<h1 class="mui-title">Hello mui</h1>
+		</header>
+		<div id="downloadBar">
+			<span>启动原生APP体验更多惊喜</span>
+			<div class="bar-item downloadbar-close"></div>
+			<div class="bar-item downloadbar-logo"></div>
+			<div class="bar-item downloadbar-open">打开APP</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/update.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var menu = null,
+				main = null;
+			var showMenu = false;
+			var downloadBar = document.getElementById("downloadBar");
+			mui.init({
+				swipeBack: false,
+				statusBarBackground: '#f7f7f7',
+				gestureConfig: {
+					doubletap: true
+				},
+				subpages: [{
+					id: 'list',
+					url: 'list.html?v=1',
+					styles: {
+						top: '45px',
+						bottom: 0,
+						bounce: 'vertical'
+					}
+				}]
+			});
+			mui.plusReady(function() {
+				//仅支持竖屏显示
+				plus.screen.lockOrientation("portrait-primary");
+				main = plus.webview.currentWebview();
+				main.addEventListener('maskClick', closeMenu);
+				//处理侧滑导航，为了避免和子页面初始化等竞争资源，延迟加载侧滑页面；
+				setTimeout(function() {
+					menu = mui.preload({
+						id: 'index-menu',
+						url: 'index-menu.html',
+						styles: {
+							left: 0,
+							width: '70%',
+							zindex: -1
+						},
+						show: {
+							aniShow: 'none'
+						}
+					});
+				}, 200);
+			});
+			var isInTransition = false;
+			/**
+			 * 显示侧滑菜单
+			 */
+			function openMenu() {
+				if(isInTransition) {
+					return;
+				}
+				if(!showMenu) {
+					//侧滑菜单处于隐藏状态，则立即显示出来；
+					isInTransition = true;
+					menu.setStyle({
+						mask: 'rgba(0,0,0,0)'
+					}); //menu设置透明遮罩防止点击
+					menu.show('none', 0, function() {
+						//主窗体开始侧滑并显示遮罩
+						main.setStyle({
+							mask: 'rgba(0,0,0,0.4)',
+							left: '70%',
+							transition: {
+								duration: 150
+							}
+						});
+						mui.later(function() {
+							isInTransition = false;
+							menu.setStyle({
+								mask: "none"
+							}); //移除menu的mask
+						}, 160);
+						showMenu = true;
+					});
+				}
+			};
+			/**
+			 * 关闭菜单
+			 */
+			function closeMenu() {
+				if(isInTransition) {
+					return;
+				}
+				if(showMenu) {
+					//关闭遮罩；
+					//主窗体开始侧滑；
+					isInTransition = true;
+					main.setStyle({
+						mask: 'none',
+						left: '0',
+						transition: {
+							duration: 200
+						}
+					});
+					showMenu = false;
+					//等动画结束后，隐藏菜单webview，节省资源；
+					mui.later(function() {
+						isInTransition = false;
+						menu.hide();
+					}, 300);
+				}
+			};
+			//点击左上角侧滑图标，打开侧滑菜单；
+			document.querySelector('.mui-icon-bars').addEventListener('tap', function(e) {
+				if(showMenu) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			});
+			//敲击顶部导航，内容区回到顶部
+			document.querySelector('header').addEventListener('doubletap', function() {
+				main.children()[0].evalJS('mui.scrollTo(0, 100)');
+			});
+			//主界面向右滑动，若菜单未显示，则显示菜单；否则不做任何操作
+			window.addEventListener("swiperight", openMenu);
+			//主界面向左滑动，若菜单已显示，则关闭菜单；否则，不做任何操作；
+			window.addEventListener("swipeleft", closeMenu);
+			//侧滑菜单触发关闭菜单命令
+			window.addEventListener("menu:close", closeMenu);
+			window.addEventListener("menu:open", openMenu);
+			//重写mui.menu方法，Android版本menu按键按下可自动打开、关闭侧滑菜单；
+			mui.menu = function() {
+				if(showMenu) {
+					closeMenu();
+				} else {
+					openMenu();
+				}
+			}
+			//处理右上角关于图标的点击事件；
+			var subWebview = null,
+				template = null;
+			document.getElementById('info').addEventListener('tap', function() {
+				if(!mui.os.plus) {
+					mui.openWindow({
+						url: "examples/info.html",
+						id: "info",
+						show: {
+							aniShow: 'zoom-fade-out',
+							duration: 300
+						}
+					});
+					return;
+				}
+				if(subWebview == null) {
+					//获取共用父窗体
+					template = plus.webview.getWebviewById("default-main");
+				}
+				if(template) {
+					subWebview = template.children()[0];
+					subWebview.loadURL('examples/info.html');
+					//修改共用父模板的标题
+					mui.fire(template, 'updateHeader', {
+						title: '关于',
+						showMenu: false
+					});
+					template.show('slide-in-right', 150);
+				}
+				//				mui.openWindow({
+				//					url:"examples/info.html",
+				//					id:"info",
+				//					show:{
+				//						aniShow:'zoom-fade-out',
+				//						duration:300
+				//					}
+				//				});
+			});
+			//首页返回键处理
+			//处理逻辑：1秒内，连续两次按返回键，则退出应用；
+			var first = null;
+			mui.back = function() {
+				if(showMenu) {
+					closeMenu();
+				} else {
+					//首次按键，提示‘再按一次退出应用’
+					if(!first) {
+						first = new Date().getTime();
+						mui.toast('再按一次退出应用');
+						setTimeout(function() {
+							first = null;
+						}, 1000);
+					} else {
+						if(new Date().getTime() - first < 1000) {
+							plus.runtime.quit();
+						}
+					}
+				}
+			};
+			var _hmt = _hmt || [];
+			(function() {
+				// var hm = document.createElement("script");
+				// hm.src = "//hm.baidu.com/hm.js?16bea9b124e2f593705dfb2997ff87db";
+				// var s = document.getElementsByTagName("script")[0]; 
+				// s.parentNode.insertBefore(hm, s);
+			})();
+
+			if(mui.os.plus || window.top != window) {
+				downloadBar.style.display = 'none'
+			}
+			document.querySelector('.downloadbar-close').addEventListener('click', function() {
+				downloadBar.style.display = 'none'
+			})
+			document.querySelector('.downloadbar-open').addEventListener('click', function() {
+				var ua = navigator.userAgent,
+					targetHref;
+				if(!/Mobile/i.test(ua)) {
+					if(/Macintosh/i.test(ua)) {
+						targetHref = 'https://itunes.apple.com/cn/app/id907931805';
+					} else {
+						targetHref = 'http://download.dcloud.net.cn/HelloMUI.apk';
+					}
+				} else {
+					if(/iPhone|iPad/i.test(ua)) {
+						targetHref = 'http://a.app.qq.com/o/simple.jsp?pkgname=io.dcloud.HelloMUI';
+					} else {
+						targetHref = 'http://fusion.qq.com/app_download?appid=1103417770&platform=qzone&via=QZ.MOBILEDETAIL.QRCODE&u=3046917960'
+					}
+				}
+				window.location.href = targetHref;
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,925 @@
+{
+	"@platforms": ["android", "iPhone", "iPad"],
+	"id": "H5E08D179",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "helloMUI",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.0",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "Messaging": {
+            "description": "访问通讯能力"
+        },
+        
+        "Speech": {
+            "description": "管理语音识别插件"
+        }
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true
+		},
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": ["<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>"]
+			},
+			"orientation": ["portrait-primary", "portrait-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					 /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
+						/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"app@2x":"unpackage/res/icons/120x120.png","app@3x":"unpackage/res/icons/180x180.png","settings@3x":"unpackage/res/icons/87x87.png","settings@2x":"unpackage/res/icons/58x58.png","spotlight@2x":"unpackage/res/icons/80x80.png","spotlight@3x":"unpackage/res/icons/120x120.png","notification@3x":"unpackage/res/icons/60x60.png","notification@2x":"unpackage/res/icons/40x40.png"
+					},
+					"ipad": {
+						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+						 /*iPad iOS7程序图标，分辨率：76x76*/
+						 /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						/*iPad设置页面程序图标，分辨率：29x29*/
+						"app":"unpackage/res/icons/76x76.png","app@2x":"unpackage/res/icons/152x152.png","settings":"unpackage/res/icons/29x29.png","proapp@2x":"unpackage/res/icons/167x167.png","spotlight":"unpackage/res/icons/40x40.png","settings@2x":"unpackage/res/icons/58x58.png","notification":"unpackage/res/icons/20x20.png","spotlight@2x":"unpackage/res/icons/80x80.png","notification@2x":"unpackage/res/icons/40x40.png"
+					},"appstore":"unpackage/res/icons/1024x1024.png"
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png","xxxhdpi":"unpackage/res/icons/192x192.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "unpackage/res/splash/engine.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "unpackage/res/splash/engine.png","iphonex":"unpackage/res/splash/engine.png","iphonexl":"unpackage/res/splash/engine.png","retina47":"unpackage/res/splash/engine.png","retina55":"unpackage/res/splash/engine.png","retina55l":"unpackage/res/splash/engine.png"
+					},
+					"ipad": {
+						"portrait": "unpackage/res/splash/engine.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "unpackage/res/splash/engine.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "unpackage/res/splash/engine.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "unpackage/res/splash/engine.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "unpackage/res/splash/engine.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "unpackage/res/splash/engine.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "unpackage/res/splash/engine.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "unpackage/res/splash/engine.png"
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "unpackage/res/splash/engine.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "unpackage/res/splash/engine.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "unpackage/res/splash/engine.png"
+				}
+			}
+		}
+	},
+	"dependencies":{
+		"pages": {
+			"examples/tab-webview-main.html": {
+				"href": "examples/tab-webview-main.html",
+				"priority": 0
+			},
+			"examples/pullrefresh_sub.html": {
+				"href": "examples/pullrefresh_sub.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js"
+				],
+				"priority": 1
+			},
+			"examples/pullrefresh_main.html": {
+				"href": "examples/pullrefresh_main.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"examples/pullrefresh_sub.html"
+				],
+				"priority": 1
+			},
+			"examples/accordion.html": {
+				"href": "examples/accordion.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js",
+					"images/yuantiao.jpg",
+					"images/shuijiao.jpg",
+					"images/muwu.jpg",
+					"images/cbd.jpg"
+				],
+				"priority": 2
+			},
+			"examples/ajax.html": {
+				"href": "examples/ajax.html",
+				"priority": 3
+			},
+			"examples/badges.html": {
+				"href": "examples/badges.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 4
+			},
+			"examples/card.html": {
+				"href": "examples/card.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js",
+					"images/logo.png",
+					"images/yuantiao.jpg",
+					"images/cbd.jpg"
+				],
+				"priority": 5
+			},
+			"examples/checkbox.html": {
+				"href": "examples/checkbox.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 6
+			},
+			"examples/dialog.html": {
+				"href": "examples/dialog.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 7
+			},
+			"examples/input.html": {
+				"href": "examples/input.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 8
+			},
+			"examples/media-list.html": {
+				"href": "examples/media-list.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"images/shuijiao.jpg",
+					"images/muwu.jpg",
+					"images/cbd.jpg",
+					"images/yuantiao.jpg"
+				],
+				"priority": 9
+			},
+			"examples/numbox.html": {
+				"href": "examples/numbox.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.js"
+				],
+				"priority": 10
+			},
+			"examples/pagination.html": {
+				"href": "examples/pagination.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 11
+			},
+			"examples/picker.html": {
+				"href": "examples/picker.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"css/mui.picker.css",
+					"css/mui.poppicker.css",
+					"js/mui.min.js",
+					"js/mui.picker.js",
+					"js/mui.poppicker.js",
+					"js/city.data.js",
+					"js/city.data-3.js"
+				],
+				"priority": 12
+			},
+			"examples/popovers.html": {
+				"href": "examples/popovers.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 13
+			},
+			"examples/progressbar.html": {
+				"href": "examples/progressbar.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 14
+			},
+			"examples/radio.html": {
+				"href": "examples/radio.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 15
+			},
+			"examples/range.html": {
+				"href": "examples/range.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 16
+			},
+			"examples/switches.html": {
+				"href": "examples/switches.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 17
+			},
+			"examples/typography.html": {
+				"href": "examples/typography.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 18
+			},
+			"examples/ad.html": {
+				"href": "examples/ad.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"priority": 19
+			},
+			"examples/echarts.html": {
+				"href": "examples/echarts.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"js/echarts-all.js"
+				],
+				"priority": 20
+			},
+			"examples/im-chat.html": {
+				"href": "examples/im-chat.html",
+				"priority": 21
+			},
+			"examples/clouddb_wilddog.html": {
+				"href": "examples/clouddb_wilddog.html",
+				"priority": 22
+			},
+			"examples/beecloud.html": {
+				"href": "examples/beecloud.html",
+				"priority": 23
+			},
+			"examples/feedback.html": {
+				"href": "examples/feedback.html",
+				"priority": 24
+			},
+			"examples/imageviewer.html": {
+				"href": "examples/imageviewer.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/mui.zoom.js",
+					"js/mui.previewimage.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"images/yuantiao.jpg",
+					"images/muwu.jpg",
+					"images/shuijiao.jpg"
+				],
+				"priority": 25
+			},
+			"examples/lazyload-image.html": {
+				"href": "examples/lazyload-image.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/mui.lazyload.js",
+					"js/mui.lazyload.img.js",
+					"images/60x60.gif",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 26
+			},
+			"examples/locker-dom.html": {
+				"href": "examples/locker-dom.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js",
+					"js/mui.locker.js"
+				],
+				"priority": 27
+			},
+			"examples/login.html": {
+				"href": "examples/login.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js",
+					"images/login-1.png"
+				],
+				"priority": 28
+			},
+			"examples/setting.html": {
+				"href": "examples/setting.html",
+				"resources": [
+					"js/mui.min.js",
+					"js/mui.view.js",
+					"js/feedback.js",
+					"js/feedback-page.js",
+					"images/logo.png",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/feedback-page.css"
+				],
+				"priority": 29
+			},
+			"examples/actionsheet.html": {
+				"href": "examples/actionsheet.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 30
+			},
+			"examples/actionsheet-plus.html": {
+				"href": "examples/actionsheet-plus.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 31
+			},
+			"examples/buttons.html": {
+				"href": "examples/buttons.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 32
+			},
+			"examples/buttons-with-icons.html": {
+				"href": "examples/buttons-with-icons.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 33
+			},
+			"examples/buttons-with-badges.html": {
+				"href": "examples/buttons-with-badges.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 34
+			},
+			"examples/buttons-with-block.html": {
+				"href": "examples/buttons-with-block.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 35
+			},
+			"examples/dtpicker.html": {
+				"href": "examples/dtpicker.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"css/mui.picker.min.css",
+					"js/mui.min.js",
+					"js/mui.picker.min.js"
+				],
+				"priority": 36
+			},
+			"examples/date.html": {
+				"href": "examples/date.html",
+				"priority": 37
+			},
+			"examples/slider-default.html": {
+				"href": "examples/slider-default.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js",
+					"images/yuantiao.jpg",
+					"images/shuijiao.jpg",
+					"images/muwu.jpg",
+					"images/cbd.jpg"
+				],
+				"priority": 38
+			},
+			"examples/slider-with-title.html": {
+				"href": "examples/slider-with-title.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"images/yuantiao.jpg",
+					"images/shuijiao.jpg",
+					"images/muwu.jpg",
+					"images/cbd.jpg"
+				],
+				"priority": 39
+			},
+			"examples/slider-table-default.html": {
+				"href": "examples/slider-table-default.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"images/shuijiao.jpg",
+					"images/muwu.jpg",
+					"images/cbd.jpg",
+					"images/yuantiao.jpg"
+				],
+				"priority": 40
+			},
+			"examples/slider-table-pagination.html": {
+				"href": "examples/slider-table-pagination.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"images/cbd.jpg",
+					"images/yuantiao.jpg",
+					"images/shuijiao.jpg",
+					"images/muwu.jpg"
+				],
+				"priority": 41
+			},
+			"examples/grid-default.html": {
+				"href": "examples/grid-default.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 42
+			},
+			"examples/grid-pagination.html": {
+				"href": "examples/grid-pagination.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 43
+			},
+			"examples/icons.html": {
+				"href": "examples/icons.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 44
+			},
+			"examples/icons-extra.html": {
+				"href": "examples/icons-extra.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/icons-extra.css",
+					"fonts/mui-icons-extra.ttf",
+					"js/mui.min.js"
+				],
+				"priority": 45
+			},
+			"examples/tableviews.html": {
+				"href": "examples/tableviews.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 46
+			},
+			"examples/tableviews-with-badges.html": {
+				"href": "examples/tableviews-with-badges.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 47
+			},
+			"examples/list-with-input.html": {
+				"href": "examples/list-with-input.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 48
+			},
+			"examples/list-triplex-row.html": {
+				"href": "examples/list-triplex-row.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 49
+			},
+			"examples/tableviews-with-collapses.html": {
+				"href": "examples/tableviews-with-collapses.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 50
+			},
+			"examples/tableviews-with-swipe.html": {
+				"href": "examples/tableviews-with-swipe.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 51
+			},
+			"examples/nav.html": {
+				"href": "examples/nav.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js"
+				],
+				"priority": 52
+			},
+			"examples/nav_transparent.html": {
+				"href": "examples/nav_transparent.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"images/yuantiao.jpg",
+					"images/shuijiao.jpg"
+				],
+				"priority": 53
+			},
+			"examples/offcanvas-drag-right-plus-main.html": {
+				"href": "examples/offcanvas-drag-right-plus-main.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js"
+				],
+				"priority": 54
+			},
+			"examples/offcanvas-drag-left-plus-main.html": {
+				"href": "examples/offcanvas-drag-left-plus-main.html",
+				"priority": 55
+			},
+			"examples/offcanvas-drag-right.html": {
+				"href": "examples/offcanvas-drag-right.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js"
+				],
+				"priority": 56
+			},
+			"examples/offcanvas-drag-left.html": {
+				"href": "examples/offcanvas-drag-left.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js"
+				],
+				"priority": 57
+			},
+			"examples/offcanvas-drag-down.html": {
+				"href": "examples/offcanvas-drag-down.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js"
+				],
+				"priority": 58
+			},
+			"examples/pullrefresh_with_tab.html": {
+				"href": "examples/pullrefresh_with_tab.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js"
+				],
+				"priority": 59
+			},
+			"examples/tabbar.html": {
+				"href": "examples/tabbar.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"images/60x60.gif"
+				],
+				"priority": 60
+			},
+			"examples/tabbar-with-submenus.html": {
+				"href": "examples/tabbar-with-submenus.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css"
+				],
+				"priority": 61
+			},
+			"examples/tab-with-segmented-control.html": {
+				"href": "examples/tab-with-segmented-control.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 62
+			},
+			"examples/tab-with-viewpagerindicator.html": {
+				"href": "examples/tab-with-viewpagerindicator.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 63
+			},
+			"examples/tab-with-segmented-control-vertical.html": {
+				"href": "examples/tab-with-segmented-control-vertical.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 64
+			},
+			"examples/tab-vertical-scroll.html": {
+				"href": "examples/tab-vertical-scroll.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/app.css",
+					"js/mui.min.js"
+				],
+				"priority": 65
+			},
+			"examples/indexed-list.html": {
+				"href": "examples/indexed-list.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/mui.indexedlist.css",
+					"js/mui.min.js",
+					"js/mui.indexedlist.js"
+				],
+				"priority": 66
+			},
+			"examples/indexed-list-select.html": {
+				"href": "examples/indexed-list-select.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"css/mui.indexedlist.css",
+					"js/mui.min.js",
+					"js/mui.indexedlist.js"
+				],
+				"priority": 67
+			},
+			"list.html": {
+				"href": "list.html",
+				"resources": [
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js"
+				],
+				"refer": [
+					"examples/tab-webview-main.html",
+					"examples/pullrefresh_main.html",
+					"examples/accordion.html",
+					"examples/ajax.html",
+					"examples/badges.html",
+					"examples/card.html",
+					"examples/checkbox.html",
+					"examples/dialog.html",
+					"examples/input.html",
+					"examples/media-list.html",
+					"examples/numbox.html",
+					"examples/pagination.html",
+					"examples/picker.html",
+					"examples/popovers.html",
+					"examples/progressbar.html",
+					"examples/radio.html",
+					"examples/range.html",
+					"examples/switches.html",
+					"examples/typography.html",
+					"examples/ad.html",
+					"examples/echarts.html",
+					"examples/im-chat.html",
+					"examples/clouddb_wilddog.html",
+					"examples/beecloud.html",
+					"examples/feedback.html",
+					"examples/imageviewer.html",
+					"examples/lazyload-image.html",
+					"examples/locker-dom.html",
+					"examples/login.html",
+					"examples/setting.html",
+					"examples/actionsheet.html",
+					"examples/actionsheet-plus.html",
+					"examples/buttons.html",
+					"examples/buttons-with-icons.html",
+					"examples/buttons-with-badges.html",
+					"examples/buttons-with-block.html",
+					"examples/dtpicker.html",
+					"examples/date.html",
+					"examples/slider-default.html",
+					"examples/slider-with-title.html",
+					"examples/slider-table-default.html",
+					"examples/slider-table-pagination.html",
+					"examples/grid-default.html",
+					"examples/grid-pagination.html",
+					"examples/icons.html",
+					"examples/icons-extra.html",
+					"examples/tableviews.html",
+					"examples/tableviews-with-badges.html",
+					"examples/list-with-input.html",
+					"examples/list-triplex-row.html",
+					"examples/tableviews-with-collapses.html",
+					"examples/tableviews-with-swipe.html",
+					"examples/nav.html",
+					"examples/nav_transparent.html",
+					"examples/offcanvas-drag-right-plus-main.html",
+					"examples/offcanvas-drag-left-plus-main.html",
+					"examples/offcanvas-drag-right.html",
+					"examples/offcanvas-drag-left.html",
+					"examples/offcanvas-drag-down.html",
+					"examples/pullrefresh_with_tab.html",
+					"examples/tabbar.html",
+					"examples/tabbar-with-submenus.html",
+					"examples/tab-with-segmented-control.html",
+					"examples/tab-with-viewpagerindicator.html",
+					"examples/tab-with-segmented-control-vertical.html",
+					"examples/tab-vertical-scroll.html",
+					"examples/indexed-list.html",
+					"examples/indexed-list-select.html"
+				],
+				"priority": 0
+			},
+			"index.html": {
+				"href": "index.html",
+				"resources": [
+					"stream.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"js/update.js"
+				],
+				"refer": [
+					"list.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"images/2.jpg",
+				"js/strophe-custom-2.0.0.js",
+				"images/5.jpg",
+				"images/1.jpg",
+				"js/jquery-1.11.1.js",
+				"css/mui.css",
+				"images/3.jpg",
+				"images/4.jpg"
+			]
+		}
+	}
+}

@@ -1,0 +1,782 @@
+{
+  "examples/tab-webview-main.html": {
+    "href": "examples/tab-webview-main.html",
+    "priority": 0
+  },
+  "examples/pullrefresh_sub.html": {
+    "href": "examples/pullrefresh_sub.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/pullrefresh_main.html": {
+    "href": "examples/pullrefresh_main.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "examples/pullrefresh_sub.html"
+    ],
+    "priority": 0
+  },
+  "examples/accordion.html": {
+    "href": "examples/accordion.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "images/yuantiao.jpg",
+      "images/shuijiao.jpg",
+      "images/muwu.jpg",
+      "images/cbd.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/ajax.html": {
+    "href": "examples/ajax.html",
+    "priority": 0
+  },
+  "examples/badges.html": {
+    "href": "examples/badges.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/card.html": {
+    "href": "examples/card.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "images/logo.png",
+      "images/yuantiao.jpg",
+      "images/cbd.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/checkbox.html": {
+    "href": "examples/checkbox.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/dialog.html": {
+    "href": "examples/dialog.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/input.html": {
+    "href": "examples/input.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/media-list.html": {
+    "href": "examples/media-list.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "images/shuijiao.jpg",
+      "images/muwu.jpg",
+      "images/cbd.jpg",
+      "images/yuantiao.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/numbox.html": {
+    "href": "examples/numbox.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/pagination.html": {
+    "href": "examples/pagination.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/picker.html": {
+    "href": "examples/picker.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "css/mui.picker.css",
+      "css/mui.poppicker.css",
+      "js/mui.min.js",
+      "js/mui.picker.js",
+      "js/mui.poppicker.js",
+      "js/city.data.js",
+      "js/city.data-3.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/popovers.html": {
+    "href": "examples/popovers.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/progressbar.html": {
+    "href": "examples/progressbar.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/radio.html": {
+    "href": "examples/radio.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/range.html": {
+    "href": "examples/range.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/switches.html": {
+    "href": "examples/switches.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/typography.html": {
+    "href": "examples/typography.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/ad.html": {
+    "href": "examples/ad.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/echarts.html": {
+    "href": "examples/echarts.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/echarts-all.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/im-chat.html": {
+    "href": "examples/im-chat.html",
+    "priority": 0
+  },
+  "examples/clouddb_wilddog.html": {
+    "href": "examples/clouddb_wilddog.html",
+    "priority": 0
+  },
+  "examples/beecloud.html": {
+    "href": "examples/beecloud.html",
+    "priority": 0
+  },
+  "examples/feedback.html": {
+    "href": "examples/feedback.html",
+    "priority": 0
+  },
+  "examples/imageviewer.html": {
+    "href": "examples/imageviewer.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/mui.zoom.js",
+      "js/mui.previewimage.js",
+      "css/mui.min.css",
+      "images/yuantiao.jpg",
+      "images/muwu.jpg",
+      "images/shuijiao.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/lazyload-image.html": {
+    "href": "examples/lazyload-image.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/mui.lazyload.js",
+      "js/mui.lazyload.img.js",
+      "images/60x60.gif",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/locker-dom.html": {
+    "href": "examples/locker-dom.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "js/mui.locker.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/login.html": {
+    "href": "examples/login.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "images/login-1.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/setting.html": {
+    "href": "examples/setting.html",
+    "resources": [
+      "js/mui.min.js",
+      "js/mui.view.js",
+      "js/feedback.js",
+      "js/feedback-page.js",
+      "images/logo.png",
+      "css/mui.min.css",
+      "css/feedback-page.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/actionsheet.html": {
+    "href": "examples/actionsheet.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/actionsheet-plus.html": {
+    "href": "examples/actionsheet-plus.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/buttons.html": {
+    "href": "examples/buttons.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/buttons-with-icons.html": {
+    "href": "examples/buttons-with-icons.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/buttons-with-badges.html": {
+    "href": "examples/buttons-with-badges.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/buttons-with-block.html": {
+    "href": "examples/buttons-with-block.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/dtpicker.html": {
+    "href": "examples/dtpicker.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "css/mui.picker.min.css",
+      "js/mui.min.js",
+      "js/mui.picker.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/date.html": {
+    "href": "examples/date.html",
+    "priority": 0
+  },
+  "examples/slider-default.html": {
+    "href": "examples/slider-default.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js",
+      "images/yuantiao.jpg",
+      "images/shuijiao.jpg",
+      "images/muwu.jpg",
+      "images/cbd.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/slider-with-title.html": {
+    "href": "examples/slider-with-title.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "images/yuantiao.jpg",
+      "images/shuijiao.jpg",
+      "images/muwu.jpg",
+      "images/cbd.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/slider-table-default.html": {
+    "href": "examples/slider-table-default.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "images/shuijiao.jpg",
+      "images/muwu.jpg",
+      "images/cbd.jpg",
+      "images/yuantiao.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/slider-table-pagination.html": {
+    "href": "examples/slider-table-pagination.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "images/cbd.jpg",
+      "images/yuantiao.jpg",
+      "images/shuijiao.jpg",
+      "images/muwu.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/grid-default.html": {
+    "href": "examples/grid-default.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/grid-pagination.html": {
+    "href": "examples/grid-pagination.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/icons.html": {
+    "href": "examples/icons.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/icons-extra.html": {
+    "href": "examples/icons-extra.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/icons-extra.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tableviews.html": {
+    "href": "examples/tableviews.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tableviews-with-badges.html": {
+    "href": "examples/tableviews-with-badges.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/list-with-input.html": {
+    "href": "examples/list-with-input.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/list-triplex-row.html": {
+    "href": "examples/list-triplex-row.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tableviews-with-collapses.html": {
+    "href": "examples/tableviews-with-collapses.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tableviews-with-swipe.html": {
+    "href": "examples/tableviews-with-swipe.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/nav.html": {
+    "href": "examples/nav.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/nav_transparent.html": {
+    "href": "examples/nav_transparent.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "images/yuantiao.jpg",
+      "images/shuijiao.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/offcanvas-drag-right-plus-main.html": {
+    "href": "examples/offcanvas-drag-right-plus-main.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/offcanvas-drag-left-plus-main.html": {
+    "href": "examples/offcanvas-drag-left-plus-main.html",
+    "priority": 0
+  },
+  "examples/offcanvas-drag-right.html": {
+    "href": "examples/offcanvas-drag-right.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/offcanvas-drag-left.html": {
+    "href": "examples/offcanvas-drag-left.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/offcanvas-drag-down.html": {
+    "href": "examples/offcanvas-drag-down.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/pullrefresh_with_tab.html": {
+    "href": "examples/pullrefresh_with_tab.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tabbar.html": {
+    "href": "examples/tabbar.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css",
+      "images/60x60.gif"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tabbar-with-submenus.html": {
+    "href": "examples/tabbar-with-submenus.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/app.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tab-with-segmented-control.html": {
+    "href": "examples/tab-with-segmented-control.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tab-with-viewpagerindicator.html": {
+    "href": "examples/tab-with-viewpagerindicator.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tab-with-segmented-control-vertical.html": {
+    "href": "examples/tab-with-segmented-control-vertical.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/tab-vertical-scroll.html": {
+    "href": "examples/tab-vertical-scroll.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/app.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/indexed-list.html": {
+    "href": "examples/indexed-list.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/mui.indexedlist.css",
+      "js/mui.min.js",
+      "js/mui.indexedlist.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "examples/indexed-list-select.html": {
+    "href": "examples/indexed-list-select.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/mui.indexedlist.css",
+      "js/mui.min.js",
+      "js/mui.indexedlist.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "list.html": {
+    "href": "list.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "examples/tab-webview-main.html",
+      "examples/pullrefresh_main.html",
+      "examples/accordion.html",
+      "examples/ajax.html",
+      "examples/badges.html",
+      "examples/card.html",
+      "examples/checkbox.html",
+      "examples/dialog.html",
+      "examples/input.html",
+      "examples/media-list.html",
+      "examples/numbox.html",
+      "examples/pagination.html",
+      "examples/picker.html",
+      "examples/popovers.html",
+      "examples/progressbar.html",
+      "examples/radio.html",
+      "examples/range.html",
+      "examples/switches.html",
+      "examples/typography.html",
+      "examples/ad.html",
+      "examples/echarts.html",
+      "examples/im-chat.html",
+      "examples/clouddb_wilddog.html",
+      "examples/beecloud.html",
+      "examples/feedback.html",
+      "examples/imageviewer.html",
+      "examples/lazyload-image.html",
+      "examples/locker-dom.html",
+      "examples/login.html",
+      "examples/setting.html",
+      "examples/actionsheet.html",
+      "examples/actionsheet-plus.html",
+      "examples/buttons.html",
+      "examples/buttons-with-icons.html",
+      "examples/buttons-with-badges.html",
+      "examples/buttons-with-block.html",
+      "examples/dtpicker.html",
+      "examples/date.html",
+      "examples/slider-default.html",
+      "examples/slider-with-title.html",
+      "examples/slider-table-default.html",
+      "examples/slider-table-pagination.html",
+      "examples/grid-default.html",
+      "examples/grid-pagination.html",
+      "examples/icons.html",
+      "examples/icons-extra.html",
+      "examples/tableviews.html",
+      "examples/tableviews-with-badges.html",
+      "examples/list-with-input.html",
+      "examples/list-triplex-row.html",
+      "examples/tableviews-with-collapses.html",
+      "examples/tableviews-with-swipe.html",
+      "examples/nav.html",
+      "examples/nav_transparent.html",
+      "examples/offcanvas-drag-right-plus-main.html",
+      "examples/offcanvas-drag-left-plus-main.html",
+      "examples/offcanvas-drag-right.html",
+      "examples/offcanvas-drag-left.html",
+      "examples/offcanvas-drag-down.html",
+      "examples/pullrefresh_with_tab.html",
+      "examples/tabbar.html",
+      "examples/tabbar-with-submenus.html",
+      "examples/tab-with-segmented-control.html",
+      "examples/tab-with-viewpagerindicator.html",
+      "examples/tab-with-segmented-control-vertical.html",
+      "examples/tab-vertical-scroll.html",
+      "examples/indexed-list.html",
+      "examples/indexed-list-select.html"
+    ],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "stream.js",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/update.js"
+    ],
+    "refer": [
+      "list.html"
+    ],
+    "priority": 0
+  }
+}
