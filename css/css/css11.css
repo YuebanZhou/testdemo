@@ -17,10 +17,11 @@ body,
   height: calc(var(--innerRadius) * 2);
   background-color: lime;
   border-radius: 50%;
+  /* shadow形成亮圈 */
   box-shadow: 0 0 0 calc(var(--innerRadius) - 0.4em) black, 0 0 0 var(--innerRadius) lime;
   position: relative;
 }
-
+/* 伪元素执行动画 */
 .circle::before,
 .circle::after {
   content: '';
@@ -35,7 +36,7 @@ body,
 .circle::after {
   animation-delay: 1s;
 }
-
+/* 动画改变缩放大小，改变透明度 */
 @keyframes pulse {
   from {
     transform: scale(1);

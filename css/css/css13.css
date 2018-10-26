@@ -23,7 +23,7 @@ body {
   border-bottom-right-radius: 1.5em;
   position: relative;
 }
-
+/* before伪元素作为咖啡 */
 .coffee .cup::before {
   content: '';
   position: absolute;
@@ -34,9 +34,10 @@ body {
   box-sizing: border-box;
   border-radius: 50%;
   top: -1em;
+  /* 内部阴影，形成杯子3D效果 */
   box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.5);
 }
-
+/* after伪元素作为把手 */
 .coffee .cup::after {
   content: '';
   position: absolute;
@@ -47,7 +48,7 @@ body {
   top: 20%;
   left: 80%;
 }
-
+/* 托盘 */
 .coffee .plate {
   width: 16em;
   height: 1em;
@@ -57,7 +58,7 @@ body {
   position: absolute;
   bottom: -1px;
 }
-
+/* 蒸汽，列居中分布 */
 .coffee .vapor {
   width: 7em;
   height: 2em;
@@ -72,7 +73,7 @@ body {
   animation: evaporation 2s linear infinite;
   filter: opacity(0);
 }
-
+/* 蒸汽的子元素执行动画延时不同 */
 .coffee .vapor span:nth-child(1) {
   animation-delay: 0.5s;
 }
@@ -92,7 +93,7 @@ body {
 .coffee .vapor span:nth-child(5) {
   animation-delay: 0.2s;
 }
-
+/* 动画改变Y方向位移，改变透明度，模糊度 */
 @keyframes evaporation {
   from {
     transform: translateY(0);

@@ -13,9 +13,12 @@ body {
   --color3: royalblue;
   --color4: dodgerblue;
 }
-
+/* 栅格布局 */
 .diamond {
   display: grid;
+  /* fr用于弹性布局，代表的是倍数，自动适应各自的border的宽度 */
+  /* 如果是两个1fr，表示除去盒子的border，两个盒子各占50%的空间 */
+  /* 如果是1fr 2fr 3fr 表示除去盒子border，三个盒子按倍数分布*/
   grid-template-columns: 1fr 1fr;
   transform: rotate(45deg);
 }
@@ -34,6 +37,7 @@ body {
   animation: animate 2s linear infinite;
 }
 
+/* border color随动画发生变化 */
 @keyframes animate {
   0% {
     border-color: var(--color1) var(--color2) var(--color3) var(--color4);

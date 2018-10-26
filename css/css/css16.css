@@ -31,11 +31,12 @@ body {
   height: calc(100% + 20%);
   border-radius: 0.5em;
   z-index: -1;
+  /* 背景图倾斜60度，渐变色 */
   background-image: linear-gradient(60deg, aquamarine, cornflowerblue, goldenrod, hotpink, salmon, lightgreen, sandybrown, violet);
   background-size: 300%;
   animation: animate_bg 5s infinite;
 }
-
+/* 背景定位发生改变 */
 @keyframes animate_bg {
   0%,
   100% {
@@ -45,7 +46,7 @@ body {
     background-position: 100%, 50%;
   }
 }
-
+/* 字体颜色发生改变 */
 @keyframes animate_text {
   from {
     color: lime;

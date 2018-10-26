@@ -4,9 +4,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* 背景渐变色 */
   background: linear-gradient(to bottom, teal, aqua);
 }
-
+/* 元素设定背景颜色 */
 .battery {
   width: 6em;
   height: 3em;
@@ -21,7 +22,7 @@ body {
   background-position: top 0.3em left 0.3em;
   animation: charge 5s steps(8) infinite;
 }
-
+/* 充电图标电视电极 */
 .battery::after {
   content: '';
   position: absolute;
@@ -32,7 +33,7 @@ body {
   right: -1em;
   border-radius: 0 0.2em 0.2em 0;
 }
-
+/* 动画改变背景颜色的尺寸 */
 @keyframes charge {
   from {
     background-size: 10% 80%;

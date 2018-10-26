@@ -7,7 +7,7 @@ body,
   justify-content: center;
   background-color: black;
 }
-
+/* 三个元素设置不同大小，隐藏部分边框，形成圆角 */
 .circle,
 .circle::before,
 .circle::after {
@@ -33,7 +33,7 @@ body,
   content: '';
   position: absolute;
 }
-
+/* 三个元素执行动画时间不同 */
 .circle::before {
   width: 70%;
   height: 70%;

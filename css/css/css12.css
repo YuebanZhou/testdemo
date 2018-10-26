@@ -13,7 +13,7 @@ body {
   position: relative;
   color: transparent;
 }
-
+/* 伪元素组成字体 */
 .text::before,
 .text::after {
   content: attr(data-text);
@@ -23,7 +23,7 @@ body {
   color: lightyellow;
   transition: 0.2s;
 }
-
+/* 伪元素切割元素，分成两部分 */
 .text::before {
   /* 	background-color: darkgreen; */
   clip-path: polygon(0 0, 60% 0, 30% 100%, 0 100%);
@@ -33,7 +33,7 @@ body {
   /*background-color: darkblue;*/
   clip-path: polygon(60% 0, 100% 0, 100% 100%, 30% 100%);
 }
-
+/* 鼠标悬浮的时候旋转一定的角度 */
 .text:hover::before {
   left: -0.15em;
   transform: rotate(-5deg);

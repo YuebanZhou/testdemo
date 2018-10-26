@@ -21,7 +21,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-
+/* 两个元素，倾斜一定角度 */
 .box .inner:first-child {
   background-color: indianred;
   color: darkred;
@@ -45,7 +45,7 @@ body {
   animation-delay: 2.5s;
   left: -100%;
 }
-
+/* 动画改变定位 */
 @keyframes marquee {
   from {
     left: 100%;

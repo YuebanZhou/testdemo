@@ -17,6 +17,7 @@ body {
   line-height: 3em;
   letter-spacing: 0.2em;
   position: relative;
+  /* 设置元素焦点的清晰度 */
   filter: blur(2px);
   transition: 0.5s;
 }
@@ -35,7 +36,7 @@ body {
   left: 3em;
   filter: opacity(0);
 }
-
+/* 除了第一个元素，剩下的四个元素，设置透明度 */
 .box span:not(:first-child) {
   position: absolute;
   background-color: red;

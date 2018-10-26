@@ -23,7 +23,9 @@ body,
   border-color: white rgba(255, 255, 255, 0.2);
   width: calc(20% + 20% * (5 - var(--n)));
   height: calc(20% + 20% * (5 - var(--n)));
+  /* 执行同一个动画 */
   animation: animate 5s ease-in-out infinite alternate;
+  /* 动画延时不同 */
   animation-delay: calc(0.2s * (5 - var(--n)));
 }
 
@@ -46,7 +48,7 @@ body,
 .loader span:nth-child(5) {
   --n: 5;
 }
-
+/* 动画改变旋转角度改变颜色 */
 @keyframes animate {
   0% {
     /* red */

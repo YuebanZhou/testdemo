@@ -40,7 +40,7 @@ body {
   color: silver;
   transition: 0.3s ease-out;
 }
-
+/* 伪元素将元素切割为上下两部分 */
 .menu li::before {
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
