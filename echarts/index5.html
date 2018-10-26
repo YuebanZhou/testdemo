@@ -20,45 +20,50 @@
   var myChart = echarts.init(document.getElementById("myChart"));
   // 进行设置
   var option = {
-    title: {
-      text: '世界人口总量',
-      subtext: '数据来自网络'
-    },
     tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'shadow'
-      }
+      show: false,
     },
-    legend: {
-      show:true,
-      data: ['2011年', '2012年']
-    },
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
-    xAxis: {
-      type: 'value',
-      boundaryGap: [0, 0.01]
-    },
-    yAxis: {
-      type: 'category',
-      data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']
-    },
+    legend: [{
+      selectedMode: false,
+      // selectedMode: 'single',
+      //data: categories.map(a => a.name),
+    }],
     series: [{
-        name: '2011年',
-        type: 'bar',
-        data: [18203, 23489, 29034, 104970, 131744, 630230]
+      cursor: 'auto',
+      /*  name: 'Les Miserables', */
+      type: 'graphGL',
+      layout: 'forceAtlas2',
+      data: fliterNodes,
+      links,
+      categories,
+      // 标记的大小
+      symbolSize: 30,
+      focusNodeAdjacencyOn: 'none',
+      forceAtlas2: {
+        stopThreshold: 1,
+        // 越大加载速度越快？
+        steps: 30,
+        // 向心力，越大越向中间靠拢
+        gravity: 500,
+        // 节点间斥力
+        scaling: 1111,
+        /*   linLogMode:true, */
+        preventOverlap: true,
+        /*      jitterTolerence: 10,
+                            edgeWeightInfluence: 4
+      */
       },
-      {
-        name: '2012年',
-        type: 'bar',
-        data: [19325, 23438, 31000, 121594, 134141, 681807]
-      }
-    ]
+      // 开启鼠标缩放
+      roam: true,
+      label: {
+        normal: {
+          show: true,
+          textStyle: {
+            fontSize: 14,
+          },
+        },
+      },
+    }],
   };
 
   // 绘制chart应用设置
@@ -66,7 +71,6 @@
   //chart.component.legend.getColor("2011年");
   console.log(myChart)
   console.log(myChart.chart)
-  
 </script>
 
 </html>
