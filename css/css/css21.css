@@ -13,7 +13,7 @@ h1 {
   text-align: center;
   position: relative;
 }
-
+/* 伪元素形成背景效果 */
 h1::after {
   content: '?';
   position: absolute;
