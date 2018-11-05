@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div id="header">模拟增删改查</div>
+    <div id="content">
+        全选<input type="checkbox" class="checkall">
+        <ul>
+            <li class="list1">
+                <input type="checkbox" class="checksin"><br>
+                名称:<span class="name">list1</span><br>
+                单价:<span class="price">123</span><br>
+                数量:
+                <div class="opera">
+                    <span class="plus">+</span>
+                    <input type="text" class="numchange" value="1">
+                    <span class="sub">-</span>
+                </div>
+            </li>
+            <li class="list2">
+                <input type="checkbox" class="checksin"><br>
+                名称:<span class="name">list2</span><br>
+                单价:<span class="price">234</span><br>
+                数量:
+                <div class="opera">
+                    <span class="plus">+</span>
+                    <input type="text" class="numchange" value="2">
+                    <span class="sub">-</span>
+                </div>
+            </li>
+            <li class="list3">
+                <input type="checkbox" class="checksin"><br>
+                名称:<span class="name">list3</span><br>
+                单价:<span class="price">345</span><br>
+                数量:
+                <div class="opera">
+                    <span class="plus">+</span>
+                    <input type="text" class="numchange" value="3">
+                    <span class="sub">-</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        结算
+        总价钱:<span class="allprice">0</span>
+        总数量:<span class="allnum">0</span>
+        <button class="del" onclick="del()">删除</button>
+    </div>
+    <script src="./jquery-3.1.0.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    height: 50px;
+    line-height: 50px;
+    background-color: #999;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+ul li {
+    list-style: none;
+    height: 125px;
+    background-color: #ccc;
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.name,
+.price,
+.num {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.opera span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: #eee;
+    line-height: 30px;
+    text-align: center;
+}
+
+.plus,
+.sub {
+    cursor: pointer;
+    border: 1px solid #666;
+}
+
+.numchange {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
