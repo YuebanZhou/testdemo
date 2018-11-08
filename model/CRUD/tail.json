@@ -1,0 +1,50 @@
+[{
+        "name": "纳兹·多拉格尼尔",
+        "sex": "男",
+        "party": "妖精的尾巴",
+        "proper": "火-灭龙魔导师",
+        "level": "END"
+    },
+    {
+        "name": "温蒂",
+        "sex": "女",
+        "party": "妖精的尾巴",
+        "proper": "空-灭龙魔导师",
+        "level": "SS"
+    },
+    {
+        "name": "罗格",
+        "sex": "男",
+        "party": "剑咬之虎",
+        "proper": "影-灭龙魔导师",
+        "level": "SS"
+    },
+    {
+        "name": "斯汀",
+        "sex": "男",
+        "party": "剑咬之虎",
+        "proper": "光-灭龙魔导师",
+        "level": "SS"
+    },
+    {
+        "name": "克布拉",
+        "sex": "男",
+        "party": "魔女之罪",
+        "proper": "毒-灭龙魔导师",
+        "level": "SS"
+    },
+    {
+        "name": "拉库萨斯",
+        "sex": "男",
+        "party": "妖精的尾巴",
+        "proper": "雷-灭龙魔导师",
+        "level": "百年"
+    },
+    {
+        "name": "葛吉尔",
+        "sex": "男",
+        "party": "妖精的尾巴",
+        "proper": "铁-灭龙魔导师",
+        "level": "SS"
+    }
+]
