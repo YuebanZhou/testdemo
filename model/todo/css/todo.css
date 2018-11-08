@@ -1,0 +1,119 @@
+body {
+  background: #F3E7B9;
+  min-width: 775px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tab {
+  height: 100px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.tab div {
+  width: 150px;
+  float: left;
+  font-size: 18px;
+  border: 5px dotted #F96B36;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.tab span {
+  color: #F96B36;
+}
+
+.add {
+  cursor: pointer;
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background: linear-gradient(#FF9B00, #FF7B00);
+  border: 1px solid #EC7800;
+  line-height: 30px;
+  text-align: center;
+}
+
+.add:active {
+  background: linear-gradient(#FF7B00, #FF9B00);
+}
+
+ul li {
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+}
+
+.check {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.bac {
+  background-color: steelblue;
+}
+
+.line {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.close {
+  float: right;
+  margin-right: 20px;
+  color: #F96B36;
+  cursor: pointer;
+  height: 30px;
+}
+
+.model {
+  width: 300px;
+  height: 150px;
+  background: #eee;
+  padding: 10px;
+  display: none;
+  box-shadow: 0px 0px 20px #666;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+fieldset {
+  border: 2px dashed #F96B36;
+  height: 130px;
+}
+fieldset input {
+  height: 40px;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+fieldset div {
+  cursor: pointer;
+  color: #fff;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background: linear-gradient(#FF9B00, #FF7B00);
+  border: 1px solid #EC7800;
+  line-height: 30px;
+  text-align: center;
+  float: right;
+  margin: 10px;
+}
+fieldset div:active {
+  background: linear-gradient(#FF7B00, #FF9B00);
+}
