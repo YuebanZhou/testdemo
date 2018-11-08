@@ -13,6 +13,10 @@ if (temp == null) {
 }
 // 获取对象数据
 var listAll = JSON.parse(temp);
+var end=[];
+var noend=[];
+
+
 redata();
 
 // 点击事件，改变状态，用事件代理
@@ -91,6 +95,34 @@ $(".alldata ul").on("click", ".close", function() {
   redata();
 });
 
+// 筛选全部
+$(".all").on("click",function(){
+  $(".end").removeClass("tabactive");
+  $(".noend").removeClass("tabactive");
+  $(".all").addClass("tabactive");
+  redata();
+  
+})
+// 筛选已完成
+$(".end").on("click",function(){
+  $(".all").removeClass("tabactive");
+  $(".noend").removeClass("tabactive");
+
+  $(".end").addClass("tabactive");
+
+  redataend();
+  
+})
+// 筛选未完成
+$(".noend").on("click",function(){
+  $(".end").removeClass("tabactive");
+  $(".all").removeClass("tabactive");
+
+  $(".noend").addClass("tabactive");
+
+  redatanoend();
+  
+})
 var adddate = "";
 function getTime() {
   var myDate = new Date();
@@ -165,4 +197,36 @@ function redata() {
   $(".end span").html(end.length);
   $(".noend span").html(noend.length);
   localStorage.setItem("temp", JSON.stringify(listAll));
+}
+
+function redataend() {
+  var str = "";
+  for (var i = 0; i < listAll.length; i++) {
+    if (listAll[i].status == 1) {
+      str +=
+      "<li class='line'>"+
+        "<span class='check bac'></span>"+
+        "<span class='msg'>"+listAll[i].list+"</span>"+
+        "<span class='edit'>编辑</span>"+
+        "<span class='close'>X</span>"+
+      "</li>"
+    } 
+  }
+  $(".alldata ul").html(str);
+}
+
+function redatanoend() {
+  var str = "";
+  for (var i = 0; i < listAll.length; i++) {
+    if (listAll[i].status == 0) {
+      str +=
+      "<li>"+
+        "<span class='check'></span>"+
+        "<span class='msg'>"+listAll[i].list+"</span>"+
+        "<span class='edit'>编辑</span>"+
+        "<span class='close'>X</span>"+
+      "</li>"
+    } 
+  }
+  $(".alldata ul").html(str);
 }
