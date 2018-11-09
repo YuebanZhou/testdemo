@@ -25,7 +25,6 @@ redata();
 modelope();
 delall();
 check();
-
 // 渲染表格函数
 function redata() {
     var str = "";
