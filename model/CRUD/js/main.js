@@ -1,10 +1,13 @@
 // 取数据
 var temp = localStorage.getItem("temp");
+// 获取对象数据
+var listAll = JSON.parse(temp);
 // 若没有缓存
 if (temp == null) {
     var alldata = [];
     $.ajax({
         url: "./tail.json",
+        async: false,
         type: "post",
         dataType: "json",
         success: function (data) {
@@ -12,20 +15,46 @@ if (temp == null) {
                 alldata.push(data[i]);
             };
             localStorage.setItem("temp", JSON.stringify(alldata));
+            temp = localStorage.getItem("temp");
+            listAll = JSON.parse(temp);
         }
     })
 }
-// 获取对象数据
-var listAll = JSON.parse(temp);
 
 redata();
 modelope();
 delall();
-check()
+check();
+
 // 渲染表格函数
 function redata() {
     var str = "";
     for (var i = 0; i < listAll.length; i++) {
+        str +=
+            '<tr>' +
+            '<td><input type="checkbox" name="tail" id="" class="checksin"></td>' +
+            '<td>' + listAll[i].name + '</td>' +
+            '<td>' + listAll[i].sex + '</td>' +
+            '<td>' + listAll[i].party + '</td>' +
+            '<td>' + listAll[i].proper + '</td>' +
+            '<td>' + listAll[i].level + '</td>' +
+            '<td>' +
+            '    <div class="ope edit">编辑</div>' +
+            '    <div class="ope del">删除</div>' +
+            '</td>' +
+            '</tr>'
+    }
+    $("tbody").html(str);
+    localStorage.setItem("temp", JSON.stringify(listAll));
+}
+
+function redatapage() {
+    // 开始的索引
+    var start = (nowpage - 1) * sinlen;
+    // 结束的索引
+    var end = start + sinlen;
+    var str = "";
+    for (var i = start; i < end; i++) {
         str +=
             '<tr>' +
             '<td><input type="checkbox" name="tail" id="" class="checksin"></td>' +
@@ -95,6 +124,7 @@ function modelope() {
 
     // 删除
     $("tbody").on("click", ".del", function () {
+        console.log(listAll);
         var index = $(this).parents("tr").index();
         listAll.splice(index, 1);
         redata();
@@ -148,13 +178,13 @@ function delall() {
                 $(this).parents("tr").remove();
             }
         });
-        listAll=[];
-        $("tbody tr").each(function(){
-            var name=$(this).children("td").eq(1).html();
-            var sex=$(this).children("td").eq(2).html();
-            var party=$(this).children("td").eq(3).html();
-            var proper=$(this).children("td").eq(4).html();
-            var level=$(this).children("td").eq(5).html();
+        listAll = [];
+        $("tbody tr").each(function () {
+            var name = $(this).children("td").eq(1).html();
+            var sex = $(this).children("td").eq(2).html();
+            var party = $(this).children("td").eq(3).html();
+            var proper = $(this).children("td").eq(4).html();
+            var level = $(this).children("td").eq(5).html();
             listAll.push({
                 "name": name,
                 "sex": sex,
@@ -166,3 +196,4 @@ function delall() {
         localStorage.setItem("temp", JSON.stringify(listAll));
     })
 }
+

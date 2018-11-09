@@ -1,16 +1,19 @@
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
 .contain {
-    width: 80%;
+    width: 800px;
     margin: 0 auto;
     padding-top: 20px;
 }
+
 table {
     width: 800px;
     margin: 0 auto;
@@ -36,21 +39,27 @@ td {
 td:nth-child(1) {
     width: 5%;
 }
+
 td:nth-child(2) {
     width: 20%;
 }
+
 td:nth-child(3) {
     width: 5%;
 }
+
 td:nth-child(4) {
     width: 19%;
 }
+
 td:nth-child(5) {
     width: 19%;
 }
+
 td:nth-child(6) {
     width: 10%;
 }
+
 td:nth-child(7) {
     width: 20%;
 }
@@ -82,9 +91,11 @@ td:nth-child(7) {
 .tractive {
     background-color: #ddd;
 }
+
 .footer {
     height: 50px;
 }
+
 .add {
     width: 50px;
     background-color: #51A736;
@@ -92,6 +103,7 @@ td:nth-child(7) {
     text-align: center;
     float: left;
 }
+
 .delall {
     width: 50px;
     background-color: #EA4D45;
@@ -99,15 +111,17 @@ td:nth-child(7) {
     text-align: center;
     float: left;
 }
+
 .mask {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     left: 0;
     top: 0;
     display: none;
 }
+
 .model {
     background-color: #eee;
     border: 5px dashed #009DCE;
@@ -120,20 +134,24 @@ td:nth-child(7) {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .model>div {
     height: 40px;
     line-height: 40px;
 }
+
 .model input {
     height: 25px;
     width: 170px;
 }
+
 .model select {
     height: 30px;
     width: 175px;
 }
+
 .true {
     width: 50px;
     background-color: #51A736;
@@ -141,10 +159,75 @@ td:nth-child(7) {
     text-align: center;
     float: right;
 }
+
 .false {
     width: 50px;
     background-color: #EA4D45;
     border: 1px solid #B84F4D;
     text-align: center;
     float: right;
+}
+
+.page {
+    height: 40px;
+}
+
+.page .total {
+    font-size: 17px;
+    float: left;
+    margin: 5px;
+    width: 45px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.pagebtn div {
+    font-size: 12px;
+    float: left;
+    margin: 5px;
+    width: 45px;
+    height: 25px;
+    background-color: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.pagebtn .pageactive {
+    background-color: #111;
+}
+
+.jump {
+    float: left;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 20px;
+}
+
+.jump .msg {
+    float: left;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+
+}
+.jump .msg input {
+    width: 50px;
+}
+.jump .jumpbtn {
+    float: left;
+    margin: 5px;
+    width: 45px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #333;
 }
