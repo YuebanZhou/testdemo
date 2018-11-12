@@ -1,0 +1,119 @@
+{
+    "fatherlist": {
+        "生活用品": [{
+                "name": "毛巾",
+                "num": 1234,
+                "quality": 5,
+                "msg":"毛巾msg毛巾msg毛巾msg毛巾msg毛巾msg毛巾msg毛巾msg毛巾msg"
+            },
+            {
+                "name": "水杯",
+                "num": 5678,
+                "quality": 3,
+                "msg":"水杯msg水杯msg水杯msg水杯msg水杯msg水杯msg水杯msg水杯msg"
+            },
+            {
+                "name": "花盆",
+                "num": 1000,
+                "quality": 1,
+                "msg":"花盆msg花盆msg花盆msg花盆msg花盆msg花盆msg花盆msg花盆msg"
+            }
+        ],
+        "电子产品": [{
+                "name": "手机",
+                "num": 2345,
+                "quality": 4,
+                "msg":"手机msg手机msg手机msg手机msg手机msg手机msg手机msg手机msg"
+            },
+            {
+                "name": "电视",
+                "num": 1234,
+                "quality": 4,
+                "msg":"电视msg电视msg电视msg电视msg电视msg电视msg电视msg电视msg"
+            },
+            {
+                "name": "平板",
+                "num": 2345,
+                "quality": 4,
+                "msg":"平板msg平板msg平板msg平板msg平板msg平板msg平板msg平板msg"
+            }
+        ],
+        "衣物鞋子": [{
+                "name": "外套",
+                "num": 5678,
+                "quality": 3,
+                "msg":"外套msg外套msg外套msg外套msg外套msg外套msg外套msg外套msg"
+            },
+            {
+                "name": "裤子",
+                "num": 5678,
+                "quality": 3,
+                "msg":"裤子msg裤子msg裤子msg裤子msg裤子msg裤子msg裤子msg裤子msg"
+            },
+            {
+                "name": "靴子",
+                "num": 5678,
+                "quality": 2,
+                "msg":"靴子msg靴子msg靴子msg靴子msg靴子msg靴子msg靴子msg靴子msg"
+            }
+        ],
+        "水产米粮": [{
+                "name": "大米",
+                "num": 2222,
+                "quality": 5,
+                "msg":"大米msg大米msg大米msg大米msg大米msg大米msg大米msg大米msg"
+            },
+            {
+                "name": "面粉",
+                "num": 1111,
+                "quality": 5,
+                "msg":"面粉msg面粉msg面粉msg面粉msg面粉msg面粉msg面粉msg面粉msg"
+            },
+            {
+                "name": "粮油",
+                "num": 3333,
+                "quality": 5,
+                "msg":"粮油msg粮油msg粮油msg粮油msg粮油msg粮油msg粮油msg粮油msg"
+            }
+        ],
+        "日化清洁": [{
+                "name": "洗面奶",
+                "num": 2222,
+                "quality": 4,
+                "msg":"洗面奶洗msg洗面奶msg洗面奶msg洗面奶msg洗面奶msg洗面奶msg洗面奶msg洗面奶msg"
+            },
+            {
+                "name": "牙膏",
+                "num": 4444,
+                "quality": 4,
+                "msg":"牙膏msg牙膏msg牙膏msg牙膏msg牙膏msg牙膏msg牙膏msg牙膏msg"
+            },
+            {
+                "name": "面膜",
+                "num": 1111,
+                "quality": 4,
+                "msg":"面膜msg面膜msg面膜msg面膜msg面膜msg面膜msg面膜msg面膜msg"
+            }
+        ],
+        "书籍杂志": [{
+                "name": "精装书",
+                "num": 1111,
+                "quality": 5,
+                "msg":"精装书精msg精装书msg精装书msg精装书msg精装书msg精装书msg精装书msg精装书msg"
+            },
+            {
+                "name": "漫画",
+                "num": 4444,
+                "quality": 3,
+                "msg":"漫画msg漫画msg漫画msg漫画msg漫画msg漫画msg漫画msg漫画msg"
+            },
+            {
+                "name": "杂志",
+                "num": 3333,
+                "quality": 3,
+                "msg":"杂志msg杂志msg杂志msg杂志msg杂志msg杂志msg杂志msg杂志msg"
+            }
+        ]
+    },
+    "msg": 200
+}

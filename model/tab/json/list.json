@@ -1,0 +1,101 @@
+{
+    "fatherlist": {
+        "生活用品": [{
+                "name": "毛巾",
+                "num": 1234,
+                "quality": 5
+            },
+            {
+                "name": "水杯",
+                "num": 5678,
+                "quality": 3
+            },
+            {
+                "name": "花盆",
+                "num": 1000,
+                "quality": 1
+            }
+        ],
+        "电子产品": [{
+                "name": "手机",
+                "num": 2345,
+                "quality": 4
+            },
+            {
+                "name": "电视",
+                "num": 1234,
+                "quality": 4
+            },
+            {
+                "name": "平板",
+                "num": 2345,
+                "quality": 4
+            }
+        ],
+        "衣物鞋子": [{
+                "name": "外套",
+                "num": 5678,
+                "quality": 3
+            },
+            {
+                "name": "裤子",
+                "num": 5678,
+                "quality": 3
+            },
+            {
+                "name": "靴子",
+                "num": 5678,
+                "quality": 2
+            }
+        ],
+        "水产米粮": [{
+                "name": "大米",
+                "num": 2222,
+                "quality": 5
+            },
+            {
+                "name": "面粉",
+                "num": 1111,
+                "quality": 5
+            },
+            {
+                "name": "粮油",
+                "num": 3333,
+                "quality": 5
+            }
+        ],
+        "日化清洁": [{
+                "name": "洗面奶",
+                "num": 2222,
+                "quality": 4
+            },
+            {
+                "name": "牙膏",
+                "num": 4444,
+                "quality": 4
+            },
+            {
+                "name": "面膜",
+                "num": 1111,
+                "quality": 4
+            }
+        ],
+        "书籍杂志": [{
+                "name": "精装书",
+                "num": 1111,
+                "quality": 5
+            },
+            {
+                "name": "漫画",
+                "num": 4444,
+                "quality": 3
+            },
+            {
+                "name": "杂志",
+                "num": 3333,
+                "quality": 3
+            }
+        ]
+    },
+    "msg": 200
+}
