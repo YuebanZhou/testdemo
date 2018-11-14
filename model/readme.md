@@ -23,6 +23,12 @@
 - 实时改变价钱数量
 <img src="./readmeimg/img004.png" style="zoom:50%;">
 
+# slider
+- 简单轮播图
+- 悬浮显示缩略图
+- 左右切换
+<img src="./readmeimg/img008.png" style="zoom:100%;">
+
 # tab
 - 模拟手风琴菜单
 - 本地json模拟后台数据

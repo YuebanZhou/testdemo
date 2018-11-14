@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+    float: left;
+}
+.container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px auto;
+    position: relative;
+}
+.imgul {
+    width: 1500px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imgul>li {
+    width: 20%;
+    height: 300px;
+}
+.container img {
+    width: 100%;
+    height: 300px;
+}
+.dot {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+.dot li {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+}
+.dot li:nth-child(5) {
+    margin-right: 0;
+}
+.btn div {
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(255,255,255,0.4);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+.left {
+    left: 10px;
+}
+.right {
+    right: 10px;
+}
+.dot li.active {
+    background-color: #aaa;
+}
+.small {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    position: absolute;
+    left: 95px;
+    bottom: 35px;
+    display: none;
+    border:1px solid #ccc;
+}
+.small::after {
+    content: "";
+    border-top: 5px solid #ccc;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+}

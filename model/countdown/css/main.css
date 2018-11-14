@@ -1,0 +1,45 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.con {
+    padding: 20px;
+}
+
+.time {
+    height: 100px;
+    line-height: 50px;
+}
+
+.timeresult {
+    height: 50px;
+    line-height: 50px;
+}
+
+.count {
+    height: 150px;
+    line-height: 50px;
+}
+
+.start {
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+    background-color: #333;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+.end {
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    float: left;
+    background-color: #333;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
