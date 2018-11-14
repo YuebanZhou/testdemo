@@ -4,6 +4,13 @@
 - 可以跳回当前日期
 <img src="./readmeimg/img001.png" style="zoom:50%;">
 
+# countdown
+- 日期倒计时
+- input输入框选择日期时刻
+- 显示当前时间
+- 计算时间差值
+<img src="./readmeimg/img009.png" style="zoom:50%;">
+
 # CRUD
 - 表格增删改demo
 - 可编辑，可单项删除，可批量删除
@@ -28,6 +35,10 @@
 - 悬浮显示缩略图
 - 左右切换
 <img src="./readmeimg/img008.png" style="zoom:100%;">
+
+# sort
+- 对象中某一属性作为关键字进行排序
+- 汉字根据转换的Unicode进行排序
 
 # tab
 - 模拟手风琴菜单
