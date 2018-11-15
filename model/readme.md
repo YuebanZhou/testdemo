@@ -22,6 +22,11 @@
 - 鼠标拖拽
 <img src="./readmeimg/img003.png" style="zoom:50%;">
 
+# page
+- 表格增删改添加了分页功能
+- 每页显示的数据条数可控
+<img src="./readmeimg/img010.png" style="zoom:50%;">
+
 # shopcar
 - 模拟购物车
 - 商品数量增减

@@ -1,0 +1,276 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.contain {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.search {
+    height: 82px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px dotted #444;
+    margin-bottom: 10px;
+}
+.search>div {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+
+.search input {
+    height: 25px;
+    width: 170px;
+}
+
+.search select {
+    height: 30px;
+    width: 175px;
+}
+
+div.searchbtn {
+    width: 50px;
+    height: 30px;
+    box-sizing: border-box;
+    line-height: 22px;
+    background-color: #51A736;
+    border: 1px solid #319517;
+    text-align: center;
+    float: right;
+}
+
+table {
+    width: 800px;
+    margin: 0 auto;
+}
+
+thead tr {
+    background-color: #009BCD;
+    color: #fff;
+}
+
+tr {
+    color: #000;
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    text-align: center;
+}
+
+td {
+    display: inline-block;
+}
+
+td:nth-child(1) {
+    width: 5%;
+}
+
+td:nth-child(2) {
+    width: 5%;
+}
+
+td:nth-child(3) {
+    width: 14%;
+}
+
+td:nth-child(4) {
+    width: 5%;
+}
+
+td:nth-child(5) {
+    width: 19%;
+}
+
+td:nth-child(6) {
+    width: 19%;
+}
+
+td:nth-child(7) {
+    width: 10%;
+}
+
+td:nth-child(8) {
+    width: 20%;
+}
+
+
+
+
+.ope {
+    color: #fff;
+    width: 30%;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.edit {
+    float: left;
+    background-color: #00C4E1;
+    border: 1px solid #54AAC4;
+}
+
+.del {
+    float: right;
+    background-color: #EA4D45;
+    border: 1px solid #B84F4D;
+}
+
+.tractive {
+    background-color: #ddd;
+}
+
+.footer {
+    height: 50px;
+    line-height: 50px;
+}
+
+.add {
+    width: 50px;
+    background-color: #51A736;
+    border: 1px solid #319517;
+    text-align: center;
+    float: left;
+}
+
+.delall {
+    width: 50px;
+    background-color: #EA4D45;
+    border: 1px solid #B84F4D;
+    text-align: center;
+    float: left;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.model {
+    background-color: #eee;
+    border: 5px dashed #009DCE;
+    width: 300px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #333;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.model>div {
+    height: 40px;
+    line-height: 40px;
+}
+
+.model input {
+    height: 25px;
+    width: 170px;
+}
+
+.model select {
+    height: 30px;
+    width: 175px;
+}
+
+.true {
+    width: 50px;
+    background-color: #51A736;
+    border: 1px solid #319517;
+    text-align: center;
+    float: right;
+}
+
+.false {
+    width: 50px;
+    background-color: #EA4D45;
+    border: 1px solid #B84F4D;
+    text-align: center;
+    float: right;
+}
+
+.page {
+    height: 40px;
+}
+
+.page .total {
+    font-size: 17px;
+    float: left;
+    margin: 5px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.pagebtn div:not(.repagebtn) {
+    font-size: 12px;
+    float: left;
+    margin: 5px;
+    width: 45px;
+    height: 25px;
+    background-color: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.pagebtn div.pageactive {
+    background-color: #111;
+}
+
+.jump {
+    float: left;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 20px;
+}
+
+.jump .msg {
+    float: left;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+
+}
+
+.jump .msg input {
+    width: 50px;
+}
+
+.jump .jumpbtn {
+    float: left;
+    margin: 5px;
+    width: 45px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #333;
+}

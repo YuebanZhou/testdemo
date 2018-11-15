@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="contain">
+      <table>
+        <thead>
+          <tr>
+            <td>
+              <input type="checkbox" name="tail" id="" class="checkall" />
+            </td>
+            <td>id</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>公会</td>
+            <td>属性</td>
+            <td>级别</td>
+            <td>操作</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="footer">
+        <div class="ope add">添加</div>
+        <div class="ope delall">删除</div>
+        <div class="change">
+          选择每页展示信息条数
+          <select name="" id="">
+            <option value="">请选择</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="page">
+        <div class="total">共<span>N</span>页</div>
+        <div class="pagebtn">
+          <div class="first">首页</div>
+          <div class="prev">上一页</div>
+          <div class="repagebtn"></div>
+          <div class="next">下一页</div>
+          <div class="end">尾页</div>
+        </div>
+        <div class="jump">
+          <div class="msg">跳 <input type="text" /> 页</div>
+          <div class="jumpbtn">跳转</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="mask"></div>
+      <div class="model">
+        <div class="name">姓名: <input type="text" /></div>
+        <div class="sex">
+          性别:
+          <select name="" id="input" class="form-control" required="required">
+            <option value="">--请选择--</option>
+            <option value="sex1">sex1</option>
+            <option value="sex2">sex2</option>
+            <option value="sex3">sex3</option>
+            <option value="sex4">sex4</option>
+            <option value="sex5">sex5</option>
+          </select>
+        </div>
+        <div class="party">
+          公会:
+          <select name="" id="input" class="form-control" required="required">
+            <option value="">--请选择--</option>
+            <option value="party1">party1</option>
+            <option value="party2">party2</option>
+            <option value="party3">party3</option>
+            <option value="party4">party4</option>
+            <option value="party5">party5</option>
+          </select>
+        </div>
+        <div class="proper">
+          属性:
+          <select name="" id="input" class="form-control" required="required">
+            <option value="">--请选择--</option>
+            <option value="proper1">proper1</option>
+            <option value="proper2">proper2</option>
+            <option value="proper3">proper3</option>
+            <option value="proper4">proper4</option>
+            <option value="proper5">proper5</option>
+          </select>
+        </div>
+        <div class="level">
+          级别:
+          <select name="" id="input" class="form-control" required="required">
+            <option value="">--请选择--</option>
+            <option value="level1">level1</option>
+            <option value="level2">level2</option>
+            <option value="level3">level3</option>
+            <option value="level4">level4</option>
+            <option value="level5">level5</option>
+          </select>
+        </div>
+
+        <div class="btn">
+          <div class="ope true">确定</div>
+          <div class="ope false">取消</div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

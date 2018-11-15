@@ -1,0 +1,36 @@
+[{
+    "id": 1,
+    "name": "name1",
+    "sex": "sex1",
+    "party": "party1",
+    "proper": "proper1",
+    "level": "level1"
+},{
+    "id": 2,
+    "name": "name2",
+    "sex": "sex2",
+    "party": "party2",
+    "proper": "proper2",
+    "level": "level2"
+},{
+    "id": 3,
+    "name": "name3",
+    "sex": "sex3",
+    "party": "party3",
+    "proper": "proper3",
+    "level": "level3"
+},{
+    "id": 4,
+    "name": "name4",
+    "sex": "sex4",
+    "party": "party4",
+    "proper": "proper4",
+    "level": "level4"
+},{
+    "id": 5,
+    "name": "name5",
+    "sex": "sex5",
+    "party": "party5",
+    "proper": "proper5",
+    "level": "level5"
+}]
