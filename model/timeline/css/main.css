@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    min-width: 600px;
+}
+.line {
+    height: 2500px;
+    width: 6px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+ul li {
+    width: 45%;
+    list-style: none;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    position: absolute;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 100px;
+    
+}
+
+li::before {
+    content: attr(data-time);
+    position: absolute;
+    top: 20px;
+    width: 120px;
+    font-size: 20px;
+    color: #fff;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.left {
+    left: 0;
+    padding-left: 60px;
+    box-shadow: -2px 2px 8px #555;
+}
+.right {
+    right: 0;
+    padding-right: 60px;
+    box-shadow: 2px 2px 8px #555;
+}
+.left::before {
+    left: 114%;
+}
+
+.left::after {
+    left: 100%;
+    border-right: 15px solid transparent;
+    border-left: 15px solid #ccc;
+}
+.left img {
+    left: 5px;
+}
+
+
+
+.right::before {
+    right: 110%;
+}
+
+.right::after {
+    right: 100%;
+    border-right: 15px solid #ccc;
+    border-left: 15px solid transparent;
+}
+.right img {
+    right: 5px;
+}

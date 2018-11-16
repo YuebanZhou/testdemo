@@ -51,6 +51,13 @@
 - 切换tab显示不同内容
 <img src="./readmeimg/img007.png" style="zoom:50%;">
 
+# timeline
+- 垂直时间线展示
+- 根据时间分布，设置top值变化
+- 最后的时间减去第一个时间，作为分母
+- 每个时间减去第一个时间，差值作为分子
+<img src="./readmeimg/img011.png" style="zoom:50%;">
+
 # todo
 - 模拟备忘录
 - 添加待办事件
