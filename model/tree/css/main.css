@@ -1,0 +1,109 @@
+#contain {
+    width: 300px;
+}
+.btn {
+    height: 50px;
+}
+.opebtn {
+    width: 100px;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.open {
+    background-color: #0381D8;
+    border: 1px solid #006CB9;
+}
+
+.close {
+    background-color: #E6BD47;
+    border: 1px solid #C1A040;
+}
+
+.showmsg {
+    background-color: #9081ff;
+    border: 1px solid #8679ED;
+    margin-bottom: 10px;
+}
+.block {
+    clear: left;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 30px;
+}
+.container {
+    padding: 20px;
+    width: 300px;
+}
+
+.level1 div {
+    display: none;
+}
+
+.plus {
+    position: relative;
+}
+
+.plus::before {
+    content: '+';
+    position: absolute;
+    left: -60px;
+    top: 0;
+    background: url("../img/folder.gif") no-repeat right;
+    width: 30px;
+}
+
+.sub {
+    position: relative;
+}
+
+.sub::before {
+    content: '-';
+    position: absolute;
+    left: -60px;
+    top: 0;
+    background: url("../img/folder-open.gif") no-repeat right;
+    width: 30px;
+}
+
+.plus~div {
+    display: none;
+}
+
+.sub~div {
+    display: block;
+}
+
+.level5 {
+    --n: 5px;
+}
+
+.level4 {
+    --n: 4px;
+}
+
+.level3 {
+    --n: 3px;
+}
+
+.level2 {
+    --n: 2px;
+}
+
+.level1 {
+    --n: 1px;
+}
+
+.container .level {
+    padding-left: calc(var(--n) * 10);
+    font-size: calc(24px - var(--n) * 2);
+
+}

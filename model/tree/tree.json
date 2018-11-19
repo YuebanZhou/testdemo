@@ -1,0 +1,66 @@
+[{
+    "name": "一级菜单1",
+    "children": [{
+            "name": "二级菜单1",
+            "children": []
+        },
+        {
+            "name": "二级菜单2",
+            "children": [{
+                    "name": "三级菜单1",
+                    "children": []
+                },
+                {
+                    "name": "三级菜单2",
+                    "children": [{
+                        "name": "四级菜单1",
+                        "children": []
+                    }]
+                }
+            ]
+        },
+        {
+            "name": "二级菜单3",
+            "children": []
+        }
+    ]
+}, {
+    "name": "一级菜单2",
+    "children": []
+}, {
+    "name": "一级菜单3",
+    "children": [{
+        "name": "二级菜单1",
+        "children": [{
+            "name": "三级菜单1",
+            "children": [{
+                "name": "四级菜单1",
+                "children": [{
+                    "name": "五级菜单1",
+                    "children": []
+                }, {
+                    "name": "五级菜单2",
+                    "children": []
+                }]
+            }, {
+                "name": "四级菜单2",
+                "children": []
+            }, {
+                "name": "四级菜单3",
+                "children": []
+            }, {
+                "name": "四级菜单4",
+                "children": []
+            }, {
+                "name": "四级菜单5",
+                "children": []
+            }]
+        }]
+    }, {
+        "name": "二级菜单2",
+        "children": []
+    }, {
+        "name": "二级菜单3",
+        "children": []
+    }]
+}]
