@@ -55,7 +55,7 @@
 .plus::before {
     content: '+';
     position: absolute;
-    left: -60px;
+    left: -30px;
     top: 0;
     background: url("../img/folder.gif") no-repeat right;
     width: 30px;
@@ -68,7 +68,7 @@
 .sub::before {
     content: '-';
     position: absolute;
-    left: -60px;
+    left: -30px;
     top: 0;
     background: url("../img/folder-open.gif") no-repeat right;
     width: 30px;

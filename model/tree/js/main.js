@@ -27,32 +27,26 @@ function reload(data) {
                     for (var m = 0; m < data[i].children[j].children[k].children[l].children.length; m++) {
                         str5 +=
                             '<div class="level level5">' +
-                            '<input type="checkbox">' +
                             '    <span>' + data[i].children[j].children[k].children[l].children[m].name + '</span>' +
                             '</div>'
                     }
                     str4 +=
                         '<div class="level level4">' +
-                        '<input type="checkbox">' +
                         '    <span>' + data[i].children[j].children[k].children[l].name + '</span>' + str5 +
                         '</div>'
                 }
                 str3 +=
                     '<div class="level level3">' +
-                    '<input type="checkbox">' +
                     '    <span>' + data[i].children[j].children[k].name + '</span>' + str4 +
                     '</div>'
             }
             str2 +=
                 '<div class="level level2">' +
-                '<input type="checkbox">' +
                 '    <span>' + data[i].children[j].name + '</span>' + str3 +
                 '</div>'
         }
-
         str +=
             '<div class="level level1">' +
-            '<input type="checkbox" class="checkall">' +
             '    <span>' + data[i].name + '</span>' + str2 +
             '</div>';
 
