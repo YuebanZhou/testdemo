@@ -17,6 +17,13 @@
 - 模拟服务器环境下启动
 <img src="./readmeimg/img002.png" style="zoom:50%;">
 
+# echartfloat
+- echart联动
+- 生成模拟数据模拟时间
+- echart模块是定位脱标的，顶部脱标，如果不添加z-index属性会将echart顶下去
+- 手动写select模块
+<img src="./readmeimg/img012.png" style="zoom:50%;">
+
 # imgfloat
 - 图片支持鼠标滚轮缩放
 - 鼠标拖拽
@@ -72,3 +79,8 @@
 - 适配手机屏幕
 <img src="./readmeimg/img006.png" style="zoom:50%;">
 
+# tree
+- 菜单树
+- 改变类名改变状态
+- 选择全部兄弟元素，css中用~符号
+<img src="./readmeimg/img013.png" style="zoom:50%;">

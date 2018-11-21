@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="contain">
+        <div class="sel">
+            <div class="sel1">
+                <div class="top">
+                    <span>选择时间间隔</span>
+                    <div class="show">
+                        <span>one second</span>
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="block">
+                    <div leap="second">one second</div>
+                    <div leap="minute">one minute</div>
+                    <div leap="hour">one hour</div>
+                    <div leap="day">one day</div>
+                    <div leap="week">one week</div>
+                    <div leap="month">one month</div>
+                    <div class="active" leap="year">one year</div>
+                </div>
+            </div>
+            <div class="sel2">
+                <div class="top">
+                    <span>选择数据个数</span>
+                    <div class="show">
+                        <span>5</span>
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="block">
+                    <div leap="5">5</div>
+                    <div leap="10">10</div>
+                    <div leap="15">15</div>
+                    <div leap="20">20</div>
+                    <div leap="25">25</div>
+                    <div leap="30">30</div>
+                    <div leap="35">35</div>
+                </div>
+            </div>
+            <div class="zybtn">确定</div>
+        </div>
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div id="main" style="width: 1000px;height:400px;margin-top:45px;"></div>
+        <div id="main2" style="width: 1000px;height:400px;"></div>
+    </div>
+
+
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/echarts.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
