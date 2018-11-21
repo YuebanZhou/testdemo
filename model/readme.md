@@ -17,6 +17,12 @@
 - 模拟服务器环境下启动
 <img src="./readmeimg/img002.png" style="zoom:50%;">
 
+# date
+- 简单日历
+- 可跳转到指定日期
+- 可跳转回当前日期
+<img src="./readmeimg/img014.png" style="zoom:50%;">
+
 # echartfloat
 - echart联动
 - 生成模拟数据模拟时间
