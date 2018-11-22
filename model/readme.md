@@ -23,6 +23,12 @@
 - 可跳转回当前日期
 <img src="./readmeimg/img014.png" style="zoom:50%;">
 
+# date
+- 日历改进
+- 显示阴历
+- 显示节假日
+<img src="./readmeimg/img015.png" style="zoom:50%;">
+
 # echartfloat
 - echart联动
 - 生成模拟数据模拟时间

@@ -35,6 +35,21 @@ $(".btn1").on("click", function () {
     })
     var year = $(".sel1 input").val()
     var month = $(".sel2 input").val()
+    if (year < 1921) {
+        year = 1921
+        $(".sel1 input").val("1921")
+    } else if (year > 2020) {
+        year = 2020
+        $(".sel1 input").val("2020")
+    }
+
+    if (month > 12) {
+        month = 12
+        $(".sel2 input").val("12")
+    } else if (month < 1) {
+        month = 1
+        $(".sel2 input").val("1")
+    }
     getday(year, month, getMonthDay(year, month))
     getmon();
     GetcYearString();
@@ -300,7 +315,7 @@ function getmon() {
     var flag = ""
     // 遍历每个li
     $(".level2ul li").each(function () {
-        if($(this).hasClass("active1")) {
+        if ($(this).hasClass("active1")) {
             $(this).removeClass("active1")
         }
         // 渲染日历
