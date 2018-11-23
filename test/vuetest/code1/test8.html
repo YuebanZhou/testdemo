@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 导入VUE -->
+    <script src="../static/vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 对象是无序键值对的集合 -->
+        <h1 :style="styleObj1">h1标签</h1>
+
+        <h1 :style="[styleObj1,styleObj2]">h1标签</h1>
+    </div>
+    <script>
+        // 创建VUE实例
+        var vm = new Vue({
+            el: '#app', // VUE实例要控制的区域
+            data: {
+                styleObj1:{color:'red','font-weight':200},
+                styleObj2:{'font-style':'italic'}
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>

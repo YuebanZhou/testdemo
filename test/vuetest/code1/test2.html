@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 导入VUE -->
+    <script src="../static/vue-2.4.0.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-cloak>++++++++++ {{msg}} ----------</p>
+        <h4 v-text="msg">==========</h4>
+        <!-- v-text没有闪烁问题 -->
+        <!-- v-text会覆盖元素中原本的内容，但是差值表达式只会替换占位符的位置 -->
+        <div>{{msg2}}</div>
+        <div v-text="msg2"></div>
+        <div v-html="msg2">121212</div>
+
+        <input type="button" value="按钮" v-bind:title="mytitle+'123'">
+        <!-- v-bind是VUE中，提供的用于绑定属性的指令 -->
+        <!-- v-bind指令可以被简写为要绑定的属性 -->
+        <!-- v-bind中可以写合法的JS表达式 -->
+        <!-- VUE中提供了v-on,事件绑定机制 -->
+        <input type="button" value="按钮" :title="mytitle+'123'" v-on:click="alert('hello')">
+        <input type="button" value="按钮" @click="show">
+    </div>
+    <script>
+        // 创建VUE实例
+        var vm = new Vue({
+            el: '#app', // VUE实例要控制的区域
+            data: {
+                msg: '123',
+                msg2: '<h1>h1标签</h1>',
+                mytitle: '自定义title',
+            },
+            methods: {
+                show: function () {
+                    alert('Hello')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
