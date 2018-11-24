@@ -1,0 +1,35 @@
+body {
+    min-width: 580px;
+    padding: 20px;
+}
+
+form {
+    width: 270px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    height: 35px;
+}
+
+label span {
+    color: red;
+}
+
+input {
+    width: 160px;
+}
+
+.qwe {
+    width: 80px;
+}
+
+.error {
+    border: 1px solid red;
+}

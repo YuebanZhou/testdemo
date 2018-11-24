@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css159.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="device iphone"></div>
+        <div class="buttons">
+            <span class="left"></span>
+            <span class="right"></span>
+        </div>
+    </div>
+    <script src="./jquery-3.1.0.js"></script>
+    <script>
+        const $ = (className) => document.getElementsByClassName(className)[0]
+        let devices = ['iphone', 'mini', 'ipad', 'macbook', 'imac']
+        let loop = {
+            'left': () => devices.unshift(devices.pop()),
+            'right': () => devices.push(devices.shift())
+        }
+
+        Array.from($('buttons').children).forEach(element =>
+            element.addEventListener('click', function (e) {
+                loop[e.target.className]()
+                $('device').className = 'device ' + devices[0]
+            })
+        )
+    </script>
+</body>
+
+</html>
