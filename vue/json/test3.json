@@ -6,7 +6,7 @@
     "pro_min": "起定量1",
     "pro_depot": "仓储1",
     "pro_num": 1,
-    "pro_img": "./himg.jpg",
+    "pro_img": "./images/himg.jpg",
     "pro_price": 800,
     "select": true
   },
@@ -18,7 +18,7 @@
     "pro_min": "起定量2",
     "pro_depot": "仓储2",
     "pro_num": 1,
-    "pro_img": "./himg.jpg",
+    "pro_img": "./images/himg.jpg",
     "pro_price": 600,
     "select": true
   },
@@ -30,7 +30,7 @@
     "pro_min": "起定量3",
     "pro_depot": "仓储3",
     "pro_num": 1,
-    "pro_img": "./himg.jpg",
+    "pro_img": "./images/himg.jpg",
     "pro_price": 900,
     "select": true
   }
