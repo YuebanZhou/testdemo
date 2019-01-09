@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- 顺时针双线追逐 -->
+    <link rel="stylesheet" href="./css/line1.css" />
+    <!-- 顺时针四线追逐 -->
+    <link rel="stylesheet" href="./css/line2.css" />
+    <!-- 对角线追逐 -->
+    <link rel="stylesheet" href="./css/line3.css" />
+    <!-- 四边勾线 -->
+    <link rel="stylesheet" href="./css/line4.css" />
+    <!-- 双勾线 -->
+    <link rel="stylesheet" href="./css/line5.css" />
+    <!-- 中心缩放 -->
+    <link rel="stylesheet" href="./css/line6.css" />
+
+    <!-- 线性、径向放大 -->
+    <link rel="stylesheet" href="./css/square1.css" />
+    <!-- 线性、径向缩小 -->
+    <link rel="stylesheet" href="./css/square2.css" />
+    <!-- tab切换10种样式 -->
+    <link rel="stylesheet" href="./css/tab.css" />
+
+    <!-- 按钮悬浮20种样式 -->
+    <link rel="stylesheet" href="./css/button.css" />
+    <link rel="stylesheet" href="./css/link.css" />
+  </head>
+  <style>
+    /* 整体布局样式 start */
+    body {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .block {
+      margin: 10px;
+      display: inline-block;
+      border: 1px dashed #ccc;
+      padding: 10px;
+    }
+
+    span {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    /* 整体布局样式 end */
+  </style>
+
+  <body>
+    <hr style=" height:2px;border:none;border-top:5px dotted #ccc;" />
+    <h3>悬浮边线效果</h3>
+    <div class="block line block1">
+      <p>顺时针双线追逐</p>
+      <span class="block1_1">block1_1</span>
+      <span class="block1_2">block1_2</span>
+      <p>双线原路返回</p>
+      <span class="block1_3">block1_3</span>
+      <span class="block1_4">block1_4</span>
+    </div>
+    <div class="block line block2">
+      <p>顺时针四线追逐</p>
+      <span class="block2_1"> <span class="block2_2">block2_1</span> </span>
+      <p>四线原路返回</p>
+      <span class="block2_3"> <span class="block2_4">block2_2</span> </span>
+    </div>
+    <div class="block line block3">
+      <p>对角线追逐</p>
+      <span class="block3_1"> <span class="block3_2">block3_1</span> </span>
+      <p>对角线返回</p>
+      <span class="block3_3"> <span class="block3_4">block3_2</span> </span>
+    </div>
+    <div class="block line block4">
+      <p>四边勾线原路返回</p>
+      <span class="block4_1"> <span class="block4_2">block4_1</span> </span>
+      <p>四边勾线追逐</p>
+      <span class="block4_3"> <span class="block4_4">block4_2</span> </span>
+    </div>
+    <div class="block line block5">
+      <p>双勾线原路返回</p>
+      <span class="block5_1"> <span class="block5_2">block5_1</span> </span>
+      <p>双勾线追逐</p>
+      <span class="block5_3"> <span class="block5_4">block5_2</span> </span>
+    </div>
+    <div class="block line block6">
+      <p>中心缩放</p>
+      <span class="block6_1"> <span class="block6_2">block6_1</span> </span>
+    </div>
+    <hr style=" height:2px;border:none;border-top:5px dotted #ccc;" />
+    <h3>悬浮缩放效果</h3>
+    <div class="block square block1">
+      <p>线性放大</p>
+      <span class="block1_1">block1_1</span>
+      <span class="block1_2">block1_2</span>
+      <p>径向放大</p>
+      <span class="block1_3">block1_3</span>
+    </div>
+    <div class="block square block2">
+      <p>线性缩小</p>
+      <span class="block2_1">block2_1</span>
+      <span class="block2_2">block2_2</span>
+      <p>径向缩小</p>
+      <span class="block2_3">block2_3</span>
+    </div>
+    <hr style=" height:2px;border:none;border-top:5px dotted #ccc;" />
+    <h3>悬浮tab10种特效</h3>
+    <h4>特效1</h4>
+    <div class="block tab block1">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效2</h4>
+    <div class="block tab block2">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效3</h4>
+    <div class="block tab block3">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效4</h4>
+    <div class="block tab block4">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效5</h4>
+    <div class="block tab block5">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效6</h4>
+    <div class="block tab block6">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效7</h4>
+    <div class="block tab block7">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效8</h4>
+    <div class="block tab block8">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效9</h4>
+    <div class="block tab block9">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h4>特效10</h4>
+    <div class="block tab block10">
+      <ul>
+        <li>
+          <span class="left iconfont icon-prev"></span>
+          <div class="right">
+            <div class="title">Exceptional Service</div>
+            <div class="title2">Personalized to your needs</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-next"></span>
+          <div class="right">
+            <div class="title">Creative Storytelling</div>
+            <div class="title2">Advanced use of technology</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-banner"></span>
+          <div class="right">
+            <div class="title">Infographical Education</div>
+            <div class="title2">Understanding visually</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-basic"></span>
+          <div class="right">
+            <div class="title">Sophisticated Team</div>
+            <div class="title2">Professionals in action</div>
+          </div>
+        </li>
+        <li>
+          <span class="left iconfont icon-experience"></span>
+          <div class="right">
+            <div class="title">Unconditional Support</div>
+            <div class="title2">24/7 for you needs</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr style=" height:2px;border:none;border-top:5px dotted #ccc;" />
+    <h3>20种按钮悬浮效果</h3>
+    <div class="button block block1"><div></div></div>
+    <div class="button block block2"><div>block2</div></div>
+    <div class="button block block3"><div>block3</div></div>
+    <div class="button block block4">
+      <div><span>block4</span></div>
+    </div>
+    <div class="button block block5"><div></div></div>
+    <div class="button block block6"><div>block6</div></div>
+    <div class="button block block7"><div>block7</div></div>
+    <div class="button block block8"><div>block8</div></div>
+    <div class="button block block9"><div>block9</div></div>
+    <div class="button block block10"><div>block10</div></div>
+    <div class="button block block11"><div>block11</div></div>
+    <div class="button block block12">
+      <div>
+        <span>b</span><span>l</span><span>o</span><span>c</span><span>k</span
+        ><span>1</span><span>2</span>
+      </div>
+    </div>
+    <div class="button block block13">
+      <div>
+        <span>b</span><span>l</span><span>o</span><span>c</span><span>k</span
+        ><span>1</span><span>3</span>
+      </div>
+    </div>
+    <div class="button block block14"><div>block14</div></div>
+    <div class="button block block15"><div>block15</div></div>
+    <div class="button block block16"><div></div></div>
+    <div class="button block block17"><div>block17</div></div>
+    <div class="button block block18"><div></div></div>
+    <div class="button block block19"><div>block19</div></div>
+    <div class="button block block20"><div></div></div>
+    <hr style=" height:2px;border:none;border-top:5px dotted #ccc;" />
+    <h3>链接悬浮效果</h3>
+    <!-- 字体镂空假特效 -->
+    <div class="link block block1">block1</div>
+    <div class="link block block2">block2</div>
+    <div class="link block block3">block3</div>
+    <div class="link block block4">block4</div>
+    <div class="link block block5"></div>
+    <div class="link block block6">block6</div>
+    <div class="link block block7">block7</div>
+    <div class="link block block8">block8</div>
+    <div class="link block block9">block9</div>
+    <div class="link block block10">block10</div>
+    <div class="link block block11">block11</div>
+    <div class="link block block12">block12</div>
+    <div class="link block block13">block13</div>
+    <div class="link block block14">block14</div>
+    <div class="link block block15">block15</div>
+    <div class="link block block16">block16</div>
+    <div class="link block block17">block17</div>
+    <div class="link block block18">block18</div>
+    <div class="link block block19">block19</div>
+    <div class="link block block20">block20</div>
+    <div class="link block block21">block21<div>
+  </body>
+</html>

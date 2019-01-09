@@ -1,0 +1,765 @@
+.button.block {
+    padding: 30px;
+    background-color: #7986CB;
+    vertical-align: bottom;
+}
+
+.button.block div {
+    width: 150px;
+    height: 50px;
+    /* background-color: #7986CB; */
+    color: #ECEFF1;
+    border: 3px solid #ECEFF1;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button.block div::after,
+.button.block div::before {
+    /* content: "ggaga"; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* button1上下切换 */
+.button.block1 div {
+    border: 3px solid #ECEFF1;
+    transition: border 1s;
+}
+
+.button.block1 div::before {
+    content: "block1";
+    top: 0px;
+    transition: top 1s;
+    color: #ECEFF1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button.block1 div::after {
+    content: "block1";
+    top: 50px;
+    transition: top 1s;
+    color: #37474F;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button.block1 div:hover {
+    border: 3px solid #37474F;
+}
+
+.button.block1 div:hover::before {
+    top: -50px;
+}
+
+.button.block1 div:hover::after {
+    top: 0;
+}
+
+/* button2中心扩散 */
+.button.block2 div {
+    border: 3px solid #ECEFF1;
+    transition: border 1s;
+}
+
+.button.block2 div::before {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ECEFF1;
+    background-color: transparent;
+    width: 60%;
+    transition: width 1s;
+}
+
+.button.block2 div:hover {
+    border: 3px solid #37474F;
+}
+
+.button.block2 div:hover::before {
+    background-color: #37474F;
+    width: 100%;
+}
+
+/* button3倾斜 */
+.button.block3 div {
+    border: 3px solid #ECEFF1;
+    transition: border 1s;
+}
+
+.button.block3 div::before {
+    content: "";
+    transform: rotate(-40deg);
+    color: #ECEFF1;
+    background-color: #37474F;
+    width: 200px;
+    height: 50px;
+    top: -105px;
+    left: -40px;
+    transition: transform 1s, top 1s, left 1s;
+}
+
+.button.block3 div:hover {
+    border: 3px solid #37474F;
+}
+
+.button.block3 div:hover::before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+
+/* button4中心割裂 */
+.button.block4 div {
+    border: 3px solid #37474F;
+    transition: border 1s;
+}
+
+.button.block4 div span {
+    display: block;
+    transform: scale(0);
+    transition: transform 1s;
+}
+
+.button.block4 div::before {
+    content: "block4";
+    background-color: #37474F;
+    top: -25px;
+    transition: top 1s;
+    line-height: 100px;
+    overflow: hidden;
+}
+
+.button.block4 div::after {
+    content: "block4";
+    background-color: #37474F;
+    top: 25px;
+    transition: top 1s;
+    line-height: 0px;
+    overflow: hidden;
+}
+
+.button.block4 div:hover {
+    border: 3px solid #ECEFF1;
+}
+
+.button.block4 div:hover span {
+    transform: scale(1);
+}
+
+.button.block4 div:hover::before {
+    top: -50px;
+}
+
+.button.block4 div:hover::after {
+    top: 50px;
+}
+
+/* button5进入位移 */
+.button.block5 div {
+    border: 3px solid #ECEFF1;
+    transition: border 1s;
+}
+
+
+.button.block5 div::before {
+    content: "block5";
+    top: 0;
+    left: 0;
+    transition: top 1s, left 1s;
+}
+
+.button.block5 div::after {
+    content: "block5";
+    top: 0;
+    left: -150px;
+    background-color: #37474F;
+    transition: top 1s, left 1s;
+}
+
+.button.block5 div:hover {
+    border: 3px solid #37474F;
+}
+
+
+.button.block5 div:hover::before {
+    top: 50px;
+}
+
+.button.block5 div:hover::after {
+    left: 0px;
+}
+
+/* button6边框放大 */
+.button.block6 div {
+    border: none;
+    border-radius: 0px;
+    color: #ECEFF1;
+}
+
+.button.block6 div::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #37474F;
+    width: 100%;
+    height: 100%;
+    transition: width 1s, height 1s;
+    border-radius: 25px;
+}
+
+.button.block6 div::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid transparent;
+    width: 50%;
+    height: 50%;
+    transition: border 1s, width 1s, height 1s;
+    border-radius: 25px;
+}
+
+.button.block6 div:hover::before {
+    width: 50%;
+    height: 50%;
+}
+
+.button.block6 div:hover::after {
+    border: 3px solid #ECEFF1;
+    width: 90%;
+    height: 90%;
+}
+
+/* button7涟漪动画 */
+.button.block7 div {
+    overflow: visible;
+}
+
+.button.block7 div:hover {
+
+    animation: block7a1 1s ease-in-out;
+}
+
+.button.block7 div::before {
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    border: 10px solid rgba(255, 255, 255, 0);
+}
+
+.button.block7 div:hover::before {
+    animation: block7a2 1s ease-in-out;
+
+
+}
+
+@keyframes block7a1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+}
+
+@keyframes block7a2 {
+    0% {
+        border: 0px solid rgba(255, 255, 255, 0);
+    }
+
+    70% {
+        border: 5px solid rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        border: 20px solid rgba(255, 255, 255, 0);
+    }
+
+}
+
+/* button8向左圆角 */
+
+.button.block8 div::before {
+    content: "";
+    left: 150px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0px;
+    transition: left 1s, border-radius 1s;
+
+}
+
+
+.button.block8 div:hover::before {
+    left: 0;
+    border-radius: 25px;
+}
+
+/* button9两层遮罩 */
+
+.button.block9 div::before {
+    content: "";
+    top: -50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: top 0.3s;
+
+}
+
+.button.block9 div::after {
+    content: "";
+    top: -50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: top 1s;
+
+}
+
+.button.block9 div:hover::before {
+    top: 0px;
+}
+
+.button.block9 div:hover::after {
+    top: 0px;
+}
+
+/* button10旋转遮盖 */
+.button.block10 div {
+    background-color: #7986CB;
+    border: 3px solid #ECEFF1;
+    color: #ECEFF1;
+    transition: background-color 1s, color 1s, border 1s;
+}
+
+.button.block10 div::before {
+    content: "block10";
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    transition: transform 1s;
+    color: #ECEFF1;
+    z-index: 1;
+}
+
+.button.block10 div:hover {
+    background-color: #37474F;
+    border: 3px solid #37474F;
+    color: #37474F;
+}
+
+.button.block10 div:hover::before {
+    transform: rotate(0deg);
+}
+
+/* button11中心缩放 */
+.button.block11 div {
+    color: #ECEFF1;
+    border: 3px solid #ECEFF1;
+    overflow: visible;
+    transition: color 1s, border 1s;
+}
+
+.button.block11 div::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: 3px solid transparent;
+    background-color: transparent;
+    transition: border 1s, background-color 1s, width 1s, height 1s;
+    border-radius: 25px;
+}
+
+.button.block11 div:hover {
+    color: #37474F;
+    border: 3px solid transparent;
+}
+
+.button.block11 div:hover::before {
+    border: 3px solid #37474F;
+    color: #37474F;
+    background-color: #ECEFF1;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* button12逐个坠落 */
+
+.button.block12 div span {
+    margin: 0;
+    position: relative;
+    top: -50px;
+    transition: top 1s;
+}
+
+.button.block12 div span:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.button.block12 div span:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.button.block12 div span:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.button.block12 div span:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.button.block12 div span:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.button.block12 div span:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.button.block12 div span:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+
+.button.block12 div::before {
+    content: "block12";
+    background: rgba(0, 0, 0, 0.3);
+    top: 0px;
+    transition: top 1s;
+}
+
+.button.block12 div:hover::before {
+    top: 50px;
+}
+
+.button.block12 div:hover span {
+    top: 0px;
+}
+
+/* button13坠落动画 */
+
+.button.block13 div span {
+    margin: 0;
+    position: relative;
+    top: 0px;
+}
+
+.button.block13 div:hover span:nth-child(1) {
+    animation: block13a1 1s ease-in-out 0.1s;
+}
+
+.button.block13 div:hover span:nth-child(2) {
+    animation: block13a2 1s ease-in-out 0.2s;
+}
+
+.button.block13 div:hover span:nth-child(3) {
+    animation: block13a1 1s ease-in-out 0.3s;
+}
+
+.button.block13 div:hover span:nth-child(4) {
+    animation: block13a2 1s ease-in-out 0.4s;
+}
+
+.button.block13 div:hover span:nth-child(5) {
+    animation: block13a1 1s ease-in-out 0.5s;
+}
+
+.button.block13 div:hover span:nth-child(6) {
+    animation: block13a2 1s ease-in-out 0.6s;
+}
+
+.button.block13 div:hover span:nth-child(7) {
+    animation: block13a1 1s ease-in-out 0.7s;
+}
+
+@keyframes block13a1 {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 50px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes block13a2 {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: -50px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* button14横向形变 */
+.button.block14 div {
+    overflow: visible;
+}
+
+.button.block14 div::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 150%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    transition: width 1s, height 1s;
+}
+
+.button.block14 div::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: #7986CB;
+    border: 3px solid #ECEFF1;
+    border-radius: 25px;
+    transition: background-color 1s;
+}
+
+.button.block14 div:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.button.block14 div:hover::after {
+    background-color: #37474F;
+}
+
+/* button15边框缩小 */
+.button.block15 div {
+    overflow: visible;
+    background-color: #7986CB;
+    border: 3px solid #ECEFF1;
+    color: #ECEFF1;
+    transition: background-color 1s, border 1s, color 1s;
+}
+
+.button.block15 div::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    border: 3px solid transparent;
+    border-radius: 25px;
+    transition: width 1s, height 1s, border 1s;
+}
+
+.button.block15 div:hover {
+    background-color: #ECEFF1;
+    border: 3px solid transparent;
+    color: #7986CB;
+}
+
+.button.block15 div:hover::before {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #37474F;
+}
+
+/* button16镜面切换 */
+.button.block16 div {
+    border-radius: 0px;
+    border: 3px solid transparent;
+}
+
+.button.block16 div::before {
+    content: "block16";
+    top: 0px;
+    transition: top 1s;
+    box-sizing: border-box;
+}
+
+.button.block16 div::after {
+    content: "block16";
+    transform: rotateX(180deg);
+    top: 47px;
+    border: 3px solid #37474F;
+    transition: top 1s;
+    box-sizing: border-box;
+}
+
+
+.button.block16 div:hover::before {
+    top: -50px;
+}
+
+.button.block16 div:hover::after {
+    top: 0px;
+}
+
+/* button17倾斜 */
+.button.block17 div {
+    border: 3px solid #ECEFF1;
+    transition: border 1s;
+}
+
+.button.block17 div::before {
+    content: "";
+    transform: rotate(40deg);
+    color: #ECEFF1;
+    background-color: #37474F;
+    width: 200px;
+    height: 50px;
+    top: 105px;
+    left: -40px;
+    transition: transform 1s, top 1s, left 1s;
+}
+
+.button.block17 div:hover {
+    border: 3px solid #37474F;
+}
+
+.button.block17 div:hover::before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+
+
+/* button18镂空颜色 */
+.button.block18 div {
+    border-radius: 0px;
+    border: 3px solid #7986CB;
+    background: #ECEFF1;
+}
+
+.button.block18 div::before {
+    content: "";
+    background-color: #37474F;
+    top: 50px;
+    transition: top 1s;
+
+}
+
+.button.block18 div::after {
+    content: "block18";
+    top: 50%;
+    left: 50%;
+    width: calc(150px - 6px);
+    height: calc(50px - 6px);
+    transform: translate(-50%, -50%);
+    background-color: #7986CB;
+    color: #ECEFF1;
+    transition: color 1s;
+}
+
+.button.block18 div:hover::before {
+    top: 0px;
+}
+
+.button.block18 div:hover::after {
+    color: #37474F;
+}
+
+/* button19中心放大 */
+.button.block19 div {
+    border-radius: 0px;
+    color: #ECEFF1;
+    overflow: visible;
+    border: 3px solid #7986CB;
+    transition: color 1s;
+}
+
+.button.block19 div::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: #37474F;
+    transition: width 1s, height 1s;
+}
+
+.button.block19 div::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #ECEFF1;
+    transition: width 1s, height 1s;
+}
+
+.button.block19 div:hover {
+    color: #37474F;
+}
+
+.button.block19 div:hover::before {
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+}
+
+.button.block19 div:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+/* button20左右位移 */
+.button.block20 div {
+    background-color: #7986CB;
+    transition: background-color 1s;
+}
+
+.button.block20 div::before {
+    content: "block20";
+    left: 0;
+    transition: left 1s;
+
+}
+
+.button.block20 div::after {
+    content: "20";
+    left: -150px;
+    top: 50px;
+    width: 30px;
+    height: 30px;
+    transition: left 1s, top 1s;
+}
+
+.button.block20 div:hover {
+    background-color: #37474F;
+}
+
+.button.block20 div:hover::before {
+    left: 20px;
+}
+
+.button.block20 div:hover::after {
+    left: 15px;
+    top: 0;
+}

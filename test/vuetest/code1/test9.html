@@ -12,7 +12,9 @@
 
 <body>
     <div id="app">
-        <p v-for="(item,i) in list">索引值：{{i}}---每一项：{{item}}</p>
+        <!-- i表示索引 -->
+        <!-- num表示索引，可以用任何变量名表示 -->
+        <p v-for="(num,i) in list">索引值：{{i}}---每一项：{{num}}</p>
     </div>
     <script>
         // 创建VUE实例

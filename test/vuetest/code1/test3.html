@@ -12,6 +12,7 @@
 
 <body>
     <div id="app">
+        <!-- 开始按钮执行begin函数，结束按钮执行finish函数 -->
         <input type="button" value="开始" @click="begin">
         <input type="button" value="结束" @click="finish">
         <h4>{{msg}}</h4>
@@ -22,6 +23,7 @@
             el: '#app', // VUE实例要控制的区域
             data: {
                 msg: '跑马灯跑起来',
+                // 默认定时器不存在
                 intervalId: null
             },
             methods: {

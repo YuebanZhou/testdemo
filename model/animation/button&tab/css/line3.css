@@ -1,0 +1,167 @@
+/* 模块1 */
+.line.block3 span {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+.line.block3 span.block3_1,.line.block3 span.block3_3 {
+    padding: 0;
+}
+
+.line.block3 span.block3_2,.line.block3 span.block3_4 {
+    /* 上下边的动画变化加在外层span上 */
+    /* 内层padding要减小，将多出的伪元素的2px的高度空出来 */
+    margin: 0;
+    padding: 10px;
+}
+
+.line.block3 .block3_1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #B43434;
+    /* 定位中心在右边中心点 */
+    /* 沿X轴缩放为0 */
+    transform: scaleX(0);
+    transform-origin: left top;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #B43434;
+    transform: scaleX(0);
+    transform-origin: right bottom;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_1:hover:before {
+    transform-origin: right top;
+    transform: scaleX(1);
+
+}
+
+.line.block3 .block3_1:hover:after {
+    transform-origin: left bottom;
+    transform: scaleX(1);
+}
+
+.line.block3 .block3_2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 40px;
+    background-color: #B43434;
+    transform: scaleY(0);
+    transform-origin: left top;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_2:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 40px;
+    background-color: #B43434;
+    transform: scaleY(0);
+    transform-origin: right bottom;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_2:hover:before {
+    transform-origin: left bottom;
+    transform: scaleY(1);
+
+}
+
+.line.block3 .block3_2:hover:after {
+    transform-origin: right top;
+    transform: scaleY(1);
+}
+
+
+
+.line.block3 .block3_3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #B43434;
+    /* 定位中心在右边中心点 */
+    /* 沿X轴缩放为0 */
+    transform: scaleX(0);
+    transform-origin: left top;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_3:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #B43434;
+    transform: scaleX(0);
+    transform-origin: right bottom;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_3:hover:before {
+    transform: scaleX(1);
+
+}
+
+.line.block3 .block3_3:hover:after {
+    transform: scaleX(1);
+}
+
+.line.block3 .block3_4:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 40px;
+    background-color: #B43434;
+    transform: scaleY(0);
+    transform-origin: left top;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_4:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 40px;
+    background-color: #B43434;
+    transform: scaleY(0);
+    transform-origin: right bottom;
+    transition: transform 1s;
+}
+
+.line.block3 .block3_4:hover:before {
+    transform: scaleY(1);
+
+}
+
+.line.block3 .block3_4:hover:after {
+    transform: scaleY(1);
+}

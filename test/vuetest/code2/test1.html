@@ -17,15 +17,19 @@
                 <h3 class="panel-title">添加品牌</h3>
             </div>
             <div class="panel-body form-inline">
+                <!-- v-model数据双向绑定，绑定data中的id -->
                 <label>
                     Id:
                     <input type="text" class="form-control" v-model="id">
                 </label>
+                <!-- 数据双向绑定，绑定data中的name -->
                 <label>
                     Name:
                     <input type="text" class="form-control" v-model="name">
                 </label>
+                <!-- 点击添加执行add函数 -->
                 <input type="button" value="添加" class="btn btn-primary" @click="add()">
+                <!-- 数据双向绑定，绑定data中的keywords -->
                 <label>
                     搜索:
                     <input type="text" class="form-control" v-model="keywords">
@@ -42,6 +46,8 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- 执行search函数，参数是keywords，关键词是id -->
+                <!-- search函数return的内容可以看做是数组，可以用v-for进行遍历 -->
                 <tr v-for="item in search(keywords)" :key="item.id">
                     <td>{{item.id}}</td>
                     <td v-text="item.name"></td>

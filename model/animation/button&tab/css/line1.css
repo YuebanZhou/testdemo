@@ -1,0 +1,159 @@
+/* 模块1 */
+/* transfor的scale属性，表示沿着X轴的缩放 */
+/* 初始状态缩放为0，缩放的中心点在一侧 */
+/* 悬浮之后，缩放状态为1，缩放的重点换到对侧 */
+/* 离开之后，缩放状态恢复成0，中心点回到初始位置 */
+/* 形成追逐的效果 */
+.line.block1 span {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+.line.block1 .block1_1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffa726;
+    /* 定位中心在右边中心点 */
+    /* 沿X轴缩放为0 */
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffa726;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_1:hover:before {
+    transform-origin: left center;
+    transform: scaleX(1);
+
+}
+
+.line.block1 .block1_1:hover:after {
+    transform-origin: right center;
+    transform: scaleX(1);
+}
+
+.line.block1 .block1_2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 41px;
+    background-color: #26a69a;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_2:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 41px;
+    background-color: #26a69a;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_2:hover:before {
+    transform-origin: bottom center;
+    transform: scaleY(1);
+
+}
+
+.line.block1 .block1_2:hover:after {
+    transform-origin: top center;
+    transform: scaleY(1);
+}
+
+.line.block1 .block1_3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffa726;
+    /* 定位中心在右边中心点 */
+    /* 沿X轴缩放为0 */
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_3:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffa726;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_3:hover:before {
+    transform: scaleX(1);
+
+}
+
+.line.block1 .block1_3:hover:after {
+    transform: scaleX(1);
+}
+
+.line.block1 .block1_4:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 41px;
+    background-color: #26a69a;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_4:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 41px;
+    background-color: #26a69a;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 1s;
+}
+
+.line.block1 .block1_4:hover:before {
+    transform: scaleY(1);
+
+}
+
+.line.block1 .block1_4:hover:after {
+    transform: scaleY(1);
+}

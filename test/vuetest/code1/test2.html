@@ -12,20 +12,36 @@
 
 <body>
     <div id="app">
+        <!-- v-clock防止出现闪烁问题，值直接替换msg的位置 -->
+        <!-- ++++++++++ 123 ---------- -->
         <p v-cloak>++++++++++ {{msg}} ----------</p>
-        <h4 v-text="msg">==========</h4>
+
         <!-- v-text没有闪烁问题 -->
         <!-- v-text会覆盖元素中原本的内容，但是差值表达式只会替换占位符的位置 -->
+        <!-- 123 -->
+        <h4 v-text="msg">==========</h4>
+
+        <!-- 直接用msg2的内容替换占位符的位置 -->
+        <!-- <h1>h1标签</h1> -->
         <div>{{msg2}}</div>
+
+        <!-- 直接覆盖了元素中的内容，标签不被解析 -->
+        <!-- <h1>h1标签</h1> -->
         <div v-text="msg2"></div>
+
+        <!-- 直接覆盖了元素中的内容，并且标签被解析 -->
+        <!-- h1标签 -->
         <div v-html="msg2">121212</div>
 
-        <input type="button" value="按钮" v-bind:title="mytitle+'123'">
         <!-- v-bind是VUE中，提供的用于绑定属性的指令 -->
         <!-- v-bind指令可以被简写为要绑定的属性 -->
         <!-- v-bind中可以写合法的JS表达式 -->
+        <!-- 鼠标悬浮到按钮上显示"自定义title123" -->
+        <input type="button" value="按钮" v-bind:title="mytitle+'123'">
+
         <!-- VUE中提供了v-on,事件绑定机制 -->
-        <input type="button" value="按钮" :title="mytitle+'123'" v-on:click="alert('hello')">
+        <!-- 鼠标悬浮到按钮上显示"自定义title123" -->
+        <input type="button" value="按钮" :title="mytitle+'123'" v-on:click="show">
         <input type="button" value="按钮" @click="show">
     </div>
     <script>

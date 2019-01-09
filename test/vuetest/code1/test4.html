@@ -23,42 +23,42 @@
 <body>
     <div id="app">
         <!-- 使用.stop阻止冒泡 -->
-        <!-- input添加stop，在input上阻止冒泡，不触发div的事件 -->
-        <!-- <div class="inner" @click="divHandler">
+        <!-- input添加stop，在input上阻止冒泡，不触发divHandler -->
+        <div class="inner" @click="divHandler">
             <input type="button" value="点击" @click.stop="btnHandler">
-        </div> -->
+        </div>
 
         <!-- 使用.prevent 阻止默认行为 -->
         <!-- 阻止默认的跳转，而是执行linkClick函数 -->
-        <!-- <a href="http://www.baidu.com" @click.prevent="linkClick">百度</a> -->
+        <a href="http://www.baidu.com" @click.prevent="linkClick">百度</a>
 
         <!-- 使用.capture实现捕获事件的机制 -->
-        <!-- 捕获事件，从外向内触发。先出发divHandler再触发btnHandler -->
-        <!-- <div class="inner" @click.capture="divHandler">
+        <!-- 捕获事件，从外向内触发。div是input外层的父元素。按照顺序，先出发divHandler再触发btnHandler -->
+        <div class="inner" @click.capture="divHandler">
             <input type="button" value="点击" @click="btnHandler">
-        </div> -->
+        </div>
 
         <!-- 使用.self实现只有点击当前元素的时候，才会触发事件处理函数 -->
         <!-- 点击btn的时候，不触发div，除非点击到div上除去btn的部分才会触发divHandler -->
-        <!-- <div class="inner" @click.self="divHandler">
+        <div class="inner" @click.self="divHandler">
             <input type="button" value="点击" @click="btnHandler">
-        </div> -->
+        </div>
 
         <!-- 使用.once只触发一次事件处理函数 -->
         <!-- prevent只阻止一次，第二次点击的时候，会发生跳转 -->
-        <!-- <a href="http://www.baidu.com" @click.prevent.once="linkClick">百度</a> -->
+        <a href="http://www.baidu.com" @click.prevent.once="linkClick">百度</a>
 
         <!-- 演示 .stop和.self的区别 -->
         <!-- 只触发btnHandler事件 -->
-        <!-- <div class="outer" @click="div2Handler">
+        <div class="outer" @click="div2Handler">
             <input type="button" value="点击" @click.stop="btnHandler">
-        </div> -->
+        </div>
 
         <!-- .self只会阻止自己身上冒泡行为的触发，并不会真正阻止冒泡行为 -->
-        <!-- <div class="outer" @click="div2Handler">
+        <div class="outer" @click="div2Handler">
             <div class="inner" @click.self="divHandler"></div>
             <input type="button" value="点击" @click="btnHandler">
-        </div> -->
+        </div>
     </div>
     <script>
         // 创建VUE实例

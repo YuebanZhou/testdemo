@@ -1,0 +1,632 @@
+.link.block {
+    text-decoration: none;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #435A6B;
+    border: none;
+    position: relative;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+.link.block::before,
+.link.block::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/* 链接1 */
+.link.block1::before {
+    content: "";
+    width: 3px;
+    height: 18px;
+    left: 60px;
+    top: 11px;
+    border: 1px solid transparent;
+    border-right: none;
+    transition: left 0.3s, border 0.3s;
+}
+
+.link.block1::after {
+    content: "";
+    width: 3px;
+    height: 18px;
+    left: 85px;
+    top: 11px;
+    border: 1px solid transparent;
+    border-left: none;
+    transition: left 0.3s, border 0.3s;
+}
+
+.link.block1:hover::before {
+    left: 40px;
+    border: 2px solid #fff;
+    border-right: none;
+}
+
+.link.block1:hover::after {
+    left: 105px;
+    border: 2px solid #fff;
+    border-left: none;
+}
+
+/* 链接2 */
+.link.block2 {
+    transform: perspective(1000px) rotatex(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    top: 0;
+    transition: transform 0.3s, top 0.3s;
+
+}
+
+.link.block2::before {
+    content: "block2";
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+    background-color: #2E3E4B;
+    top: 40px;
+    transition: background-color 0.3s;
+}
+
+
+.link.block2:hover {
+    top: -20px;
+    transform: perspective(1000px) rotatex(90deg);
+}
+
+.link.block2:hover::before {
+    background-color: #6A8BA5;
+}
+
+
+
+
+/* 链接3 */
+.link.block3::before {
+    content: "";
+    width: 60px;
+    height: 3px;
+    top: 50px;
+    background: rgba(255, 255, 255, 0);
+    left: 50%;
+    margin-left: -30px;
+    top: 40px;
+    transition: top 0.3s, background 0.3s;
+}
+
+.link.block3:hover::before {
+    background: rgba(255, 255, 255, 0.5);
+    top: 30px;
+}
+
+/* 链接4 */
+.link.block4::before {
+    content: "";
+    width: 60px;
+    height: 3px;
+    top: 50px;
+    background: rgba(255, 255, 255, 0);
+    left: 50%;
+    margin-left: -30px;
+    top: 20px;
+    transition: top 0.3s, background 0.3s;
+}
+
+.link.block4:hover::before {
+    background: rgba(255, 255, 255, 0.5);
+    top: 30px;
+}
+
+/* 链接5 */
+.link.block5 {
+    overflow: hidden;
+}
+
+.link.block5::before {
+    content: "block5";
+    top: 0px;
+    transition: top 0.3s;
+}
+
+.link.block5::after {
+    content: "block5";
+    top: 40px;
+    font-weight: bold;
+    transition: top 0.3s;
+}
+
+.link.block5:hover::before {
+    top: -40px;
+}
+
+.link.block5:hover::after {
+    top: 0px;
+}
+
+/* 链接6 */
+.link.block6 {
+    overflow: hidden;
+}
+
+.link.block6::before {
+    content: "";
+    top: -37px;
+    border: 3px solid #fff;
+    transition: top 0.3s;
+    box-sizing: border-box;
+    border-top: none;
+    border-right: none;
+}
+
+.link.block6:hover::before {
+    top: 0px;
+}
+
+/* 链接7 */
+.link.block7::before {
+    width: 70px;
+    left: 50%;
+    height: 2px;
+    transform: translateX(-50%);
+    content: "";
+    top: 35px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.link.block7::after {
+    width: 70px;
+    left: 50%;
+    height: 2px;
+    transform: translateX(-50%);
+    content: "";
+    top: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: top 0.3s, background-color 0.3s, width 0.3s;
+}
+
+.link.block7:hover::before {
+    width: 80px;
+}
+
+.link.block7:hover::after {
+    width: 80px;
+    top: 5px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* 链接8 */
+.link.block8::before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: border 0.3s;
+}
+
+.link.block8::after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -65%);
+    box-sizing: border-box;
+    border: 3px solid rgba(255, 255, 255, 0);
+    transition: border 0.3s, transform 0.3s;
+}
+
+.link.block8:hover::before {
+    border: 3px solid rgba(255, 255, 255, 0);
+}
+
+.link.block8:hover::after {
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(255, 255, 255, 1);
+}
+
+/* 链接9 */
+.link.block9::before {
+    content: "";
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 0px solid rgba(255, 255, 255, 0);
+    transition: border-top 0.3s, border-bottom 0.3s;
+}
+
+.link.block9::after {
+    content: "block9";
+    top: 0px;
+    color: rgba(255, 255, 255, 0);
+    transition: top 0.3s, color 0.3s;
+}
+
+.link.block9:hover::before {
+    border-top: 5px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.link.block9:hover::after {
+    top: 10px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* 链接10 */
+.link.block10 {
+    overflow: hidden;
+}
+
+.link.block10::before {
+    content: "block10";
+    background-color: #435A6B;
+    color: #fff;
+    left: 0px;
+    transition: left 0.3s;
+}
+
+.link.block10::after {
+    content: "block10";
+    background-color: #fff;
+    color: #435A6B;
+    left: -150px;
+    transition: left 0.3s;
+}
+
+.link.block10:hover::before {
+    left: 150px;
+
+}
+
+.link.block10:hover::after {
+    left: 0px;
+
+}
+
+/* 链接11 */
+.link.block11 {
+    color: #000;
+    overflow: hidden;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.link.block11::before {
+    content: "block11";
+    color: #fff;
+    width: 60px;
+    margin-left: 45px;
+    text-align: left;
+    max-width: 0%;
+    overflow: hidden;
+    transition: max-width 0.3s;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+}
+
+.link.block11:hover::before {
+    max-width: 100%;
+}
+
+
+/* 链接12 */
+.link.block12::before,
+.link.block12::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: width 0.3s, height 0.3s, border 0.3s;
+}
+
+
+.link.block12:hover::before {
+    width: 70px;
+    height: 70px;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+}
+
+.link.block12:hover::after {
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* 链接13 */
+.link.block13 {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.link.block13::before {
+    content: "link";
+    color: rgba(255, 255, 255, 0);
+    top: 20px;
+    left: 0px;
+    transition: left 0.3s, color 0.3s;
+}
+
+.link.block13::after {
+    content: "link";
+    color: rgba(255, 255, 255, 0);
+    top: 20px;
+    left: 0px;
+    transition: left 0.3s, color 0.3s;
+}
+
+.link.block13:hover {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.link.block13:hover::before {
+    left: -10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.link.block13:hover::after {
+    left: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* 链接14 */
+
+
+.link.block14::before {
+    content: "";
+    width: 2px;
+    height: 36px;
+    left: 0;
+    top: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    transition: background 0.3s, transform 0.3s, left 0.3s;
+    transform: rotate(0deg);
+    transform-origin: left top;
+}
+
+.link.block14::after {
+    content: "";
+    width: 2px;
+    height: 36px;
+    left: 148px;
+    top: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    transition: background 0.3s, transform 0.3s, left 0.3s;
+    transform: rotate(0deg);
+    transform-origin: right bottom;
+}
+
+
+.link.block14:hover::before {
+    transform: rotate(-90deg);
+    background: rgba(255, 255, 255, 1);
+    left: 55px;
+}
+
+.link.block14:hover::after {
+    transform: rotate(-90deg);
+    background: rgba(255, 255, 255, 1);
+    left: 90px;
+}
+
+/* 链接15 */
+.link.block15 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    transition: font-size 0.3s, color 0.3s;
+}
+
+.link.block15::before {
+    content: "block15";
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0);
+    transition: color 0.3s;
+}
+
+.link.block15:hover {
+
+    color: rgba(255, 255, 255, 0);
+}
+
+.link.block15:hover::before {
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+/* 链接16 */
+.link.block16 {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.link.block16::before {
+    content: "block16";
+    color: rgba(255, 255, 255, 0);
+    transform: rotate(10deg);
+    transform-origin: right bottom;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.link.block16:hover {
+    color: rgba(255, 255, 255, 0);
+}
+
+.link.block16:hover::before {
+    color: rgba(255, 255, 255, 1);
+    transform: rotate(0deg);
+}
+
+/* 链接17 */
+.link.block17 {
+    color: #fff;
+    transition: color 0.3s;
+    overflow: hidden;
+}
+
+.link.block17::before {
+    content: "block17";
+    color: rgba(0, 0, 0, 0);
+
+    top: 0px;
+    border-bottom: 3px solid #fff;
+    transition: color 0.3s, top 0.3s;
+}
+
+.link.block17:hover {
+    color: rgba(255, 255, 255, 0);
+}
+
+.link.block17:hover::before {
+    color: rgba(0, 0, 0, 1);
+    top: -3px;
+}
+
+
+/* 链接18 */
+.link.block18 {
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.3s;
+}
+
+.link.block18::before {
+    content: "";
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    top: 0px;
+    transform: rotate(0deg);
+    transition: top 0.3s, transform 0.3s;
+}
+
+.link.block18::after {
+    content: "";
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    top: 39px;
+    transform: rotate(0deg);
+    transition: top 0.3s, transform 0.3s;
+}
+
+.link.block18:hover {
+    color: #fff;
+}
+
+.link.block18:hover::before {
+    top: 19px;
+    transform: rotate(45deg);
+}
+
+.link.block18:hover::after {
+    top: 19px;
+    transform: rotate(-45deg);
+}
+
+/* 链接19 */
+.link.block19 {
+    transform: perspective(1000px) rotateY(0deg) translateX(-60px);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    left: 60px;
+    transition: transform 0.3s, left 0.3s;
+}
+
+.link.block19::before {
+    content: "block19";
+    left: 150px;
+    transform-origin: left center;
+    transform: rotateY(90deg);
+    background-color: #2E3E4B;
+    transition: background-color 0.3s;
+}
+
+
+.link.block19:hover {
+    left: -75px;
+    transform: perspective(1000px) rotateY(-90deg) translateX(-60px);
+}
+
+.link.block19:hover::before {
+    background-color: #6A8BA5;
+}
+
+/* 链接20 */
+.link.block20 {
+    border-top: 3px solid #222;
+    background-color: #435A6B;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.link.block20::before {
+    content: "block20";
+    transform: perspective(1000px) rotateX(270deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    color: #435A6B;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+
+.link.block20:hover {
+    background-color: #344652;
+}
+
+.link.block20:hover::before {
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+/* 链接21 */
+.link.block21 {
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.3s;
+}
+
+.link.block21::before {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    height: 1px;
+    background: rgba(255, 255, 255, 0);
+    top: -10px;
+    transition: top 0.3s, background 0.3s, height 0.3s;
+}
+
+.link.block21::after {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    height: 1px;
+    background: rgba(255, 255, 255, 0);
+    top: 50px;
+    transition: top 0.3s, background 0.3s, height 0.3s;
+}
+
+.link.block21:hover {
+    color: #fff;
+}
+
+.link.block21:hover::before {
+    top: 5px;
+    background: rgba(255, 255, 255, 1);
+    height: 3px;
+}
+
+.link.block21:hover::after {
+    top: 32px;
+    background: rgba(255, 255, 255, 1);
+    height: 3px;
+}

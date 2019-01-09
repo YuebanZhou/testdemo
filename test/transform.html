@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		.p1{
+			font-stretch:normal;
+		}
+		.p2{
+			font-stretch:ultra-condensed;
+		}
+		.p3{
+			font-stretch:extra-condensed;
+		}
+		.p4{
+			font-stretch:condensed;
+		}
+		.p5{
+			font-stretch:semi-condensed;
+		}
+		.p6{
+			font-stretch:semi-expanded;
+		}
+		.p7{
+			font-stretch:expanded;
+		}
+		.p8{
+			font-stretch:extra-expanded
+		}
+		.p9{
+			font-stretch:ultra-expanded;
+		}
+		.li1{
+			word-break:normal; //不会换行
+			word-break:break-all;//适应宽度 会换行
+			word-break:keep-all;//不会换行
+		}
+		.none{
+			text-decoration:none;
+		}
+		.underline{
+			text-decoration:underline;
+		}
+		.overline{
+			text-decoration:overline;
+		}
+		.line-through{
+			text-decoration:line-through;
+		}
+		.blink{
+			text-decoration:blink;
+		}
+		.text-decoration-css3{
+			-webkit-text-decoration:#f00 wavy underline;
+			-moz-text-decoration:#f00 solid underline;
+			text-decoration:#f00 solid underline;
+		}
+		.capitalize span{text-transform:capitalize;}
+		.uppercase span{text-transform:uppercase;}
+		.lowercase span{text-transform:lowercase;}
+		.fullwidth span{text-transform:full-width;}
+		.collapse{
+			border-collapse:collapse
+		}
+		div p{
+			margin:0;
+			width:200px;
+			height:200px;
+			opacity:0.5;
+			-webkit-transition: 0.3s;
+  			transition: 0.3s;
+  			background:#0ff;
+		}
+		
+		div li{
+			width:200px;
+			height:200px;
+			margin:10px;
+			background:#ccc;
+			list-style: none;
+			display:inline-block;
+		}
+		li.transform1 p:hover{
+			transform:rotate(7deg);
+		}
+		li.transform2 p:hover{
+			
+			transform:translate(10px,10px)
+		}
+		li.rotate1 p:hover{
+			
+			transform:rotate(45deg);
+		}
+		li.rotate2 p:hover{
+			
+			transform:rotateX(45deg);
+		}
+		li.rotate3 p:hover{
+			
+			transform:rotateY(45deg);
+		}
+		li.rotate4 p:hover{
+			
+			transform:rotateZ(45deg);
+		}
+		li.scale1 p:hover{
+			
+			transform:scale(2);
+		}
+		li.scale1 p:hover{
+			
+			transform:scale(1.2);
+		}
+		li.scale2 p:hover{
+			
+			transform:scaleX(1.2);
+		}
+		li.scale3 p:hover{
+			
+			transform:scaleY(1.2);
+		}
+		li.matrix p:hover{
+			transform:matrix(2,2,0,2,45,0);
+		}
+		li.skew1 p:hover{
+			
+			transform:skew(15deg,35deg);
+		}
+		li.skew2 p:hover{
+			
+			transform:skewX(35deg);
+		}
+		li.skew3 p:hover{
+			
+			transform:skewY(35deg);
+		}
+		.perspective1,.perspective2{
+			perspective:100px;
+		}
+		li.perspective1 p:hover{
+			
+			transform:rotateX(35deg);
+		}
+		li.perspective2 p:hover{
+
+			transform:rotateY(35deg);
+		}
+		.perspective3,.perspective4{
+			perspective:200px;
+		}
+		li.perspective3 p:hover{
+			
+			transform:rotateX(35deg);
+		}
+		li.perspective4 p:hover{
+			perspective:100px;
+			transform:rotateY(35deg);
+		}
+		.origin li:nth-child(2n+1) p{
+			transform-origin: 100% 0 0;
+			-webkit-transform-origin: 100% 0 0;
+		}
+		.origin li:nth-child(2n+2) p{
+			transform-origin: 0 100% 0;
+			-webkit-transform-origin: 0 100% 0;
+		}
+		
+	</style>
+</head>
+<body>
+	<p class="p1">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p2">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p3">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p4">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p5">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p6">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p7">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p8">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<p class="p9">设置或检索对象中的文字是否横向拉伸变形。</p>
+	<ul>
+		<li class="none">无装饰文字</li>
+		<li class="underline">带下划线文字</li>
+		<li class="overline">带上划线文字</li>
+		<li class="line-through">带贯穿线文字</li>
+		<li class="blink">带闪烁文字</li>
+		<li class="text-decoration-css3">红色下划实线</li>
+	</ul>
+	<ul class="test">
+	<li>
+		<strong>将每个单词的首字母转换成大写</strong>
+		<div>原　文： <span>how do you do.</span></div>
+		<div class="capitalize">转换后： <span>how do you do.</span></div>
+	</li>
+	<li>
+		<strong>转换成大写</strong>
+		<div>原　文： <span>how do you do.</span></div>
+		<div class="uppercase">转换后： <span>how do you do.</span></div>
+	</li>
+	<li>
+		<strong>转换成小写</strong>
+		<div>原　文： <span>HOW ARE YOU.</span></div>
+		<div class="lowercase">转换后： <span>HOW ARE YOU.</span></div>
+	</li>
+<li>
+		<strong>转换成小写</strong>
+		<div>原　文： <span>HOW ARE YOU.</span></div>
+		<div class="fullwidth">转换后： <span>HOW ARE YOU.</span></div>
+	</li>
+</ul>
+<table border="1"  collapse> 
+	<thead>记录情况</thead>
+	<tbody>
+		<tr>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+		<tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+		</tr>
+	</tbody>
+</table>
+<div>
+	<ul class="transform">
+		<li class="transform1">
+			<p></p>
+		</li>
+		<li class="transform2">
+			<p></p>
+		</li>
+	</ul>
+	<ul class="rotate">
+		<li class="rotate1">
+			<p></p>
+		</li>
+		<li class="rotate2">
+			<p></p>
+		</li>
+		<li class="rotate3">
+			<p></p>
+		</li>
+		<li class="rotate4">
+			<p></p>
+		</li>
+	</ul>
+	<ul class="scale">
+		<li class="scale1">
+			<p></p>
+		</li>
+		<li class="scale2">
+			<p></p>
+		</li>
+		<li class="scale3">
+			<p></p>
+		</li>
+		<li class="matrix">
+			<p></p>
+		</li>
+	</ul>
+	<ul class="skew">
+		<li class="skew1">
+			<p></p>
+		</li>
+		<li class="skew2">
+			<p></p>
+		</li>
+		<li class="skew3">
+			<p></p>
+		</li>
+		
+	</ul>
+	<ul class="perspective">
+		<li class="perspective1">
+			<p></p>
+		</li>
+		<li class="perspective2">
+			<p></p>
+		</li>
+		<li class="perspective3">
+			<p></p>
+		</li>
+		<li class="perspective4">
+			<p></p>
+		</li>
+	</ul>
+	<ul class="origin">
+		<li class="rotate1">
+			<p></p>
+		</li>
+		<li class="rotate1">
+			<p></p>
+		</li>
+		<li class="rotate2 perspective1">
+			<p></p>
+		</li>
+		<li  class="rotate3 perspective2">
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+		<li>
+			<p></p>
+		</li>
+	</ul>
+	<input type="color" value="#34538b" autocomplete="off">
+</div>
+
+</body>
+</html>

@@ -11,15 +11,19 @@
 </head>
 
 <body>
+    <!-- id用来定位要控制的区域 -->
+    <!-- 双花括号表示进行渲染的数据 -->
     <div id="app">
         <p>{{msg}}</p>
+        <p>{{msg1}}</p>
     </div>
     <script>
         // 创建VUE实例
         var vm = new Vue({
             el: '#app', // VUE实例要控制的区域
             data: {
-                msg: 'helloworld' // 要渲染的数据
+                msg: 'helloworld', // 要渲染的数据
+                msg1: 'helloworld2' // 要渲染的数据
             }
         })
     </script>

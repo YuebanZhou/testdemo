@@ -12,7 +12,9 @@
 
 <body>
     <div id="app">
+        <!-- 点击调用toggle函数 -->
         <input type="button" value="toggle" @click="toggle">
+        <!-- 点击将flag值取反 -->
         <input type="button" value="toggle" @click="flag=!flag">
         <!-- v-if的特点，每次都会重新删除或者创建元素 -->
         <!-- v-show的特点，每次不会重新进行DOM删除和创建，只是切换了元素的display：none样式 -->

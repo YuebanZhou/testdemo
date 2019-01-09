@@ -1,0 +1,64 @@
+/* 模块1 */
+.square.block2 span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background-color: #469179;
+}
+
+
+.square.block2 .block2_1:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: width 1s;
+
+}
+
+.square.block2 .block2_1:hover:before {
+    width: 0;
+}
+
+.square.block2 .block2_2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: height 1s;
+
+}
+
+.square.block2 .block2_2:hover:before {
+    height: 0;
+
+}
+
+.square.block2 .block2_3:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: translateY(-50%);
+    transform: translateX(-50%); */
+    width: 160px;
+    height: 160px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: height 1s, width 1s;
+
+}
+
+.square.block2 .block2_3:hover:before {
+    height: 0;
+    width: 0;
+}
