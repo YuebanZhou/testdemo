@@ -1,0 +1,1026 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    background-color: #e74c3c;
+    position: relative;
+}
+
+
+/* .btnzu:after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.btn {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 10px;
+    background-color: #c0392b;
+    float: left;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.masker {
+    background-color: rgba(143, 27, 15, 0.8);
+    animation: masker1 1s ease-in-out;
+}
+
+@keyframes masker1 {
+    from {
+        background-color: rgba(143, 27, 15, 0);
+    }
+
+    to {
+        background-color: rgba(143, 27, 15, 0.8);
+    }
+}
+
+.closemasker {
+    background-color: rgba(143, 27, 15, 0);
+    animation: closemasker1 1s ease-in-out;
+}
+
+@keyframes closemasker1 {
+    from {
+        background-color: rgba(143, 27, 15, 0.8);
+    }
+
+    to {
+        background-color: rgba(143, 27, 15, 0);
+    }
+}
+
+.modal>div {
+    position: absolute;
+    width: 560px;
+    height: 400px;
+    left: 50%;
+    margin-left: -280px;
+    top: 100px;
+}
+
+.modal>div .head {
+    height: 20%;
+    background: #d44637;
+    font-size: 26px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 5px 5px 0 0;
+}
+
+.modal>div .content {
+    height: 60%;
+    background: #e74c3c;
+    padding: 20px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.modal>div .content p {
+    margin-top: 0px;
+}
+
+.modal>div .foot {
+    height: 20%;
+    background: #e74c3c;
+    border-radius: 0 0 5px 5px;
+}
+
+.modal>div .foot .close {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #c0392b;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* 淡入放大背景遮罩 */
+.modal>div.modal1 {
+    transform: scale(1);
+    opacity: 1;
+    animation: modal1 1s ease-in-out;
+}
+
+@keyframes modal1 {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal>div.close1 {
+    transform: scale(0.5);
+    opacity: 0;
+    animation: close1 1s ease-in-out;
+}
+
+@keyframes close1 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* 从右滑入背景遮罩 */
+.modal>div.modal2 {
+    transform: translateX(0);
+    opacity: 1;
+    animation: modal2 1s ease-in-out;
+}
+
+@keyframes modal2 {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.modal>div.close2 {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: close2 1s ease-in-out;
+}
+
+@keyframes close2 {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* 从下滑入背景遮罩 */
+.modal>div.modal3 {
+    transform: translateY(0);
+    opacity: 1;
+    animation: modal3 1s ease-in-out;
+}
+
+@keyframes modal3 {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal>div.close3 {
+    transform: translateY(100%);
+    opacity: 0;
+    animation: close3 1s ease-in-out;
+}
+
+@keyframes close3 {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* 旋转放大背景遮罩 */
+.modal>div.modal4 {
+    transform: rotate(0deg);
+    opacity: 1;
+    animation: modal4 1s ease-in-out;
+}
+
+@keyframes modal4 {
+    from {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.modal>div.close4 {
+    transform: rotate(180deg);
+    opacity: 0;
+    animation: close4 1s ease-in-out;
+}
+
+@keyframes close4 {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* 全屏缩小掉落 */
+.modal>div.modal5 {
+    transform: scale(1);
+    opacity: 1;
+    animation: modal5 1s ease-in-out;
+}
+
+@keyframes modal5 {
+    from {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal>div.close5 {
+    transform: scale(1.5);
+    opacity: 0;
+    animation: close5 1s ease-in-out;
+}
+
+@keyframes close5 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* 全屏倾斜掉落 */
+.modal>div.modal6 {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    animation: modal6 1s ease-in-out;
+}
+
+@keyframes modal6 {
+    from {
+        transform: scale(1.5) rotate(15deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.modal>div.close6 {
+    transform: scale(1.5) rotate(15deg);
+    opacity: 0;
+    animation: close6 1s ease-in-out;
+}
+
+@keyframes close6 {
+    from {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.5) rotate(15deg);
+        opacity: 0;
+    }
+}
+
+/* 标签从上掉落 */
+.modal>div.modal7 {
+    top: 0px;
+    animation: modal7 1s ease-in-out;
+}
+
+@keyframes modal7 {
+    from {
+        top: -400px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.modal>div.close7 {
+    top: -400px;
+    animation: close7 1s ease-in-out;
+}
+
+@keyframes close7 {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: -400px;
+    }
+}
+
+/* 3D左右旋转 */
+.modal>div.modal8 {
+    transform: perspective(1000px) rotatey(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: modal8 1s ease-in-out;
+}
+
+@keyframes modal8 {
+    from {
+        transform: perspective(1000px) rotatey(-90deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatey(0deg);
+    }
+}
+
+.modal>div.close8 {
+    transform: perspective(1000px) rotatey(-90deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: close8 1s ease-in-out;
+}
+
+@keyframes close8 {
+    from {
+        transform: perspective(1000px) rotatey(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatey(-90deg);
+    }
+}
+
+/* 3D上下旋转 */
+.modal>div.modal9 {
+    transform: perspective(1000px) rotatex(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: modal9 1s ease-in-out;
+}
+
+@keyframes modal9 {
+    from {
+        transform: perspective(1000px) rotatex(-90deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+}
+
+.modal>div.close9 {
+    transform: perspective(1000px) rotatex(-90deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: close9 1s ease-in-out;
+}
+
+@keyframes close9 {
+    from {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatex(-90deg);
+    }
+}
+
+/* 3D翻页 */
+.modal>div.modal10 {
+    transform: perspective(1000px) rotatex(0deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    animation: modal10 1s ease-in-out;
+}
+
+@keyframes modal10 {
+    from {
+        transform: perspective(1000px) rotatex(-90deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+}
+
+.modal>div.close10 {
+    transform: perspective(1000px) rotatex(-90deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    animation: close10 1s ease-in-out;
+}
+
+@keyframes close10 {
+    from {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatex(-90deg);
+    }
+}
+
+/* 全屏淡入缩小 */
+.modal>div.modal11 {
+    transform: scale(1);
+    opacity: 1;
+    animation: modal11 1s ease-in-out;
+}
+
+@keyframes modal11 {
+    from {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal>div.close11 {
+    transform: scale(1.5);
+    opacity: 0.5;
+    animation: close11 1s ease-in-out;
+}
+
+@keyframes close11 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+/* 全屏遮罩展示 */
+.modal>div.modal12 {
+    transform: scale(1);
+    opacity: 1;
+    animation: modal12 1s ease-in-out;
+}
+
+.modal>div.modal12 .head {
+    background-color: #e74c3c;
+}
+
+@keyframes modal12 {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal>div.close12 .head {
+    background-color: #e74c3c;
+}
+
+.modal>div.close12 {
+    transform: scale(0.5);
+    opacity: 0;
+    animation: close12 1s ease-in-out;
+}
+
+@keyframes close12 {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+.masker12 .modal {
+    background-color: #E74C3C;
+    animation: masker12 1s ease-in-out;
+}
+
+@keyframes masker12 {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: #E74C3C;
+    }
+}
+
+.closemasker12 .modal {
+    background-color: transparent;
+    animation: closemasker12 1s ease-in-out;
+}
+
+@keyframes closemasker12 {
+    from {
+        background-color: #E74C3C;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+/* 3D左右旋转突出显示 */
+.modal>div.modal13 {
+    transform: perspective(1000px) rotatey(0deg) translatex(0px);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: modal13 1s ease-in-out;
+}
+
+@keyframes modal13 {
+    0% {
+        transform: perspective(1000px) rotatey(80deg) translateX(200px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: perspective(1000px) rotatey(80deg) translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(1000px) rotatey(0deg) translateX(0px);
+        opacity: 1;
+    }
+}
+
+.modal>div.close13 {
+    transform: perspective(1000px) rotatey(80deg) translateX(200px);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: close13 1s ease-in-out;
+}
+
+@keyframes close13 {
+    0% {
+        transform: perspective(1000px) rotatey(0deg) translateX(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: perspective(1000px) rotatey(80deg) translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(1000px) rotatey(80deg) translateX(200px);
+        opacity: 0;
+    }
+}
+
+/* 3D底部滑入 */
+.modal>div.modal14 {
+
+    transform: perspective(1000px) rotatex(0deg) translateZ(0px);
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    animation: modal14 1s ease-in-out;
+}
+
+@keyframes modal14 {
+    0% {
+        transform: perspective(1000px) rotatex(90deg) translateY(150px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: perspective(1000px) rotatex(0deg) translateY(150px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(1000px) rotatex(0deg) translateY(0px);
+        opacity: 1;
+    }
+}
+
+.modal>div.close14 {
+
+    transform: perspective(1000px) rotatex(90deg) translateY(150px);
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    animation: close14 1s ease-in-out;
+}
+
+@keyframes close14 {
+    0% {
+        transform: perspective(1000px) rotatex(0deg) translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: perspective(1000px) rotatex(0deg) translateY(150px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(1000px) rotatex(90deg) translateY(150px);
+        opacity: 0;
+    }
+}
+
+/* 3D左边滑入 */
+.modal>div.modal15 {
+    transform: perspective(1000px) rotatey(0deg) translateX(0px);
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    animation: modal15 1s ease-in-out;
+}
+
+@keyframes modal15 {
+    0% {
+        transform: perspective(1000px) rotatey(90deg) translateX(-150px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: perspective(1000px) rotatey(0deg) translateX(-150px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(1000px) rotatey(0deg) translateX(0px);
+        opacity: 1;
+    }
+}
+
+.modal>div.close15 {
+    transform: perspective(1000px) rotatey(90deg) translateX(-150px);
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    animation: close15 1s ease-in-out;
+}
+
+@keyframes close15 {
+    0% {
+        transform: perspective(1000px) rotatey(0deg) translateX(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: perspective(1000px) rotatey(0deg) translateX(-150px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(1000px) rotatey(90deg) translateX(-150px);
+        opacity: 0;
+    }
+}
+
+/* 突出显示背景模糊 */
+.modal>div.modal16 {
+    top: 100px;
+    opacity: 1;
+    animation: modal16 1s ease-in-out;
+}
+
+@keyframes modal16 {
+    from {
+        top: 60px;
+        opacity: 0;
+    }
+
+    to {
+        top: 100px;
+        opacity: 1;
+    }
+}
+
+.modal>div.close16 {
+    top: 60px;
+    opacity: 0;
+    animation: close16 1s ease-in-out;
+}
+
+@keyframes close16 {
+    from {
+        top: 100px;
+        opacity: 1;
+    }
+
+    to {
+        top: 60px;
+        opacity: 0;
+    }
+}
+
+.masker16 .btnzu {
+    filter: blur(5px);
+    animation: masker16 1s ease-in-out;
+}
+
+@keyframes masker16 {
+    from {
+        filter: blur(0px);
+    }
+
+    to {
+        filter: blur(5px);
+    }
+}
+
+.closemasker16 .btnzu {
+    filter: blur(0px);
+    animation: closemasker16 1s ease-in-out;
+}
+
+@keyframes closemasker16 {
+    from {
+        filter: blur(5px);
+    }
+
+    to {
+        filter: blur(0px);
+    }
+}
+
+/* 从下滑入背景掀开 */
+.modal>div.modal17 {
+    transform: translateY(0);
+    opacity: 1;
+    animation: modal17 1s ease-in-out;
+}
+
+@keyframes modal17 {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.masker17 {
+    transform: perspective(1000px) rotatex(-10deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    animation: masker17 1s ease-in-out;
+}
+
+@keyframes masker17 {
+    from {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatex(-10deg);
+    }
+}
+
+.modal>div.close17 {
+    transform: translateY(100%);
+    opacity: 0;
+    animation: close17 1s ease-in-out;
+}
+
+@keyframes close17 {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.closemasker17 {
+    transform: perspective(1000px) rotatex(0deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    animation: closemasker17 1s ease-in-out;
+}
+
+@keyframes closemasker17 {
+    from {
+        transform: perspective(1000px) rotatex(-10deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+}
+
+/* 从左滑入背景缩小 */
+.modal>div.modal18 {
+    transform: translateX(0);
+    opacity: 1;
+    animation: modal18 1s ease-in-out;
+}
+
+@keyframes modal18 {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.masker18 {
+    transform: scale(0.8);
+    animation: masker18 1s ease-in-out;
+}
+
+@keyframes masker18 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+}
+
+.modal>div.close18 {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: close18 1s ease-in-out;
+}
+
+@keyframes close18 {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.closemasker18 {
+    transform: scale(1);
+    animation: closemasker18 1s ease-in-out;
+}
+
+@keyframes closemasker18 {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* 从上滑入 */
+.modal>div.modal19 {
+    transform: translateY(0);
+    opacity: 1;
+    animation: modal19 1s ease-in-out;
+}
+
+@keyframes modal19 {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.masker19 {
+    transform: perspective(1000px) rotatex(0deg);
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    animation: masker19 1s ease-in-out;
+}
+
+@keyframes masker19 {
+    0% {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+
+    50% {
+        transform: perspective(1000px) rotatex(10deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+}
+
+.modal>div.close19 {
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: close19 1s ease-in-out;
+}
+
+@keyframes close19 {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.closemasker19 {
+    transform: perspective(1000px) rotatex(0deg);
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    animation: closemasker19 1s ease-in-out;
+}
+
+@keyframes closemasker19 {
+    0% {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+
+    50% {
+        transform: perspective(1000px) rotatex(10deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotatex(0deg);
+    }
+}

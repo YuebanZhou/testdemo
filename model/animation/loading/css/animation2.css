@@ -1,0 +1,919 @@
+/* loading7 */
+.loading7 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading7 div {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: relative;
+}
+
+.loading7 div::before {
+    content: "";
+    width: 2px;
+    height: 14px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -14px;
+    margin-left: -1px;
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+    /* 动画 */
+    animation: loading7a1 4s linear infinite;
+}
+
+.loading7 div::after {
+    content: "";
+    width: 2px;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -1px;
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+    /* 动画 */
+    animation: loading7a1 1s linear infinite;
+}
+
+@keyframes loading7a1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* loading8 */
+.loading8 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.loading8 div {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.loading8 div:nth-child(1) {
+    /* 动画 */
+    animation: loading8a1 1s linear infinite;
+}
+
+.loading8 div:nth-child(2) {
+    /* 动画 */
+    animation: loading8a2 1s linear infinite;
+}
+
+.loading8 div:nth-child(3) {
+    /* 动画 */
+    animation: loading8a3 1s linear infinite;
+}
+
+@keyframes loading8a1 {
+    0% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    20% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    30% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    50% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    80% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes loading8a2 {
+    0% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    20% {
+        left: 60px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    30% {
+        left: 60px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        left: 60px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    70% {
+        left: 60px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    80% {
+        left: 60px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes loading8a3 {
+    0% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    20% {
+        left: 90px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    30% {
+        left: 90px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    50% {
+        left: 90px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        left: 90px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    80% {
+        left: 90px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        left: 30px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+/* loading9 */
+.loading9 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading9 div {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+}
+
+.loading9 div::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 10px;
+    transform: rotate(45deg);
+    /* 动画 */
+    animation: loading9a1 1s linear infinite;
+}
+
+.loading9 div::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+@keyframes loading9a1 {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: -10px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* loading10 */
+.loading10 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading10 div {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading10 div::before {
+    content: "";
+    width: 2px;
+    height: 14px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -14px;
+    margin-left: -1px;
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+    /* 动画 */
+    animation: loading10a1 1s linear infinite;
+}
+
+.loading10 div::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 7px;
+    margin-left: -15px;
+}
+
+@keyframes loading10a1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(70deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(-70deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* loading11 */
+.loading11 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading11 div {
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    position: relative;
+}
+
+.loading11 div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 15px;
+    background-color: #fff;
+    /* 动画 */
+    animation: loading11a1 3s linear infinite;
+}
+
+.loading11 div::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    width: 3px;
+    height: 8px;
+    margin-top: -4px;
+    background-color: #fff;
+}
+
+@keyframes loading11a1 {
+    0% {
+        width: 0px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    50% {
+        width: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        width: 40px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+/* loading12 */
+.loading12 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading12 div {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    transform: translate(-10px, -10px) rotate(-45deg) scale(1);
+    /* 动画 */
+    animation: loading12a1 1s ease-in-out infinite;
+}
+
+.loading12 div::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.loading12 div::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 31px;
+    width: 3px;
+    height: 20px;
+    background-color: #fff;
+
+}
+
+@keyframes loading12a1 {
+    0% {
+        transform: translate(-10px, -10px) rotate(-45deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-10px, -10px) rotate(-45deg) scale(0.8);
+    }
+
+    100% {
+        transform: translate(-10px, -10px) rotate(-45deg) scale(1);
+    }
+}
+
+/* loading13 */
+.loading13 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading13 div {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    /* 动画 */
+    animation: loading13a1 1s linear infinite;
+}
+
+.loading13 div::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+@keyframes loading13a1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(180deg);
+    }
+
+    80% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* loading14 */
+.loading14 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 120px;
+}
+
+
+.loading14 div {
+    width: 10px;
+    height: 30px;
+    float: left;
+    margin-left: 8px;
+    margin-top: 35px;
+}
+
+.loading14 div:nth-child(1) {
+    margin-left: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* 动画 */
+    animation: loading14a1 1s linear infinite;
+}
+
+.loading14 div:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 动画 */
+    animation: loading14a2 1s linear infinite;
+}
+
+.loading14 div:nth-child(3) {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 动画 */
+    animation: loading14a3 1s linear infinite;
+}
+
+.loading14 div:nth-child(4) {
+    background-color: rgba(255, 255, 255, 0.6);
+    /* 动画 */
+    animation: loading14a4 1s linear infinite;
+}
+
+.loading14 div:nth-child(5) {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 动画 */
+    animation: loading14a5 1s linear infinite;
+}
+
+.loading14 div:nth-child(6) {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* 动画 */
+    animation: loading14a6 1s linear infinite;
+}
+
+.loading14::before {
+    content: "";
+    background-color: #fff;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -15px;
+    background-color: rgba(255, 255, 255, 1);
+    /* 动画 */
+    animation: loading14a7 2s linear infinite;
+}
+
+@keyframes loading14a1 {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@keyframes loading14a2 {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes loading14a3 {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@keyframes loading14a4 {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes loading14a5 {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes loading14a6 {
+    0% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+
+@keyframes loading14a7 {
+    0% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0px;
+    }
+}
+
+/* loading15 */
+.loading15 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading15 div {
+    display: inline-block;
+    background-color: #fff;
+    width: 25px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.loading15 div::before {
+    content: "";
+    background-color: #333;
+    position: absolute;
+    left: 2px;
+    top: 15px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    animation: loading15a1 3s linear infinite;
+}
+
+@keyframes loading15a1 {
+    0% {
+        left: 2px;
+    }
+
+    50% {
+        left: 10px;
+    }
+
+    100% {
+        left: 2px;
+    }
+}
+
+/* loading16 */
+.loading16 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+    position: relative;
+}
+
+
+.loading16 div:nth-child(1) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    height: 10px;
+    width: 2px;
+    background-color: #fff;
+    /* 动画 */
+    animation: loading16a1 3s linear infinite;
+}
+
+.loading16 div:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32px;
+    height: 10px;
+    width: 2px;
+    background-color: #fff;
+    /* 动画 */
+    animation: loading16a1 3s linear infinite;
+}
+
+.loading16 div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    height: 10px;
+    width: 2px;
+    background-color: #fff;
+    /* 动画 */
+    animation: loading16a1 3s linear infinite;
+}
+
+.loading16 div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 10px;
+    width: 2px;
+    background-color: #fff;
+    /* 动画 */
+    animation: loading16a1 3s linear infinite;
+}
+
+.loading16 div:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.loading16 div:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    left: 31px;
+    top: 4px;
+    width: 5px;
+    height: 12px;
+    border: 2px #fff solid;
+    border-left: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+@keyframes loading16a1 {
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 2px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+/* loading17 */
+.loading17 {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.loading17 div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.loading17 div::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 动画 */
+    animation: loading17a1 3s linear infinite;
+}
+
+.loading17 div::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    /* 动画 */
+    animation: loading17a2 1s linear infinite;
+}
+
+@keyframes loading17a1 {
+    0% {
+        height: 0px;
+    }
+
+
+    100% {
+        height: 46px;
+    }
+}
+
+@keyframes loading17a2 {
+    0% {
+        top: -10px;
+        left: -10px;
+    }
+
+    25% {
+        top: -10px;
+        left: 48px;
+    }
+
+    50% {
+        top: 48px;
+        left: 48px;
+    }
+
+    75% {
+        top: 48px;
+        left: -10px;
+    }
+
+    100% {
+        top: -10px;
+        left: -10px;
+    }
+}
+
+/* loading18 */
+.loading18 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.loading18 div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(-180deg) scale(0.5);
+    /* 动画 */
+    animation: loading18a1 2s ease-in-out infinite;
+}
+
+.loading18 div::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* 动画 */
+    animation: loading18a2 2s ease-in-out infinite;
+}
+
+@keyframes loading18a1 {
+    0% {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%) rotate(-180deg) scale(0.3);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: translate(-50%, -50%) rotate(180deg) scale(1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%) rotate(-180deg) scale(0.3);
+    }
+}
+
+@keyframes loading18a2 {
+    0% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}

@@ -1,0 +1,1466 @@
+/* 公共样式 */
+body {
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul {
+    padding: 0;
+}
+
+ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+    float: left;
+}
+
+h2 {
+    text-align: center;
+    margin: 80px auto;
+    font-size: 40px;
+    width: 280px;
+}
+
+.tab {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 基本样式 */
+.tabNav li {
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0px 0px 5px #000;
+    border-radius: 5px;
+}
+
+.tabNav li:hover {
+    box-shadow: 0px 0px 10px #000;
+}
+
+.tabNav li.active {
+    box-shadow: 0px 0px 10px #000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tabPane {
+    display: none;
+}
+
+.tabPane li {
+    cursor: pointer;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 5px #aaa;
+    border-radius: 5px;
+}
+
+.tabPane li:hover {
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+.tabPane li.active {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+/* 动画样式 */
+/* 上下颤动 */
+.bounce {
+    animation: bounce 1s linear;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+@keyframes bounce {
+    0% {
+        top: 0px;
+    }
+
+    40% {
+        top: -20px;
+    }
+
+    60% {
+        top: 0px;
+    }
+
+    80% {
+        top: -10px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+/* 闪现两次 */
+.flash {
+    animation: flash 1s linear;
+    opacity: 1;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 放大再缩小 */
+.pulse {
+    animation: pulse 1s linear;
+    transform: scale(1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 弹性形变 */
+.rubberBand {
+    transform: scaleX(1) scaleY(1);
+    animation: rubberBand 1s ease-in-out;
+
+}
+
+@keyframes rubberBand {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+
+    20% {
+        transform: scaleX(1.2) scaleY(0.8);
+    }
+
+    40% {
+        transform: scaleX(0.8) scaleY(1.2);
+    }
+
+    60% {
+        transform: scaleX(1.1) scaleY(0.9);
+    }
+
+    80% {
+        transform: scaleX(0.9) scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+/* 左右颤动 */
+.shake {
+    animation: shake 1s ease-in-out;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+@keyframes shake {
+    0% {
+        left: 0;
+    }
+
+    12.5% {
+        left: 20px;
+    }
+
+    25% {
+        left: -20px;
+    }
+
+    37.5% {
+        left: 10px;
+    }
+
+    50% {
+        left: -10px;
+    }
+
+    62.5% {
+        left: 5px;
+    }
+
+    75% {
+        left: -5px;
+    }
+
+    87.5% {
+        left: 0;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+/* 左右旋转摆动 */
+.swing {
+    animation: swing 1s ease-in-out;
+    transform: rotate(0deg);
+    transform-origin: top center;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(20deg);
+    }
+
+    40% {
+        transform: rotate(-20deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* 缩放摆动 */
+.tada {
+    animation: tada 1s ease-in-out;
+    transform: rotate(0deg) scale(1);
+    transform-origin: center center;
+}
+
+@keyframes tada {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    40% {
+        transform: rotate(-10deg) scale(0.8);
+    }
+
+    60% {
+        transform: rotate(10deg) scale(1.1);
+    }
+
+    70% {
+        transform: rotate(-10deg) scale(1.1);
+    }
+
+    80% {
+        transform: rotate(5deg) scale(1.1);
+    }
+
+    90% {
+        transform: rotate(-5deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* 左右大幅度倾斜小角度摆动 */
+.wobble {
+    animation: wobble 1s ease-in-out;
+    transform: rotate(0deg) translateX(0);
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+
+    20% {
+        transform: rotate(-10deg) translateX(-100px);
+    }
+
+    40% {
+        transform: rotate(10deg) translateX(100px);
+    }
+
+    60% {
+        transform: rotate(-5deg) translateX(-50px);
+    }
+
+    80% {
+        transform: rotate(5deg) translateX(50px);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+/* 缩放闪现 */
+.bounceIn {
+    animation: bounceIn 1s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    20% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    90% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 从上滑入弹性 */
+.bounceInDown {
+    animation: bounceInDown 1s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes bounceInDown {
+    0% {
+        top: -200px;
+        opacity: 0;
+    }
+
+    40% {
+        top: 10px;
+        opacity: 1;
+    }
+
+    60% {
+        top: -10px;
+    }
+
+    80% {
+        top: 5px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+/* 从左滑入弹性 */
+.bounceInLeft {
+    animation: bounceInLeft 1s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes bounceInLeft {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+
+    40% {
+        left: 10px;
+        opacity: 1;
+    }
+
+    60% {
+        left: -10px;
+    }
+
+    80% {
+        left: 5px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+/* 从右滑入弹性 */
+.bounceInRight {
+    animation: bounceInRight 1s ease-in-out;
+    position: relative;
+    top: 0;
+    right: 0;
+    opacity: 1;
+}
+
+@keyframes bounceInRight {
+    0% {
+        right: -200px;
+        opacity: 0;
+    }
+
+    40% {
+        right: 10px;
+        opacity: 1;
+    }
+
+    60% {
+        right: -10px;
+    }
+
+    80% {
+        right: 5px;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+/* 从下滑入弹性 */
+.bounceInUp {
+    animation: bounceInUp 1s ease-in-out;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes bounceInUp {
+    0% {
+        bottom: -200px;
+        opacity: 0;
+    }
+
+    40% {
+        bottom: 10px;
+        opacity: 1;
+    }
+
+    60% {
+        bottom: -10px;
+    }
+
+    80% {
+        bottom: 5px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+/* 缩小消失再放大 */
+.bounceOut {
+    animation: bounceOut 1s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+}
+
+@keyframes bounceOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 上下抖动消失 */
+.bounceOutDown {
+    animation: bounceOutDown 1s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes bounceOutDown {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+
+    10% {
+        top: 10px;
+        opacity: 1;
+    }
+
+    70% {
+        top: -10px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 500px;
+        opacity: 0;
+    }
+}
+
+/* 左右抖动消失 */
+.bounceOutLeft {
+    animation: bounceOutLeft 1s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes bounceOutLeft {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    10% {
+        left: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        left: -300px;
+        opacity: 0;
+    }
+}
+
+/* 左右抖动消失 */
+.bounceOutRight {
+    animation: bounceOutRight 1s ease-in-out;
+    position: relative;
+    top: 0;
+    right: 0;
+    opacity: 1;
+}
+
+@keyframes bounceOutRight {
+    0% {
+        right: 0;
+        opacity: 1;
+    }
+
+    10% {
+        right: 10px;
+        opacity: 1;
+    }
+
+    100% {
+        right: -300px;
+        opacity: 0;
+    }
+}
+
+/* 上下抖动消失 */
+.bounceOutUp {
+    animation: bounceOutUp 1s ease-in-out;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes bounceOutUp {
+    0% {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    10% {
+        bottom: 10px;
+        opacity: 1;
+    }
+
+    70% {
+        bottom: -10px;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 500px;
+        opacity: 0;
+    }
+}
+
+/* 淡入 */
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 从上滑入淡入 */
+.fadeInDown {
+    animation: fadeInDown 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+
+
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+/* 从左滑入淡入 */
+.fadeInLeft {
+    animation: fadeInLeft 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        left: -100px;
+    }
+
+
+    100% {
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+/* 从右滑入淡入 */
+.fadeInRight {
+    animation: fadeInRight 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+/* 从下滑入 */
+.fadeInUp {
+    animation: fadeInUp 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        bottom: -100px;
+    }
+
+
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+
+/* 淡出 */
+.fadeOut {
+    animation: fadeOut 1s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 从上滑出淡出 */
+.fadeOutDown {
+    animation: fadeOutDown 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        top: 0px;
+    }
+
+    100% {
+        opacity: 0;
+        top: -100px;
+    }
+}
+
+/* 从左滑出淡出 */
+.fadeOutLeft {
+    animation: fadeOutLeft 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        left: 0px;
+    }
+
+
+    100% {
+        opacity: 0;
+        left: -100px;
+    }
+}
+
+/* 从右滑出淡出 */
+.fadeOutRight {
+    animation: fadeOutRight 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        right: 0px;
+    }
+
+
+    100% {
+        opacity: 0;
+        right: -100px;
+    }
+}
+
+/* 从下滑出 */
+.fadeOutUp {
+    animation: fadeOutUp 1s ease-in-out;
+    opacity: 1;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        bottom: 0px;
+    }
+
+
+    100% {
+        opacity: 0;
+        bottom: -100px;
+    }
+}
+
+/* 3D旋转 */
+.flip {
+    transform: perspective(200px) rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: flip 1s linear;
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(200px) rotateY(0deg);
+    }
+
+    40% {
+        transform: perspective(200px) rotateY(180deg);
+    }
+
+    60% {
+        transform: perspective(200px) rotateY(180deg);
+    }
+
+    100% {
+        transform: perspective(200px) rotateY(360deg);
+    }
+}
+
+/* 绕X轴转动颤动出现 */
+.flipInX {
+    transform: perspective(200px) rotateX(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    opacity: 1;
+    animation: flipInX 1s ease-in-out;
+}
+
+@keyframes flipInX {
+    0% {
+        transform: perspective(200px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    80% {
+        transform: perspective(200px) rotateX(-20deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: perspective(200px) rotateX(10deg);
+    }
+
+    100% {
+        transform: perspective(200px) rotateX(0deg);
+    }
+}
+
+/* 绕y轴转动颤动出现 */
+.flipInY {
+    transform: perspective(200px) rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    opacity: 1;
+    animation: flipInY 1s ease-in-out;
+}
+
+@keyframes flipInY {
+    0% {
+        transform: perspective(200px) rotateY(90deg);
+        opacity: 0;
+    }
+
+    80% {
+        transform: perspective(200px) rotateY(-20deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: perspective(200px) rotateY(10deg);
+    }
+
+    100% {
+        transform: perspective(200px) rotateY(0deg);
+    }
+}
+
+/* 绕x轴转动颤动消失 */
+.flipOutX {
+    transform: perspective(200px) rotateX(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    opacity: 1;
+
+    animation: flipOutX 1s ease-in-out;
+}
+
+@keyframes flipOutX {
+    0% {
+        transform: perspective(200px) rotateX(0deg);
+    }
+
+    10% {
+        transform: perspective(200px) rotateX(10deg);
+    }
+
+    20% {
+        transform: perspective(200px) rotateX(-20deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(200px) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+/* 绕y轴转动颤动消失 */
+.flipOutY {
+    transform: perspective(200px) rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    opacity: 1;
+
+    animation: flipOutY 1s ease-in-out;
+}
+
+@keyframes flipOutY {
+    0% {
+        transform: perspective(200px) rotateY(0deg);
+    }
+
+    10% {
+        transform: perspective(200px) rotateY(10deg);
+    }
+
+    20% {
+        transform: perspective(200px) rotateY(-20deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: perspective(200px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+
+/* 倾斜弹性冲入 */
+.lightSpeedIn {
+    animation: lightSpeedIn 1s ease-in-out;
+    transform: translateX(0) skew(0deg);
+    opacity: 1;
+}
+
+@keyframes lightSpeedIn {
+    0% {
+        transform: translateX(200px) skew(0deg);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateX(-40px) skew(30deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(40px) skew(-30deg);
+    }
+
+    75% {
+        transform: translateX(0) skew(20deg);
+    }
+
+    100% {
+        transform: translateX(0) skew(0deg);
+    }
+}
+
+/* 倾斜弹性移出 */
+.lightSpeedOut {
+    animation: lightSpeedOut 1s ease-in-out;
+    transform: translateX(0) skew(0deg);
+    opacity: 1;
+}
+
+@keyframes lightSpeedOut {
+    0% {
+        transform: translateX(0) skew(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(200px) skew(30deg);
+        opacity: 0;
+    }
+}
+
+/* 旋转淡入 */
+.rotateIn {
+    animation: rotateIn 1s ease-in-out;
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+@keyframes rotateIn {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/* 左上角旋入 */
+.rotateInDownLeft {
+    animation: rotateInDownLeft 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: left center;
+}
+
+@keyframes rotateInDownLeft {
+    0% {
+        transform: rotate(-30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* 右上角旋入 */
+.rotateInDownRight {
+    animation: rotateInDownRight 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: right center;
+}
+
+@keyframes rotateInDownRight {
+    0% {
+        transform: rotate(30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* 左下角旋入 */
+.rotateInUpLeft {
+    animation: rotateInUpLeft 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: left center;
+}
+
+@keyframes rotateInUpLeft {
+    0% {
+        transform: rotate(30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* 右下角旋入 */
+.rotateInUpRight {
+    animation: rotateInUpRight 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: right center;
+}
+
+@keyframes rotateInUpRight {
+    0% {
+        transform: rotate(-30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* 旋转淡出 */
+.rotateOut {
+    animation: rotateOut 1s ease-in-out;
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+@keyframes rotateOut {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 左上角旋出 */
+.rotateOutDownLeft {
+    animation: rotateOutDownLeft 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: left center;
+}
+
+@keyframes rotateOutDownLeft {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-30deg);
+        opacity: 0;
+    }
+}
+
+/* 右上角旋出 */
+.rotateOutDownRight {
+    animation: rotateOutDownRight 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: right center;
+}
+
+@keyframes rotateOutDownRight {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/* 左下角旋出 */
+.rotateOutUpLeft {
+    animation: rotateOutUpLeft 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: left center;
+}
+
+@keyframes rotateOutUpLeft {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/* 右下角旋出 */
+.rotateOutUpRight {
+    animation: rotateOutUpRight 1s ease-in-out;
+    transform: rotate(0deg);
+    opacity: 1;
+    transform-origin: right center;
+}
+
+@keyframes rotateOutUpRight {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-30deg);
+        opacity: 0;
+    }
+}
+
+/* 从上滑入 */
+.slideInDown {
+    animation: slideInDown 1s ease-in-out;
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+}
+
+@keyframes slideInDown {
+    0% {
+        top: -200px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* 从左滑入 */
+.slideInLeft {
+    animation: slideInLeft 1s ease-in-out;
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* 从右滑入 */
+.slideInRight {
+    animation: slideInRight 1s ease-in-out;
+    position: relative;
+    right: 0;
+    top: 0;
+    opacity: 1;
+}
+
+@keyframes slideInRight {
+    0% {
+        right: -200px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+/* 从左划出 */
+.slideOutLeft {
+    animation: slideOutLeft 1s ease-in-out;
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+}
+
+@keyframes slideOutLeft {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: -200px;
+        opacity: 0;
+    }
+}
+
+/* 从右划出 */
+.slideOutRight {
+    animation: slideOutRight 1s ease-in-out;
+    position: relative;
+    right: 0;
+    top: 0;
+    opacity: 1;
+}
+
+@keyframes slideOutRight {
+    0% {
+        right: 0;
+        opacity: 1;
+    }
+
+    100% {
+        right: -200px;
+        opacity: 0;
+    }
+}
+
+/* 从下划出 */
+.slideOutUp {
+    animation: slideOutUp 1s ease-in-out;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+@keyframes slideOutUp {
+    0% {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    100% {
+        bottom: -200px;
+        opacity: 0;
+    }
+}
+
+/* 悬挂 */
+.hinge {
+    animation: hinge 1s linear;
+    transform: rotate(0deg);
+    transform-origin: left center;
+}
+
+@keyframes hinge {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(110deg);
+    }
+
+    50% {
+        transform: rotate(70deg);
+    }
+
+    60% {
+        transform: rotate(100deg);
+    }
+
+    70% {
+        transform: rotate(80deg);
+    }
+
+    80% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+/* 旋转位移进入 */
+.rollIn {
+    animation: rollIn 1s ease-in-out;
+    transform: rotate(0deg) translateX(0);
+    transform-origin: left center;
+    opacity: 1;
+}
+
+@keyframes rollIn {
+    0% {
+        transform: rotate(-90deg) translateX(-330px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 旋转位移移出 */
+.rollOut {
+    animation: rollOut 1s ease-in-out;
+    transform: rotate(0deg) translateX(0);
+    transform-origin: right center;
+    opacity: 1;
+}
+
+@keyframes rollOut {
+    0% {
+        transform: rotate(0deg) translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(90deg) translateX(330px);
+        opacity: 0;
+    }
+}

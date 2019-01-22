@@ -1,0 +1,527 @@
+.contain {
+    width: 760px;
+    height: 340px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #aaa;
+    cursor: pointer;
+}
+
+.contain div {
+    width: 250px;
+    height: 100px;
+    background-color: rgba(0, 122, 204, 1);
+    position: absolute;
+    transform: perspective(200px) rotateX(0deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+
+}
+
+/* .contain div:nth-child(1) {
+    left: 255px;
+    top: 400px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 1);
+} */
+
+.contain div.active2:nth-child(1) {
+    left: 255px;
+    top: 400px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 1);
+    animation: ani12 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(1) {
+    left: 0;
+    top: 0;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 1);
+    animation: ani11 1s ease-in-out;
+}
+
+@keyframes ani11 {
+    0% {
+        left: 255px;
+        top: 400px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 1);
+    }
+
+    100% {
+        left: 0;
+        top: 0;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 1);
+    }
+}
+
+@keyframes ani12 {
+    0% {
+        left: 0;
+        top: 0;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 1);
+    }
+
+    100% {
+        left: 255px;
+        top: 400px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 1);
+    }
+}
+
+/* .contain div:nth-child(2) {
+    left: 255px;
+    top: 410px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.9);
+
+} */
+
+.contain div.active2:nth-child(2) {
+    left: 255px;
+    top: 410px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.9);
+    animation: ani22 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(2) {
+    left: 255px;
+    top: 0;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 1);
+    animation: ani21 1s ease-in-out;
+
+}
+
+@keyframes ani21 {
+    0% {
+        left: 255px;
+        top: 410px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.9);
+    }
+
+    100% {
+        left: 255px;
+        top: 0;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 1);
+    }
+}
+
+@keyframes ani22 {
+    0% {
+        left: 255px;
+        top: 0;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 1);
+    }
+
+    100% {
+        left: 255px;
+        top: 410px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.9);
+    }
+}
+
+/* .contain div:nth-child(3) {
+    left: 255px;
+    top: 420px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.8);
+} */
+
+.contain div.active2:nth-child(3) {
+    left: 255px;
+    top: 420px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.8);
+    animation: ani32 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(3) {
+    left: 510px;
+    top: 0;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 0.8);
+    animation: ani31 1s ease-in-out;
+}
+
+@keyframes ani31 {
+    0% {
+        left: 255px;
+        top: 420px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.8);
+    }
+
+    100% {
+        left: 510px;
+        top: 0;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.8);
+    }
+}
+
+@keyframes ani32 {
+    0% {
+        left: 510px;
+        top: 0;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.8);
+    }
+
+    100% {
+        left: 255px;
+        top: 420px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.8);
+    }
+}
+
+/* .contain div:nth-child(4) {
+    left: 255px;
+    top: 430px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.7);
+} */
+
+.contain div.active2:nth-child(4) {
+    left: 255px;
+    top: 430px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.7);
+    animation: ani42 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(4) {
+    left: 0;
+    top: 105px;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 0.7);
+    animation: ani41 1s ease-in-out;
+}
+
+@keyframes ani41 {
+    0% {
+        left: 255px;
+        top: 430px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.7);
+    }
+
+    100% {
+        left: 0;
+        top: 105px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.7);
+    }
+}
+
+@keyframes ani42 {
+    0% {
+        left: 0;
+        top: 105px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.7);
+    }
+
+    100% {
+        left: 255px;
+        top: 430px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.7);
+    }
+}
+
+/* .contain div:nth-child(5) {
+    left: 255px;
+    top: 440px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.6);
+} */
+
+.contain div.active2:nth-child(5) {
+    left: 255px;
+    top: 440px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.6);
+    animation: ani52 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(5) {
+    left: 255px;
+    top: 105px;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 0.6);
+    animation: ani51 1s ease-in-out;
+}
+
+@keyframes ani51 {
+    0% {
+        left: 255px;
+        top: 440px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.6);
+    }
+
+    100% {
+        left: 255px;
+        top: 105px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.6);
+    }
+}
+
+@keyframes ani52 {
+    0% {
+        left: 255px;
+        top: 105px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.6);
+    }
+
+    100% {
+        left: 255px;
+        top: 440px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.6);
+    }
+}
+
+/* .contain div:nth-child(6) {
+    left: 255px;
+    top: 450px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.5);
+} */
+
+.contain div.active2:nth-child(6) {
+    left: 255px;
+    top: 450px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.5);
+    animation: ani62 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(6) {
+    left: 510px;
+    top: 105px;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 0.5);
+    animation: ani61 1s ease-in-out;
+}
+
+@keyframes ani61 {
+    0% {
+        left: 255px;
+        top: 450px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.5);
+    }
+
+    100% {
+        left: 510px;
+        top: 105px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.5);
+    }
+}
+
+@keyframes ani62 {
+    0% {
+        left: 510px;
+        top: 105px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.5);
+    }
+
+    100% {
+        left: 255px;
+        top: 450px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.5);
+    }
+}
+
+/* .contain div:nth-child(7) {
+    left: 255px;
+    top: 460px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.4);
+} */
+
+.contain div.active2:nth-child(7) {
+    left: 255px;
+    top: 460px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.4);
+    animation: ani72 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(7) {
+    left: 0;
+    top: 210px;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 0.4);
+    animation: ani71 1s ease-in-out;
+}
+
+@keyframes ani71 {
+    0% {
+        left: 255px;
+        top: 460px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.4);
+    }
+
+    100% {
+        left: 0;
+        top: 210px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.4);
+    }
+}
+
+@keyframes ani72 {
+    0% {
+        left: 0;
+        top: 210px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.4);
+    }
+
+    100% {
+        left: 255px;
+        top: 460px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.4);
+    }
+}
+
+/* .contain div:nth-child(8) {
+    left: 255px;
+    top: 470px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.3);
+    animation: ani8 1s ease-in-out;
+} */
+
+.contain div.active2:nth-child(8) {
+    left: 255px;
+    top: 470px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.3);
+    animation: ani82 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(8) {
+    left: 255px;
+    top: 210px;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 0.3);
+    animation: ani81 1s ease-in-out;
+}
+
+@keyframes ani81 {
+    0% {
+        left: 255px;
+        top: 470px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.3);
+    }
+
+    100% {
+        left: 255px;
+        top: 210px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.3);
+    }
+}
+
+@keyframes ani82 {
+    0% {
+        left: 255px;
+        top: 210px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.3);
+    }
+
+    100% {
+        left: 255px;
+        top: 470px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.3);
+    }
+}
+
+/* .contain div:nth-child(9) {
+    left: 255px;
+    top: 480px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.2);
+    animation: ani9 1s ease-in-out;
+} */
+
+.contain div.active2:nth-child(9) {
+    left: 255px;
+    top: 480px;
+    transform: perspective(200px) rotateX(70deg);
+    background-color: rgba(0, 122, 204, 0.2);
+    animation: ani92 1s ease-in-out;
+}
+
+.contain div.active1:nth-child(9) {
+    left: 510px;
+    top: 210px;
+    transform: perspective(200px) rotateX(0deg);
+    background-color: rgba(0, 122, 204, 0.2);
+    animation: ani91 1s ease-in-out;
+}
+
+@keyframes ani91 {
+    0% {
+        left: 255px;
+        top: 480px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.2);
+    }
+
+    100% {
+        left: 510px;
+        top: 210px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.2);
+    }
+}
+
+@keyframes ani92 {
+    0% {
+        left: 510px;
+        top: 210px;
+        transform: perspective(200px) rotateX(0deg);
+        background-color: rgba(0, 122, 204, 0.2);
+    }
+
+    100% {
+        left: 255px;
+        top: 480px;
+        transform: perspective(200px) rotateX(70deg);
+        background-color: rgba(0, 122, 204, 0.2);
+    }
+}

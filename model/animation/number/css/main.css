@@ -1,0 +1,188 @@
+/* 公共样式 */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.container .shi {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.container .ge {
+    position: absolute;
+    left: 200px;
+    top: 0;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px #333;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 400px;
+    cursor: pointer;
+}
+
+.block.shu {
+    transform: rotateZ(90deg);
+}
+
+.block:nth-child(1) {
+    left: 0px;
+    top: 0px;
+}
+
+.block:nth-child(2) {
+    left: 0px;
+    top: 140px;
+}
+
+.block:nth-child(3) {
+    left: 0px;
+    top: 280px;
+}
+
+.block:nth-child(4) {
+    left: -70px;
+    top: 70px;
+}
+
+.block:nth-child(5) {
+    left: -70px;
+    top: 210px;
+}
+
+.block:nth-child(6) {
+    left: 70px;
+    top: 70px;
+}
+
+.block:nth-child(7) {
+    left: 70px;
+    top: 210px;
+}
+
+/* 核心矩形翻转 */
+.block {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    /* transform: perspective(200px) rotateX(30deg); */
+}
+
+.block::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(-360deg) translateZ(1px);
+    background-color: #ccc;
+    width: 100px;
+    height: 30px;
+}
+
+.block::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(0deg) translateZ(-1px);
+    background-color: #333;
+    width: 100px;
+    height: 30px;
+}
+
+.heng.active {
+    transform: perspective(200px) rotateX(180deg);
+}
+
+.shu.active {
+    transform: perspective(200px) rotateZ(90deg) rotateX(180deg);
+}
+
+/* 两边三角翻转 */
+.block .prev {
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+
+.prev::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(-360deg) translateZ(1px);
+    background-color: #ccc;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(100% 0px, 100% 100%, 15px 50%);
+}
+
+.prev::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(0deg) translateZ(-1px);
+    background-color: #333;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(100% 0px, 100% 100%, 15px 50%);
+}
+
+.block .next {
+    position: absolute;
+    right: -30px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+
+.next::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(-360deg) translateZ(1px);
+    background-color: #ccc;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(0px 0px, 15px 50%, 0 100%);
+}
+
+.next::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(0deg) translateZ(-1px);
+    background-color: #333;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(0px 0px, 15px 50%, 0 100%);
+}
