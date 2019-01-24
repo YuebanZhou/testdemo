@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+.masker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 5;
+}
+
+img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: scale(2) translate(-50%,-50%);
+}

@@ -1,0 +1,69 @@
+.container3 {
+    position: relative;
+    background-color: #68B88E;
+}
+
+.container3 div {
+    width: 400px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px #666;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    margin-left: -200px;
+    color: #000;
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: bold;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+.container3 div:nth-child(1) {
+    border: 15px solid #381924;
+    transform: perspective(200px) translateZ(-60px) translateY(-150px);
+    z-index: 1;
+}
+
+.container3 div:nth-child(2) {
+    border: 15px solid #B7511D;
+    transform: perspective(200px) translateZ(-40px) translateY(-100px);
+    z-index: 2;
+}
+
+.container3 div:nth-child(3) {
+    border: 15px solid #5E665B;
+    transform: perspective(200px) translateZ(-20px) translateY(-50px);
+    z-index: 3;
+
+}
+
+.container3 div:nth-child(4) {
+    border: 15px solid #12AA9C;
+    transform: perspective(200px) translateZ(0px) translateY(0px);
+    z-index: 4;
+}
+
+.container3 div:nth-child(5) {
+    border: 15px solid #0F95B0;
+    transform: perspective(200px) translateZ(-20px) translateY(50px);
+    z-index: 3;
+
+}
+
+.container3 div:nth-child(6) {
+    border: 15px solid #142334;
+    transform: perspective(200px) translateZ(-40px) translateY(100px);
+    z-index: 2;
+}
+
+.container3 div:nth-child(7) {
+    border: 15px solid #C27C88;
+    transform: perspective(200px) translateZ(-60px) translateY(150px);
+    z-index: 1;
+}

@@ -1,0 +1,106 @@
+.container {
+    width: 80%;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    transform: perspective(1000px) rotateY(-10deg) rotateX(-10deg);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: transform 5s;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px inset #333;
+    cursor: pointer;
+}
+
+.container.active {
+    transform: perspective(1000px) rotateY(-370deg) rotateX(-370deg);
+}
+
+.block {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -86px;
+    margin-top: -86px;
+    width: 172px;
+    height: 172px;
+}
+
+.block div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    box-shadow: 0 0 10px #333;
+    border-radius: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: left 1s,top 1s,transform 1s;
+}
+
+.block:nth-child(1) div {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+.block:nth-child(2) div {
+    background-color: rgba(0, 70, 154, 0.5);
+}
+
+.block:nth-child(3) div {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.block:nth-child(4) div {
+    background-color: rgba(254, 131, 11, 0.5);
+}
+
+.block:nth-child(5) div {
+    background-color: rgba(213, 1, 16, 0.5);
+}
+
+.block:nth-child(6) div {
+    background-color: rgba(0, 159, 66, 0.5);
+}
+
+.block:nth-child(1) {
+    transform: perspective(4000px);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+.block:nth-child(2) {
+    transform: perspective(4000px) rotateX(90deg);
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+}
+
+.block:nth-child(3) {
+    transform: perspective(4000px) translateZ(-172px);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+
+.block:nth-child(4) {
+    transform: perspective(4000px) rotateX(-90deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
+}
+
+.block:nth-child(5) {
+    transform: perspective(4000px) rotateY(90deg);
+    transform-style: preserve-3d;
+    transform-origin: left center;
+}
+
+.block:nth-child(6) {
+    transform: perspective(4000px) rotateY(-90deg);
+    transform-style: preserve-3d;
+    transform-origin: right center;
+}
