@@ -1,0 +1,514 @@
+.banner {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 100px;
+}
+
+.banner div {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    transform: perspective(2000px) rotateX(0deg);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    background-color: #435A6B;
+    color: #fff;
+    transition: transform 1s, top 1s;
+}
+
+.banner div:hover {
+    top: -25px;
+    transform: perspective(2000px) rotateX(90deg);
+}
+
+.banner div::before {
+    background-color: #6A8BA5;
+    content: attr(dataname);
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6 {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: perspective(2000px) rotateX(-10deg) rotateY(-10deg);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+    color: #333;
+    transition: transform 5s;
+    margin: 100px;
+    /* display: inline-block; */
+    display: none;
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5,
+.btn6 {
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px inset #333;
+    margin: 0 50px;
+    /* display: inline-block; */
+    display: none;
+}
+
+.container1.active,
+.container2.active,
+.container3.active,
+.container4.active,
+.container5.active,
+.container6.active {
+    transform: perspective(2000px) rotateX(350deg) rotateY(350deg);
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 15px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    transform-style: preserve-3d;
+}
+
+/* 第一个模块 */
+.container1 .block:nth-child(1) {
+    transform: perspective(2000px) translateZ(100px);
+    transform-origin: center center;
+    z-index: 4;
+    border-color: #5C2223;
+}
+
+.container1 .block:nth-child(2) {
+    transform: perspective(2000px) translateX(-100px) rotateY(90deg);
+    transform-origin: center center;
+    z-index: 3;
+    border-color: #EC2C64;
+}
+
+.container1 .block:nth-child(3) {
+    transform: perspective(2000px) translateY(-100px) rotateX(90deg);
+    transform-origin: center center;
+    z-index: 3;
+    border-color: #815C94;
+}
+
+.container1 .block:nth-child(4) {
+    transform: perspective(2000px) translateX(100px) rotateY(90deg);
+    transform-origin: center center;
+    z-index: 2;
+    border-color: #5698C3;
+}
+
+.container1 .block:nth-child(5) {
+    transform: perspective(2000px) translateY(100px) rotateX(90deg);
+    transform-origin: center center;
+    z-index: 2;
+    border-color: #12AA9C;
+}
+
+.container1 .block:nth-child(6) {
+    transform: perspective(2000px) translateZ(-100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #BEC936;
+}
+
+/* 第二个模块 */
+.container2 .block {
+    border-radius: 50px;
+}
+
+/* 从左侧看 */
+.container2 .block:nth-child(1) {
+    transform: perspective(2000px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #859743;
+}
+
+.container2 .block:nth-child(2) {
+    transform: perspective(2000px) rotateX(90deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5C2223;
+}
+
+.container2 .block:nth-child(3) {
+    transform: perspective(2000px) rotateX(45deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #EC2C64;
+}
+
+.container2 .block:nth-child(4) {
+    transform: perspective(2000px) rotateX(-45deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #815C94;
+}
+
+/* 从上方看 */
+
+.container2 .block:nth-child(5) {
+    transform: perspective(2000px) rotateY(90deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5698C3;
+}
+
+.container2 .block:nth-child(6) {
+    transform: perspective(2000px) rotateY(45deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #12AA9C;
+}
+
+.container2 .block:nth-child(7) {
+    transform: perspective(2000px) rotateY(-45deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #BEC936;
+}
+
+.container2 .block:nth-child(8) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(45deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #FCC307;
+}
+
+.container2 .block:nth-child(9) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(-45deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #41B349;
+}
+
+/* 第三个模块 */
+.container3 .block:nth-child(1) {
+    transform: perspective(2000px) rotateY(0deg) translateZ(260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #859743;
+}
+
+.container3 .block:nth-child(2) {
+    transform: perspective(2000px) rotateY(0deg) translateZ(-260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5C2223;
+}
+
+.container3 .block:nth-child(3) {
+    transform: perspective(2000px) rotateY(90deg) translateZ(260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #EC2C64;
+}
+
+.container3 .block:nth-child(4) {
+    transform: perspective(2000px) rotateY(90deg) translateZ(-260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #815C94;
+}
+
+.container3 .block:nth-child(5) {
+    transform: perspective(2000px) rotateY(45deg) translateZ(260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5698C3;
+}
+
+.container3 .block:nth-child(6) {
+    transform: perspective(2000px) rotateY(45deg) translateZ(-260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #12AA9C;
+}
+
+.container3 .block:nth-child(7) {
+    transform: perspective(2000px) rotateY(-45deg) translateZ(260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #BEC936;
+}
+
+.container3 .block:nth-child(8) {
+    transform: perspective(2000px) rotateY(-45deg) translateZ(-260px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #FCC307;
+}
+
+/* 第四个模块 */
+.container4 .block:nth-child(1) {
+    transform: perspective(2000px) rotateY(0deg) translateZ(100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #859743;
+}
+
+.container4 .block:nth-child(2) {
+    transform: perspective(2000px) rotateY(0deg) translateZ(-100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5C2223;
+}
+
+.container4 .block:nth-child(3) {
+    transform: perspective(2000px) rotateY(90deg) translateZ(100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #EC2C64;
+}
+
+.container4 .block:nth-child(4) {
+    transform: perspective(2000px) rotateY(90deg) translateZ(-100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #815C94;
+}
+
+.container4 .block:nth-child(5) {
+    transform: perspective(2000px) rotateY(45deg) translateZ(100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5698C3;
+}
+
+.container4 .block:nth-child(6) {
+    transform: perspective(2000px) rotateY(45deg) translateZ(-100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #12AA9C;
+}
+
+.container4 .block:nth-child(7) {
+    transform: perspective(2000px) rotateY(-45deg) translateZ(100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #BEC936;
+}
+
+.container4 .block:nth-child(8) {
+    transform: perspective(2000px) rotateY(-45deg) translateZ(-100px);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #FCC307;
+}
+
+/* 第五个模块 */
+.container5 .block:nth-child(1) {
+    transform: perspective(2000px) rotateY(0deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #859743;
+}
+
+.container5 .block:nth-child(2) {
+    transform: perspective(2000px) rotateY(10deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5C2223;
+}
+
+.container5 .block:nth-child(3) {
+    transform: perspective(2000px) rotateY(20deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #EC2C64;
+}
+
+.container5 .block:nth-child(4) {
+    transform: perspective(2000px) rotateY(30deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #815C94;
+}
+
+.container5 .block:nth-child(5) {
+    transform: perspective(2000px) rotateY(40deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #5698C3;
+}
+
+.container5 .block:nth-child(6) {
+    transform: perspective(2000px) rotateY(50deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #12AA9C;
+}
+
+.container5 .block:nth-child(7) {
+    transform: perspective(2000px) rotateY(60deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #BEC936;
+}
+
+.container5 .block:nth-child(8) {
+    transform: perspective(2000px) rotateY(70deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #FCC307;
+}
+
+.container5 .block:nth-child(9) {
+    transform: perspective(2000px) rotateY(80deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #C45A65;
+}
+
+.container5 .block:nth-child(10) {
+    transform: perspective(2000px) rotateY(90deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #475164;
+}
+
+.container5 .block:nth-child(11) {
+    transform: perspective(2000px) rotateY(100deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #C06F98;
+}
+
+.container5 .block:nth-child(12) {
+    transform: perspective(2000px) rotateY(110deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #619AC3;
+}
+
+.container5 .block:nth-child(13) {
+    transform: perspective(2000px) rotateY(120deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #134857;
+}
+
+.container5 .block:nth-child(14) {
+    transform: perspective(2000px) rotateY(130deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #12A182;
+}
+
+.container5 .block:nth-child(15) {
+    transform: perspective(2000px) rotateY(140deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #D2B116;
+}
+
+.container5 .block:nth-child(16) {
+    transform: perspective(2000px) rotateY(150deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #9ECCAB;
+}
+
+.container5 .block:nth-child(17) {
+    transform: perspective(2000px) rotateY(160deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #80766E;
+}
+
+.container5 .block:nth-child(18) {
+    transform: perspective(2000px) rotateY(170deg);
+    transform-origin: center center;
+    z-index: 1;
+    border-color: #753117;
+}
+
+/* 第六个模块 */
+.container6 .block:nth-child(1) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(70deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #859743;
+}
+
+.container6 .block:nth-child(2) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(50deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #5C2223;
+}
+
+.container6 .block:nth-child(3) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(30deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #EC2C64;
+}
+
+.container6 .block:nth-child(4) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(10deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #815C94;
+}
+
+.container6 .block:nth-child(5) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(-10deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #5698C3;
+}
+
+.container6 .block:nth-child(6) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(-30deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #12AA9C;
+}
+
+.container6 .block:nth-child(7) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(-50deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #BEC936;
+}
+
+.container6 .block:nth-child(8) {
+    transform: perspective(2000px) rotateY(90deg) rotateX(-70deg);
+    transform-origin: bottom center;
+    z-index: 1;
+    border-color: #FCC307;
+}
+
