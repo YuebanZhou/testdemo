@@ -10,54 +10,51 @@
 <script src="./js/vue.js"></script>
 <style>
   #tab {
-    width: 600px;
-    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    box-shadow: 0 0 10px #333;
   }
-  .tab-tit {
-    font-size: 0;
-    width: 600px;
-  }
-  .tab-tit a {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
+
+  .title div {
+    float: left;
     width: 25%;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     background-color: #ccc;
-    color: #fff;
+    cursor: pointer;
   }
-  .tab-tit .cur {
-    background-color: #09f;
-    color: #fff;
+
+  .content div {
+    width: 100%;
+    height: 200px;
   }
-  .tab-con div {
-    border: 1px solid #ccc;
-    height: 400px;
-    padding-top: 20px;
+
+  .title div.active {
+    background-color: burlywood;
   }
 </style>
+
 <body>
   <div id="tab">
-    <div class="tab-tit">
-      <a href="javascript:;" @click="curId=0" :class="{'cur':curId===0}">html</a>
-      <a href="javascript:;" @click="curId=1" :class="{'cur':curId===1}">css</a>
-      <a href="javascript:;" @click="curId=2" :class="{'cur':curId===2}">javascript</a>
-      <a href="javascript:;" @click="curId=3" :class="{'cur':curId===3}">vue</a>
+    <div class="title">
+      <div @click="choose=0" :class="{'active':choose==0}">tab1</div>
+      <div @click="choose=1" :class="{'active':choose==1}">tab2</div>
+      <div @click="choose=2" :class="{'active':choose==2}">tab3</div>
+      <div @click="choose=3" :class="{'active':choose==3}">tab4</div>
     </div>
-    <div class="tab-con">
-      <div v-show="curId===0">html</div>
-      <div v-show="curId===1">css</div>
-      <div v-show="curId===2">javascript</div>
-      <div v-show="curId===3">vue</div>
+    <div class="content">
+      <div v-show="choose==0">contant1</div>
+      <div v-show="choose==1">contant2</div>
+      <div v-show="choose==2">contant3</div>
+      <div v-show="choose==3">contant4</div>
     </div>
-
   </div>
   <script>
     new Vue({
-      el: "#tab",
+      el: '#tab',
       data: {
-        curId: 0
+        choose: 0
       },
       computed: {},
       methods: {},

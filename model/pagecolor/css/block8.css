@@ -1,0 +1,136 @@
+.block8 {
+    background: #B9D9CA;
+    position: relative;
+}
+
+.block8 .one {
+    width: 80px;
+    height: 80px;
+    left: 50px;
+    top: 50px;
+    position: absolute;
+}
+
+.block8 .one div {
+    position: absolute;
+    /* background-color: #E5E2DB; */
+    border: 1px solid #90BAB1;
+    box-sizing: border-box;
+}
+
+.block8 .one div:nth-child(1) {
+    border: 2px solid #90BAB1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.block8 .one div:nth-child(2) {
+    width: 1px;
+    height: 74px;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.block8 .one div:nth-child(3) {
+    width: 25px;
+    height: 1px;
+    left: 2px;
+    top: 28px;
+}
+
+.block8 .one div:nth-child(4) {
+    width: 13px;
+    height: 26px;
+    border-radius: 0 13px 13px 0;
+    border: 2px solid #90BAB1;
+    left: 25px;
+    top: 4px;
+}
+
+.block8 .one div:nth-child(5) {
+    width: 24px;
+    height: 48px;
+    border-radius: 0 24px 24px 0;
+    border: 2px solid #90BAB1;
+    left: 25px;
+    top: 29px;
+}
+
+.block8 .two {
+    color: #90BAB1;
+    position: absolute;
+    left: 50px;
+    top: 200px;
+}
+
+.block8 .three {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom right, #64A3AA, #3B7F87);
+    z-index: 2;
+}
+
+.block8 .three::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #64A3AA;
+}
+
+.block8 .four {
+    width: 1000px;
+    position: absolute;
+    left: 300px;
+    height: 560px;
+    background-color: #E9EAE5;
+}
+
+.block8 .five {
+    width: 1120px;
+    height: 1120px;
+    border-radius: 50%;
+    position: absolute;
+    right: -560px;
+    top: 0;
+    background-color: #ED7C6C;
+}
+
+.block8 .six {
+    width: 180px;
+    height: 70px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+.block8 .six div:nth-child(1) {
+    position: absolute;
+    left: -15px;
+    top: 20px;
+    width: 70px;
+    height: 30px;
+    transform: rotate(-90deg);
+    color: #fff;
+}
+
+.block8 .six div:nth-child(2) {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css4.css">
+</head>
+<script src="./js/vue.js"></script>
+<body>
+    <div id="app" class="main">
+        <h2>小目标列表</h2>
+        <div class="list">
+            <h3>添加小目标</h3>
+            <input type="text" class="text-keywork" placeholder="输入小目标后，按回车确认" @keyup.13="addList" v-model="addText"/>
+            <p>公有{{prolist.length}}个目标，{{noend==0?"全部完成了":'已完成'+(prolist.length-noend)+',还有'+noend+'条未完成'}}</p>
+            <p>
+                <input type="radio" name="chooseType" checked="true" @click="chooseList(1)">
+                <label>所有目标</label>
+                <input type="radio" name="chooseType" @click="chooseList(2)">
+                <label>已完成目标</label>
+                <input type="radio" name="chooseType" @click="chooseList(3)">
+                <label>未完成目标</label>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

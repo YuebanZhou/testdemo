@@ -1,0 +1,210 @@
+/* 主体元素撑满全屏 */
+.banul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banul li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.banul li:nth-child(1) {
+    transform: translateX(0) rotate(0deg);
+}
+
+.banul li:nth-child(2) {
+    transform: translateX(100%) rotate(90deg);
+}
+
+.banul li:nth-child(3) {
+    transform: translateX(100%) rotate(90deg);
+}
+
+/* 文字描述部分 */
+.banul li .content {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    z-index: 4;
+}
+
+.banul li .content div:nth-child(1) {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'font1', cursive;
+}
+
+.banul li .content div:nth-child(2) {
+    margin-bottom: 20px;
+    font-family: 'font3', cursive;
+}
+
+.banul li .content div:nth-child(3) {
+    cursor: pointer;
+    font-size: 14px;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-size: 150% 150%;
+    animation: buttonan 3s ease-in-out infinite;
+    font-family: 'font2', cursive;
+}
+
+.banul li:nth-child(1) .content div:nth-child(3) {
+    background-image: linear-gradient(to right, #d43325, #f36e67);
+}
+
+.banul li:nth-child(2) .content div:nth-child(3) {
+    background-image: linear-gradient(to right, #252228, #848f9e);
+}
+
+.banul li:nth-child(3) .content div:nth-child(3) {
+    background-image: linear-gradient(to right, #d43325, #f36e67);
+}
+
+@keyframes buttonan {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 图片部分 */
+.banul li .pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banul li .pic img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banul li .pic img:nth-child(1) {
+    top: 9%;
+    height: 80%;
+    z-index: 4;
+}
+
+.banul li .pic img:nth-child(2) {
+    z-index: 1;
+}
+
+.banul li .pic img:nth-child(3) {
+    z-index: 3;
+}
+
+.banul li .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-family: 'font1', cursive;
+    font-size: 120px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 2;
+}
+
+/* 导航点部分 */
+.dot {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateX(-50%);
+}
+
+.dot ul {
+    width: 70%;
+    height: 30px;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+
+.dot ul li {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+    text-align: center;
+}
+
+.dot ul li:last-child {
+    margin-right: 0;
+}
+
+.dot ul li img {
+    width: 30px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.dot ul li img:hover {
+    opacity: 0.7;
+}
+
+.dot ul li img.active {
+    opacity: 1;
+}
+
+/* 左右切换部分 */
+.button {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 78px;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.button div {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.button div:hover {
+    opacity: 1;
+}
+
+.button div img {
+    height: 78px;
+}
+
+.button .left {
+    left: 10px;
+}
+
+.button .right {
+    right: 10px;
+}

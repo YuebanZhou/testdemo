@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+    }
+
+    .top {
+        width: 300px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #ccc;
+    }
+
+    .top div {
+        float: left;
+        height: 30px;
+    }
+
+    .img {
+        background: url("./line.png") no-repeat 0px center;
+    }
+</style>
+
 <body>
-    <select name="" id="">
-        <option value="河北省">河北省</option>
-        <option value="北京">北京</option>
-        <option value="河南省">河南省</option>
-        <option value="陕西省">陕西省</option>
-        <option value="山东省">山东省</option>
-    </select>
+    <div class="top clearfloat">
+        <div class="text1">美术创作能力1111</div>
+        <div class="img"></div>
+        <div class="text2">测评详情</div>
+    </div>
+
     <script src="./jquery-3.1.0.min.js"></script>
     <script>
-        $("select").val("北京")
+        var width = $(".top").width();
+        var width1 = $(".text1").width();
+        var width2 = $(".text2").width();
+        var widthi = width - width1 - width2
+        $(".img").width(widthi);
+        console.log(widthi);
     </script>
 </body>
+
 </html>

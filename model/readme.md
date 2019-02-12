@@ -1,3 +1,26 @@
+# 3D
+- 3D动画
+- 3Dbanner，轮播图
+- card，卡片动画效果
+- circle，多种形状的旋转动画效果
+- cube，魔方
+<img src="./readmeimg/img016.png" style="zoom:50%;">
+<img src="./readmeimg/img017.png" style="zoom:50%;">
+<img src="./readmeimg/img018.png" style="zoom:50%;">
+<img src="./readmeimg/img019.png" style="zoom:50%;">
+
+# animation
+- button、tab、loading、模态框、数码二极管、文字标题的动画效果
+<img src="./readmeimg/img020.png" style="zoom:50%;">
+<img src="./readmeimg/img021.png" style="zoom:50%;">
+<img src="./readmeimg/img022.png" style="zoom:50%;">
+<img src="./readmeimg/img023.png" style="zoom:50%;">
+<img src="./readmeimg/img024.png" style="zoom:50%;">
+
+# banner
+- 视觉差banner
+<img src="./readmeimg/img025.png" style="zoom:50%;">
+
 # calendar
 - 日历插件
 - 显示阴历，显示阳历阴历的节假日
@@ -23,7 +46,7 @@
 - 可跳转回当前日期
 <img src="./readmeimg/img014.png" style="zoom:50%;">
 
-# date
+# date2
 - 日历改进
 - 显示阴历
 - 显示节假日
@@ -36,6 +59,10 @@
 - 手动写select模块
 <img src="./readmeimg/img012.png" style="zoom:50%;">
 
+# form
+- 测试信息提示插件
+<img src="./readmeimg/img026.png" style="zoom:50%;">
+
 # imgfloat
 - 图片支持鼠标滚轮缩放
 - 鼠标拖拽
@@ -45,6 +72,10 @@
 - 表格增删改添加了分页功能
 - 每页显示的数据条数可控
 <img src="./readmeimg/img010.png" style="zoom:50%;">
+
+# pagecolor
+- 页面背景设计
+<img src="./readmeimg/img027.png" style="zoom:50%;">
 
 # shopcar
 - 模拟购物车

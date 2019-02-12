@@ -1,0 +1,168 @@
+.block2 {
+    background: #F2F2F0;
+}
+
+.block2 .left {
+    width: 800px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.block2 .left .one {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+.block2 .left .one ul {
+    position: relative;
+}
+
+.block2 .left .one ul li {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.block2 .left .one li:nth-child(1) {
+    left: 0px;
+    background-color: #016CBC;
+    border-radius: 0 50% 50% 0;
+}
+
+.block2 .left .one li:nth-child(2) {
+    left: 25px;
+    background-color: #B6D0EC;
+    border-radius: 0 0 50% 50%;
+}
+
+
+.block2 .left .one li:nth-child(3) {
+    left: 50px;
+    background-color: #F98315;
+    border-radius: 50%;
+}
+
+.block2 .left .two {
+    position: absolute;
+    left: 200px;
+    top: 70px;
+    width: 300px;
+    height: 30px;
+}
+
+.block2 .left .two li {
+    width: 100px;
+    color: #333;
+    text-align: center;
+}
+
+.block2 .left .three {
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    top: 400px;
+    color: #333;
+    width: 350px;
+    height: 100px;
+}
+
+.block2 .right {
+    width: 500px;
+    height: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.block2 .right div {
+    position: absolute;
+}
+
+.block2 .right div:nth-child(1) {
+    width: 0;
+    height: 0;
+    border-top: 140px solid #F98315;
+    border-right: 125px solid #F98315;
+    border-bottom: 140px solid transparent;
+    border-left: 125px solid transparent;
+}
+
+.block2 .right div:nth-child(2) {
+    width: 0;
+    height: 0;
+    border-top: 140px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 140px solid #016CBC;
+    border-left: 125px solid #016CBC;
+}
+
+.block2 .right div:nth-child(3) {
+    top: 280px;
+    width: 0;
+    height: 0;
+    border-top: 140px solid #333;
+    border-right: 125px solid transparent;
+    border-bottom: 140px solid transparent;
+    border-left: 125px solid #333;
+}
+
+.block2 .right div:nth-child(4) {
+    top: 280px;
+    width: 0;
+    height: 0;
+    border-top: 140px solid transparent;
+    border-right: 125px solid #B6D0EC;
+    border-bottom: 140px solid #B6D0EC;
+    border-left: 125px solid transparent;
+}
+
+.block2 .right div:nth-child(5) {
+    left: 250px;
+    width: 250px;
+    height: 560px;
+    background-color: #016CBC;
+}
+
+.block2 .right div:nth-child(6) {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #B6D0EC;
+    left: 250px;
+    top: -140px;
+}
+
+.block2 .right div:nth-child(7) {
+    width: 250px;
+    height: 250px;
+    left: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.block2 .right div:nth-child(8) {
+    width: 140px;
+    height: 140px;
+    left: 305px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.block2 .right div:nth-child(9) {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #F98315;
+    left: 250px;
+    top: 420px;
+}

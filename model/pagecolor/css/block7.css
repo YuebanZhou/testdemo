@@ -1,0 +1,242 @@
+.block7 {
+    background: #F2F1EF;
+    position: relative;
+}
+
+.block7 .one {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.block7 .two {
+    position: absolute;
+    left: 450px;
+    top: 50px;
+    width: 300px;
+    height: 30px;
+}
+
+.block7 .two li {
+    width: 100px;
+    color: #333;
+    text-align: center;
+}
+
+.block7 .three {
+    position: absolute;
+    font-size: 30px;
+    left: 450px;
+    top: 250px;
+    color: #C6663C;
+    width: 350px;
+    height: 100px;
+}
+
+.block7 .four {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: 0;
+    bottom: 0;
+}
+
+.block7 .four div:nth-child(1) {
+    background-color: #B3DCD4;
+    width: 180px;
+    height: 460px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0 90px 0 0;
+}
+
+.block7 .four div:nth-child(2) {
+    background-color: #F2F1EF;
+    width: 180px;
+    height: 180px;
+    z-index: 3;
+    position: absolute;
+    left: 180px;
+    bottom: 180px;
+    border-radius: 0 0 0 90px;
+}
+
+.block7 .four div:nth-child(3) {
+    background-color: #B3DCD4;
+    width: 460px;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 90px 0 0;
+}
+
+.block7 .four div:nth-child(4) {
+    background-color: #B3DCD4;
+    width: 180px;
+    height: 180px;
+    z-index: 1;
+    position: absolute;
+    left: 180px;
+    bottom: 180px;
+}
+
+.block7 .four div:nth-child(5) {
+    background-color: #364F6D;
+    width: 180px;
+    height: 460px;
+    position: absolute;
+    left: -100px;
+    top: 100px;
+    border-radius: 0 90px 0 0;
+}
+
+.block7 .four div:nth-child(6) {
+    background-color: #B3DCD4;
+    width: 180px;
+    height: 180px;
+    z-index: 2;
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+    border-radius: 0 0 0 90px;
+}
+
+.block7 .four div:nth-child(7) {
+    background-color: #364F6D;
+    width: 460px;
+    height: 180px;
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    border-radius: 0 90px 0 0;
+}
+
+.block7 .four div:nth-child(8) {
+    background-color: #364F6D;
+    width: 180px;
+    height: 180px;
+    z-index: 1;
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+}
+
+.block7 .five {
+    position: absolute;
+    width: 280px;
+    height: 140px;
+    right: 0;
+    top: 0;
+}
+
+.block7 .five div:nth-child(1) {
+    z-index: 3;
+    color: #C6663C;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.block7 .five div:nth-child(2) {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #F8C3B5;
+    z-index: 2;
+}
+
+.block7 .five div:nth-child(3) {
+    width: 280px;
+    height: 140px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 0 140px 140px;
+    background-color: #F8C3B5;
+    z-index: 2;
+}
+
+.block7 .five div:nth-child(4) {
+    width: 330px;
+    height: 140px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    border-radius: 0 0 140px 140px;
+    background-color: #C6663C;
+    z-index: 1;
+}
+
+.block7 .five div:nth-child(5) {
+    width: 140px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 140px;
+    background-color: #F8C3B5;
+    z-index: 1;
+}
+
+.block7 .five div:nth-child(6) {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 140px;
+    background-color: #C6663C;
+    z-index: 1;
+}
+
+.block7 .five div:nth-child(7) {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: -10px;
+    top: 119px;
+    border-radius: 0 100px 0 0;
+    background-color: #C6663C;
+    z-index: 1;
+    transform: rotate(-45deg);
+}
+
+.block7 .five div:nth-child(8) {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 40px;
+    top: 99px;
+    border-radius: 0 200px 0 0;
+    background-color: #F2F1EF;
+    z-index: 1;
+    transform: rotate(-45deg);
+}
+
+.block7 .six {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 100px;
+    bottom: -100px;
+    border-radius: 50%;
+    border: 1px solid #C6663C;
+}
+
+.block7 .six::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #C6663C;
+    border-radius: 50%;
+}
