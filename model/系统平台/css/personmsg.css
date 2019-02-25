@@ -1,0 +1,100 @@
+.frametop {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.frametop span {
+    cursor: pointer;
+}
+
+.block {
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.block>div {
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+.block>div input {
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 150px;
+}
+
+.block>div label {
+    position: absolute;
+    padding: 5px;
+    text-align: right;
+    width: 150px;
+    box-sizing: border-box;
+    height: 34px;
+    line-height: 34px;
+}
+
+.block>div textarea {
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+
+}
+
+.block>div:nth-child(1) {
+    height: 100px;
+}
+
+.block>div:nth-child(1) div {
+    position: absolute;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+}
+.block>div:nth-child(1) div img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.block>div:nth-child(1) input {
+    border: none;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.block>div:nth-child(9) {
+    height: 75px;
+}
+
+.block>div:nth-child(9) textarea {
+    position: absolute;
+    left: 150px;
+}
+.save {
+    width: 100px;
+    height: 30px;
+    background-color: #FFBE00;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+}

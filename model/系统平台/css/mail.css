@@ -1,0 +1,200 @@
+.frametop {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+
+.block {
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.block table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: #555;
+}
+
+tr {
+    border: 1px solid #eee;
+}
+
+th {
+    height: 50px;
+}
+
+td {
+    height: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td:nth-child(1) {
+    width: 5%
+}
+
+td:nth-child(2) {
+    width: 60%;
+    text-align: left;
+    cursor: pointer;
+}
+
+td:nth-child(2):hover {
+    color: #000;
+}
+
+td:nth-child(3) {
+    width: 25%
+}
+
+td:nth-child(4) {
+    width: 10%
+}
+
+td:nth-child(4) div {
+    background-color: #DC4E41;
+    padding: 3px;
+    width: 60px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.page {
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.page .first,
+.page .prev,
+.page .next,
+.page .end,
+.page .delall,
+.repagebtn div {
+    float: left;
+    padding: 3px 10px;
+    background-color: #333;
+    cursor: pointer;
+    color: #ccc;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.page .first:hover,
+.page .prev:hover,
+.page .next:hover,
+.page .end:hover,
+.page .delall:hover,
+.repagebtn div:hover,
+.page .first.active,
+.page .prev.active,
+.page .next.active,
+.page .end.active,
+.page .delall.active,
+.repagebtn div.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.page .repagebtn {
+    float: left;
+}
+
+.modal {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #ccc;
+    background-color: #fff;
+    padding: 20px;
+    border-top: 30px solid #333;
+    border-bottom: 30px solid #333;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    display: none;
+}
+
+.modal .close {
+    position: absolute;
+    right: 5px;
+    top: -25px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .top {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.modal .top .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.modal .top .person {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.modal .top .time {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.modal .content {
+    height: 260px;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.modal .content div {
+    text-indent: 2em;
+    margin-bottom: 10px;
+}
+
+td {
+    position: relative;
+}
+
+input+label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+}
+
+input:checked+label::before {
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}

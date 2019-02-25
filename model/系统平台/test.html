@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aspect Ratio with Preview Pane | Jcrop Demo</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.Jcrop.js"></script>
+    <script type="text/javascript">
+      jQuery(function($) {
+        // 先判断图片的宽高比例
+        var width = $(".jc-demo-box img").width();
+        var height = $(".jc-demo-box img").height();
+        var size = width / height;
+        // 图片比400*400小，按照原尺寸
+        // 图片比400*400大
+        // 宽高比大于1，按照宽度
+        // 宽高比小于1，按照高度
+        if (width <= 400 && height <= 400) {
+        } else if (size > 1) {
+          $(".jc-demo-box img").width("400px");
+          $(".jc-demo-box img").height(400 / size + "px");
+        } else if (size < 1) {
+          $(".jc-demo-box img").width(400 * size + "px");
+          $(".jc-demo-box img").height("400px");
+        } else {
+          $(".jc-demo-box img").width("400px");
+          $(".jc-demo-box img").height("400px");
+        }
+
+        var jcrop_api;
+        var boundx;
+        var boundy;
+        // 缩略图模块
+        var $preview = $("#preview-pane");
+        // 缩略图展示图像模块
+        var $pcnt = $("#preview-pane .preview-container");
+        // 缩略图图片
+        var $pimg = $("#preview-pane .preview-container img");
+        // 缩略图模块的宽高
+        var xsize = $pcnt.width();
+        var ysize = $pcnt.height();
+        // 图片执行Jcrop操作updatePreview
+        $("#target").Jcrop(
+          {
+            onChange: updatePreview,
+            onSelect: updatePreview,
+            aspectRatio: xsize / ysize
+          },
+          function() {
+            var bounds = this.getBounds();
+            boundx = bounds[0];
+            boundy = bounds[1];
+            jcrop_api = this;
+            $preview.appendTo(jcrop_api.ui.holder);
+          }
+        );
+
+        function updatePreview(c) {
+          if (parseInt(c.w) > 0) {
+            var rx = xsize / c.w;
+            var ry = ysize / c.h;
+
+            $pimg.css({
+              width: Math.round(rx * boundx) + "px",
+              height: Math.round(ry * boundy) + "px",
+              marginLeft: "-" + Math.round(rx * c.x) + "px",
+              marginTop: "-" + Math.round(ry * c.y) + "px"
+            });
+          }
+        }
+      });
+    </script>
+    <link rel="stylesheet" href="./css/demo_files/main.css" type="text/css" />
+    <link rel="stylesheet" href="./css/demo_files/demos.css" type="text/css" />
+    <link rel="stylesheet" href="./css/jquery.Jcrop.css" type="text/css" />
+    <style type="text/css">
+      .jcrop-holder #preview-pane {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        top: 10px;
+        right: -280px;
+        padding: 6px;
+        background-color: white;
+      }
+
+      #preview-pane .preview-container {
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div class="jc-demo-box">
+            <img
+              src="./css/demo_files/sago.jpg"
+              id="target"
+              alt="[Jcrop Example]"
+            />
+
+            <div id="preview-pane">
+              <div class="preview-container">
+                <img
+                  src="./css/demo_files/sago.jpg"
+                  class="jcrop-preview"
+                  alt="Preview"
+                />
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
