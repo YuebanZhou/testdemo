@@ -1,0 +1,447 @@
+{
+	"pond": [{
+		"name": "储水池",
+		"relationList": [{
+			"id": "13",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 15:59:00",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 15:59:00",
+			"tacheId": 8,
+			"nextTacheId": 9
+		}],
+		"subType": "",
+		"id": "8",
+		"enterpriseId": 1,
+		"sort": 1,
+		"type": "pond",
+		"flowmeterList": [{
+			"id": "16",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 15:59:27",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 15:59:27",
+			"tacheId": 8,
+			"name": "出口流量计",
+			"location": 2,
+			"sort": 1
+		}]
+	}],
+	"workshop": [{
+		"name": "车间一",
+		"relationList": [{
+			"id": "6",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:00:09",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:00:09",
+			"tacheId": 4,
+			"nextTacheId": 9
+		}],
+		"subType": 1,
+		"id": "4",
+		"enterpriseId": 1,
+		"sort": 1,
+		"type": "workshop",
+		"flowmeterList": [{
+			"id": "18",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 16:04:26",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 16:04:26",
+			"tacheId": 4,
+			"name": "进口流量计一",
+			"location": 1,
+			"sort": 1
+		}, {
+			"id": "12",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:47:54",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 16:04:35",
+			"tacheId": 4,
+			"name": "进口流量计二",
+			"location": 1,
+			"sort": 2
+		}, {
+			"id": "13",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:48:02",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 16:04:41",
+			"tacheId": 4,
+			"name": "出口流量计",
+			"location": 2,
+			"sort": 3
+		}]
+	}, {
+		"name": "车间二",
+		"relationList": [{
+			"id": "12",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:42:43",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:42:43",
+			"tacheId": 5,
+			"nextTacheId": 9
+		}],
+		"subType": 1,
+		"id": "5",
+		"enterpriseId": 1,
+		"sort": 2,
+		"type": "workshop",
+		"flowmeterList": [{
+			"id": "10",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:47:31",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:47:31",
+			"tacheId": 5,
+			"name": "进口流量计",
+			"location": 1,
+			"sort": 1
+		}, {
+			"id": "11",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:47:41",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:47:41",
+			"tacheId": 5,
+			"name": "出口流量计",
+			"location": 2,
+			"sort": 2
+		}]
+	}, {
+		"name": "车间三",
+		"relationList": [{
+			"id": "8",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:00:18",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:00:18",
+			"tacheId": 6,
+			"nextTacheId": 8
+		}],
+		"subType": 1,
+		"id": "6",
+		"enterpriseId": 1,
+		"sort": 3,
+		"type": "workshop",
+		"flowmeterList": [{
+			"id": "8",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:45:49",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:45:49",
+			"tacheId": 6,
+			"name": "进口流量计",
+			"location": 1,
+			"sort": 1
+		}, {
+			"id": "9",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:46:04",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:46:04",
+			"tacheId": 6,
+			"name": "出口流量计",
+			"location": 2,
+			"sort": 2
+		}]
+	}, {
+		"name": "雨水管网",
+		"relationList": [{
+			"id": "10",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:00:32",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:00:32",
+			"tacheId": 7,
+			"nextTacheId": 11
+		}],
+		"subType": 2,
+		"id": "7",
+		"enterpriseId": 1,
+		"sort": 4,
+		"type": "workshop",
+		"flowmeterList": [{
+			"id": "17",
+			"remarks": "",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 16:00:09",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 16:00:09",
+			"tacheId": 7,
+			"name": "出口流量计",
+			"location": 2,
+			"sort": 1
+		}]
+	}],
+	"inlet": [{
+		"name": "生活用水入口",
+		"relationList": [{
+			"id": "3",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 13:59:07",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 13:59:07",
+			"tacheId": 1,
+			"nextTacheId": 4
+		}],
+		"subType": 1,
+		"id": "1",
+		"enterpriseId": 1,
+		"sort": 1,
+		"type": "inlet",
+		"flowmeterList": []
+	}, {
+		"name": "工业用水入口",
+		"relationList": [{
+			"id": "11",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 14:41:16",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 14:41:16",
+			"tacheId": 2,
+			"nextTacheId": 4
+		}, {
+			"id": "4",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 13:59:16",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 13:59:16",
+			"tacheId": 2,
+			"nextTacheId": 5
+		}],
+		"subType": 2,
+		"id": "2",
+		"enterpriseId": 1,
+		"sort": 2,
+		"type": "inlet",
+		"flowmeterList": []
+	}, {
+		"name": "自备井",
+		"relationList": [{
+			"id": "23",
+			"createBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"createDate": "2019-04-23 18:28:10",
+			"updateBy": {
+				"id": "1",
+				"loginFlag": "1",
+				"admin": true,
+				"roleNames": ""
+			},
+			"updateDate": "2019-04-23 18:28:10",
+			"tacheId": 40,
+			"nextTacheId": 6
+		}],
+		"subType": 4,
+		"id": "40",
+		"enterpriseId": 1,
+		"sort": 3,
+		"type": "inlet",
+		"flowmeterList": []
+	}],
+	"drain": [{
+		"name": "污水排口",
+		"relationList": [],
+		"subType": 1,
+		"id": "9",
+		"enterpriseId": 1,
+		"sort": 1,
+		"type": "drain",
+		"flowmeterList": []
+	}, {
+		"name": "雨水排口",
+		"relationList": [],
+		"subType": 2,
+		"id": "11",
+		"enterpriseId": 1,
+		"sort": 3,
+		"type": "drain",
+		"flowmeterList": []
+	}]
+}

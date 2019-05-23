@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/echarts.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width:100%;height:400px;"></div>
+    <script>
+        $("#main").css({
+            "width": "100%",
+            "height": "100%"
+        });
+        var myChart = echarts.init(document.getElementById("main"));
+        var data = [70, 34, 60, 78, 69]
+        var titlename = ['项目数据1', '项目数据2', '项目数据3', '项目数据4', '项目数据5'];
+        var valdata = [683, 234, 234, 523, 345]
+        var myColor = ['#eea2a4', '#806d9e', '#2177b8', '#0eb0c9', '#fc8c23'];
+        option = {
+            backgroundColor: '#0e2147',
+            xAxis: {
+                show: false
+            },
+            yAxis: [{
+                show: true,
+                data: titlename,
+                inverse: true,
+                axisLine: {
+                    show: false
+                },
+                splitLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                // 渲染y轴刻度内容
+                axisLabel: {
+                    color: '#fff',
+                    formatter: function (value, index) {
+                        return [
+                            value
+                        ].join('\n')
+                    }
+                },
+
+
+            }, {
+                show: true,
+                inverse: true,
+                data: valdata,
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 12,
+                        color: '#fff',
+                    },
+                },
+                axisLine: {
+                    show: false
+                },
+                splitLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+
+            }],
+            series: [{
+                name: '条',
+                type: 'bar',
+                yAxisIndex: 0,
+                data: data,
+                barWidth: 30,
+                itemStyle: {
+                    normal: {
+                        barBorderRadius: 30,
+                        color: function (params) {
+                            var num = myColor.length;
+                            return myColor[params.dataIndex % num]
+                        },
+                    }
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter: '{c}%'
+                    }
+                },
+            }, {
+                name: '框',
+                type: 'bar',
+                yAxisIndex: 1,
+                barGap: '-100%',
+                data: [100, 100, 100, 100, 100],
+                barWidth: 40,
+                itemStyle: {
+                    normal: {
+                        color: 'none',
+                        borderColor: '#00c1de',
+                        borderWidth: 3,
+                        barBorderRadius: 30,
+                    }
+                }
+            }, ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

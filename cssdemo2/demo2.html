@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: bisque;
+      }
+      .container {
+        width: 200px;
+        margin: 100px auto;
+        text-align: center;
+      }
+      .container div {
+        width: 200px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 24px;
+        color: #333;
+        position: relative;
+        cursor: pointer;
+        transition: color 0.5s;
+      }
+      .container div::before,
+      .container div::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 33px;
+        width: 15px;
+        height: 15px;
+        background-color: #ccc;
+        border-radius: 50%;
+        transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+      }
+      .container div::after {
+        left: 0;
+      }
+      .container div::before {
+        right: 0;
+      }
+      .container div:hover {
+        color: #fff;
+      }
+      .container div:hover::after {
+        top: 23px;
+        width: 180px;
+        height: 50px;
+        background-color: #1e90ff;
+        border-radius: 0;
+      }
+      .container div:hover::before {
+        top: 43px;
+        width: 180px;
+        height: 50px;
+        background-color: #1873cc;
+        border-radius: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>Home</div>
+      <div>Products</div>
+      <div>Services</div>
+      <div>Contact</div>
+    </div>
+  </body>
+</html>

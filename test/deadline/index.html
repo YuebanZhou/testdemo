@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 20px;
+        font-size: 12px;
+      }
+      .container .top {
+        height: 100px;
+      }
+
+      .container .center {
+        height: 300px;
+      }
+      .container .center div {
+        width: 20px;
+        height: 150px;
+      }
+      .container .bottom {
+        height: 100px;
+      }
+      .container > div > div {
+        border: 1px solid #333;
+        margin: 10px 20px;
+        padding: 5px;
+        float: left;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container" id="diagramContainer">
+      <div class="top">
+        <div id="1">碳源投加间</div>
+        <div id="2">加药间</div>
+      </div>
+      <div class="center">
+        <div id="wu">污水</div>
+        <div id="3">粗格栅及进水泵房</div>
+        <div id="4">细格栅及爆气</div>
+        <div id="5">初沉</div>
+        <div id="6">厌氧</div>
+        <div id="7">好氧</div>
+        <div id="8">二沉</div>
+        <div id="9">中提泵房</div>
+        <div id="10">缺氧速分池</div>
+        <div id="11">好氧速分池</div>
+        <div id="12">机械混合池</div>
+        <div id="13">机械反应池</div>
+        <div id="14">滤布滤池</div>
+        <div id="15">紫外消毒渠</div>
+        <div id="j3">总排口</div>
+        <div id="j4">浇地</div>
+      </div>
+      <div class="bottom">
+        <div id="16">污泥浓缩池</div>
+        <div id="17">污泥泵房</div>
+        <div id="18">污泥脱水房</div>
+        <div id="19">回用水池和回用水泵房</div>
+        <div id="j5">回水利用</div>
+      </div>
+    </div>
+    <script src="./jquery-3.1.0.min.js"></script>
+    <script src="./jsPlumb.js"></script>
+    <script>
+      jsPlumb.ready(function() {
+        /* 连接点的公共样式 */
+        var commonlt = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["left", "top"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonlr = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["left", "right"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonlb = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["left", "bottom"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commontr = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["top", "right"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commontb = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["top", "bottom"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commontl = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["top", "left"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonrb = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["right", "bottom"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonrl = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["right", "left"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonrt = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["right", "top"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonbl = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["bottom", "left"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonbt = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["bottom", "top"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        var commonbr = {
+          /* 设置点的形状 */
+          endpoint: "Rectangle",
+          /* 设置连线方向，左到右 */
+          anchor: ["Continuous", { faces: ["bottom", "right"] }],
+          /* 设置连线 */
+          connector: ["Flowchart"],
+          /* 连线的样式 */
+          paintStyle: { stroke: "#B7B6B6", strokeWidth: 2 },
+          /* 连接点的样式 */
+          endpointStyle: { width: 1, height: 1, strokeStyle: "#666" },
+          /* 设置连接线上的箭头 */
+          overlays: [["Arrow", { width: 12, length: 12, location: 0.5 }]]
+          /*  hoverPaintStyle: {outlineStroke: 'red'}, */
+        };
+        
+        jsPlumb.connect({ source: "1", target: "3" }, commonlb);
+        jsPlumb.connect({ source: "1", target: "10" }, commonlb);
+        jsPlumb.connect({ source: "2", target: "8" }, commonlb);
+        jsPlumb.connect({ source: "wu", target: "3" }, commonlr);
+        jsPlumb.connect({ source: "16", target: "3" }, commonlb);
+        jsPlumb.connect({ source: "4", target: "3" }, commonlb);
+        jsPlumb.connect({ source: "18", target: "3" }, commonlb);
+        jsPlumb.connect({ source: "14", target: "3" }, commonlb);
+        jsPlumb.connect({ source: "3", target: "j3" }, commonrt);
+        jsPlumb.connect({ source: "3", target: "4" }, commonlr);
+        jsPlumb.connect({ source: "4", target: "5" }, commonlr);
+        jsPlumb.connect({ source: "5", target: "16" }, commonlb);
+        jsPlumb.connect({ source: "5", target: "6" }, commonlr);
+        jsPlumb.connect({ source: "8", target: "6" }, commonlb);
+        jsPlumb.connect({ source: "7", target: "6" }, commonbr);
+        jsPlumb.connect({ source: "7", target: "8" }, commonlr);
+        jsPlumb.connect({ source: "8", target: "16" }, commontb);
+        jsPlumb.connect({ source: "8", target: "9" }, commonlr);
+        jsPlumb.connect({ source: "9", target: "10" }, commonlr);
+        jsPlumb.connect({ source: "10", target: "16" }, commontb);
+        jsPlumb.connect({ source: "11", target: "16" }, commontb);
+        jsPlumb.connect({ source: "11", target: "12" }, commonlr);
+        jsPlumb.connect({ source: "12", target: "13" }, commonlr);
+        jsPlumb.connect({ source: "13", target: "14" }, commonlr);
+        jsPlumb.connect({ source: "14", target: "15" }, commonlr);
+        jsPlumb.connect({ source: "15", target: "19" }, commontb);
+        jsPlumb.connect({ source: "15", target: "j3" }, commonlr);
+        jsPlumb.connect({ source: "15", target: "j4" }, commonbr);
+        jsPlumb.connect({ source: "19", target: "j5" }, commontb);
+        jsPlumb.connect({ source: "16", target: "17" }, commonlr);
+        jsPlumb.connect({ source: "17", target: "18" }, commonlr);
+        jsPlumb.connect({ source: "18", target: "wai" }, commonlr);
+      });
+    </script>
+  </body>
+</html>

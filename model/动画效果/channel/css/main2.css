@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.container .box .block {
+    height: 60px;
+    margin-bottom: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.container .box .block p {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    left: 0;
+    line-height: 200px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container .box .block .msg {
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.6);
+    transition: width 1s,height 1s,background 1s;
+}
+
+.container .box .block .msg i {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #333;
+    font-size: 40px;
+}
+
+.container .box .block .text {
+    display: none;
+    text-align: left;
+    color: #333;
+    padding: 10px;
+}
+.container .box .block .text .header {
+    font-size: 30px;
+    font-weight: bold;
+}
+.container .box .block .text .cont {
+    font-size: 16px;
+}
+.container .box .block.active {
+    height: 200px;
+}
+.container .box .block.active .msg {
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    top: 60px;
+    background: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.6))
+}
+.container .box .block.active .msg i {
+    display: none;
+}
+.container .box .block.active .msg .text {
+    display: block;
+}

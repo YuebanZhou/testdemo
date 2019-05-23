@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+      }
+      body > div {
+        float: left;
+      }
+      .container1 {
+        width: 100px;
+        margin: 20px;
+      }
+      .container1 .block {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        background: linear-gradient(#cbcbcb, #fcfcfc);
+        cursor: pointer;
+      }
+      .container1 .block .mid {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        left: 10px;
+        top: 10px;
+        border-radius: 50%;
+        background: linear-gradient(#f4f4f4, #d8d8d8);
+        box-shadow: 0px 5px 5px #ccc;
+      }
+      .container1 .block .mid .led {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        border-radius: 50%;
+        background: radial-gradient(#eee, #333);
+      }
+      .container1 .block.active .mid {
+        background: linear-gradient(#efefef, #ececec);
+      }
+      .container1 .block.active .mid .led {
+        background: radial-gradient(#eee, #4cc74c);
+        box-shadow: 0 0 20px #4cc74c;
+      }
+      .container2 {
+        width: 120px;
+        margin: 20px;
+      }
+      .container2 .block {
+        width: 110px;
+        height: 150px;
+        border-radius: 5px;
+        background: linear-gradient(#dcdcdc, #bbbbbb);
+        box-shadow: 1px 1px 10px #666;
+        margin-bottom: 20px;
+        position: relative;
+        cursor: pointer;
+      }
+      .container2 .block::before,
+      .container2 .block::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #333;
+        border-radius: 50%;
+        left: 50%;
+        margin-left: -5px;
+      }
+      .container2 .block::before {
+        top: 10px;
+      }
+      .container2 .block::after {
+        bottom: 10px;
+      }
+      .container2 .block .btn {
+        width: 50px;
+        height: 100px;
+        position: relative;
+        left: 30px;
+        top: 25px;
+        background-color: #ddd;
+        border: 1px solid #999;
+        border-radius: 5px;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .container2 .block .btn .sha1 {
+        width: 48px;
+        height: 10px;
+        background-color: #e5e5e5;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+      }
+      .container2 .block .btn .sha2 {
+        width: 48px;
+        height: 48px;
+        background-color: #cbc7bc;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        border-radius: 5px;
+      }
+      .container2 .block.active .btn .sha1 {
+        background-color: #aaaaaa;
+        top: 88px;
+        border-radius: 0;
+      }
+      .container2 .block.active .btn .sha2 {
+        height: 40px;
+        background-color: #d2cbc3;
+        top: 50px;
+        border-bottom: 1px solid #999;
+      }
+      .container3 {
+        width: 200px;
+        margin: 20px;
+      }
+      .container3 .block {
+        position: relative;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 80px;
+        cursor: pointer;
+      }
+      .container3 .block .slid {
+        width: 200px;
+        height: 80px;
+        border-radius: 40px;
+        background: linear-gradient(#f1f1f1, #acacac);
+        position: absolute;
+      }
+      .container3 .block .slid::before {
+        content: "ON";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 90px;
+        height: 60px;
+        border-radius: 30px 0 0 30px;
+        background-color: #9abb82;
+        box-shadow: 0 0 10px #819c6e inset;
+        color: #82a06a;
+        font-size: 20px;
+        font-weight: bold;
+        text-indent: 22px;
+        line-height: 60px;
+      }
+      .container3 .block .slid::after {
+        content: "OFF";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 90px;
+        height: 60px;
+        border-radius: 0 30px 30px 0;
+        background-color: #a5a39d;
+        box-shadow: 0 0 10px #888782 inset;
+        color: #75736c;
+        font-size: 20px;
+        font-weight: bold;
+        text-indent: 33px;
+        line-height: 60px;
+      }
+      .container3 .block .move {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 120px;
+        height: 66px;
+        border-radius: 35px;
+        background: linear-gradient(#f4eff3, #b2ac9e);
+        box-shadow: 0px 0px 10px #999;
+      }
+      .container3 .block .move::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        height: 46px;
+        border-radius: 23px;
+        background: linear-gradient(#cbc7bc, #d1cac2);
+      }
+      .container3 .block.active .move {
+        left: 72px;
+      }
+      .container4 {
+        width: 200px;
+        margin: 20px;
+      }
+      .container4 .block {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #ececec;
+        margin-bottom: 20px;
+        position: relative;
+        cursor: pointer;
+      }
+      .container4 .block::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        left: 10px;
+        top: 10px;
+        background: linear-gradient(#cfcfcf, #ececec);
+      }
+      .container4 .block .cir {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        left: 20px;
+        top: 20px;
+        background: linear-gradient(#ece7eb, #b4afa1);
+        box-shadow: 0 15px 15px #999;
+      }
+      .container4 .block .cir::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        left: 30px;
+        top: 30px;
+        background: linear-gradient(#cbc7bc, #d1cac2);
+      }
+      .container4 .block .cir .icon {
+        border: 8px solid #a5a39d;
+        width: 40px;
+        height: 40px;
+        box-sizing: border-box;
+        position: absolute;
+        left: 60px;
+        top: 60px;
+        border-radius: 50%;
+      }
+      .container4 .block.active .cir {
+        box-shadow: 0px 0px 10px #999;
+      }
+      .container4 .block.active .cir .icon {
+        border: 8px solid #9abb82;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="block">
+        <div class="mid">
+          <div class="led"></div>
+        </div>
+      </div>
+      <div class="block active">
+        <div class="mid">
+          <div class="led"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div class="block">
+        <div class="btn">
+          <div class="sha1"></div>
+          <div class="sha2"></div>
+        </div>
+      </div>
+      <div class="block active">
+        <div class="btn">
+          <div class="sha1"></div>
+          <div class="sha2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="block">
+        <div class="slid"></div>
+        <div class="move"></div>
+      </div>
+      <div class="block active">
+        <div class="slid"></div>
+        <div class="move"></div>
+      </div>
+    </div>
+    <div class="container4">
+      <div class="block">
+        <div class="cir">
+          <div class="icon"></div>
+        </div>
+      </div>
+      <div class="block active">
+        <div class="cir">
+          <div class="icon"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./jquery-3.1.0.min.js"></script>
+    <script>
+      $(".block").on("click", function() {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+        } else {
+          $(this).addClass("active");
+        }
+      });
+    </script>
+  </body>
+</html>

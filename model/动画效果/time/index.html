@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+      }
+      .container > div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        box-sizing: border-box;
+        border-radius: 50%;
+      }
+      .month {
+        width: 500px;
+        height: 500px;
+        border: 20px solid #eea2a4;
+      }
+      .date {
+        width: 400px;
+        height: 400px;
+        border: 20px solid #ad6598;
+      }
+      .hour {
+        width: 300px;
+        height: 300px;
+        border: 20px solid #2177b8;
+      }
+      .minute {
+        width: 200px;
+        height: 200px;
+        border: 20px solid #68b88e;
+      }
+      .second {
+        width: 100px;
+        height: 100px;
+        border: 20px solid #fcc515;
+      }
+      .left,
+      .right {
+        width: calc(50% + 20px);
+        height: calc(100% + 40px);
+        position: absolute;
+        top: -20px;
+        overflow: hidden;
+      }
+      .left {
+        left: -20px;
+      }
+      .right {
+        right: -20px;
+      }
+      .cir {
+        width: 200%;
+        height: 100%;
+        border-radius: 50%;
+        box-sizing: border-box;
+        transform: rotate(-45deg);
+        color: #fff;
+
+        line-height: 0;
+      }
+      .left .cir {
+        border-left: 20px solid #333;
+        border-top: 20px solid #333;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        text-align: left;
+      }
+      .right .cir {
+        position: relative;
+        left: -100%;
+        border-left: 20px solid transparent;
+        border-top: 20px solid transparent;
+        border-right: 20px solid #333;
+        border-bottom: 20px solid #333;
+        text-align: right;
+      }
+      .text {
+        width: 20px;
+        height: calc(50% + 20px);
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        top: -20px;
+        box-sizing: border-box;
+        transform-origin: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="month">
+        <div class="left">
+          <div class="cir"></div>
+        </div>
+        <div class="right">
+          <div class="cir"></div>
+        </div>
+        <div class="text"></div>
+      </div>
+      <div class="date">
+        <div class="left">
+          <div class="cir"></div>
+        </div>
+        <div class="right">
+          <div class="cir"></div>
+        </div>
+        <div class="text"></div>
+      </div>
+      <div class="hour">
+        <div class="left">
+          <div class="cir"></div>
+        </div>
+        <div class="right">
+          <div class="cir"></div>
+        </div>
+        <div class="text"></div>
+      </div> 
+      <div class="minute">
+        <div class="left">
+          <div class="cir"></div>
+        </div>
+        <div class="right">
+          <div class="cir"></div>
+        </div>
+        <div class="text"></div>
+      </div>
+      <div class="second">
+        <div class="left">
+          <div class="cir"></div>
+        </div>
+        <div class="right">
+          <div class="cir"></div>
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+    <script src="http://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        reData();
+        setInterval(function() {
+          reData();
+        }, 1000);
+      });
+      function getResult(result) {
+        if (result < 10) {
+          result = "0" + result;
+        }
+        return result;
+      }
+      function reData() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var date = now.getDate();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+
+        percent(12, month, $(".month"));
+        // 判断闰年
+        if (month == 2) {
+          if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            percent(29, date, $(".date"));
+          } else {
+            percent(28, date, $(".date"));
+          }
+        } else if (
+          month == 1 ||
+          month == 3 ||
+          month == 5 ||
+          month == 7 ||
+          month == 8 ||
+          month == 10 ||
+          month == 12
+        ) {
+          percent(31, date, $(".date"));
+        } else if (month == 4 || month == 5 || month == 9 || month == 11) {
+          percent(30, date, $(".date"));
+        }
+
+        percent(24, hour, $(".hour"));
+        percent(60, minute, $(".minute"));
+        percent(60, second, $(".second"));
+      }
+      function percent(all, time, obj) {
+        if (time != 0) {
+          var val = all / time;
+          var valr = 360 / val - 45;
+          var vall = 360 / val - 45 - 180;
+          var valt = 360 / val;
+          // right和left
+          if (val > 2) {
+            // 时间没过半
+            obj.find(".right .cir").css("transform", "rotate(" + valr + "deg)");
+          } else if (val <= 2) {
+            // 时间过半，转换right和left
+            obj.find(".right .cir").css("transform", "rotate(135deg)");
+            obj.find(".right .cir").html("");
+            obj.find(".left .cir").css("transform", "rotate(" + vall + "deg)");
+          }
+          // text
+          obj.find(".text").html(getResult(time));
+          obj.find(".text").css("transform", "rotate(" + valt + "deg)");
+        } else {
+          // 时间归零，恢复初始状态
+          obj.find(".right .cir").css("transform", "rotate(-45deg)");
+          obj.find(".left .cir").css("transform", "rotate(-45deg)");
+          obj.find(".text").css("transform", "rotate(0deg)");
+        }
+      }
+    </script>
+  </body>
+</html>

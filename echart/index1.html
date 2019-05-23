@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/echarts.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width:100%;height:400px;"></div>
+    <script>
+        $("#main").css({
+            "width": "100%",
+            "height": "100%"
+        });
+        var myChart = echarts.init(document.getElementById("main"));
+        var scaleData = [{
+                'name': '项目工程1',
+                'value': 10
+            },
+            {
+                'name': '项目工程2',
+                'value': 15
+            },
+            {
+                'name': '项目工程3',
+                'value': 20
+            },
+            {
+                'name': '项目工程4',
+                'value': 25
+            },
+            {
+                'name': '项目工程5',
+                'value': 30
+            }
+        ]
+        // 设置富文本，颜色#ddd，位置居中，上下padding为5px
+        var rich = {
+            white: {
+                color: '#ddd',
+                align: 'center',
+                padding: [5, 0]
+            }
+        };
+        var placeHolderStyle = {
+            normal: {
+                label: {
+                    show: false
+                },
+                labelLine: {
+                    show: false
+                },
+                // 断层部分透明
+                color: 'rgba(0,0,0,0)',
+                borderColor: 'rgba(0,0,0,0)',
+                borderWidth: 0
+            }
+        };
+        // 定义空对象
+        var data = [];
+        // 遍历所有数据
+        for (var i = 0; i < scaleData.length; i++) {
+            data.push({
+                value: scaleData[i].value,
+                name: scaleData[i].name,
+                itemStyle: {
+                    normal: {
+                        borderWidth: 5,
+                        shadowBlur: 30,
+                        // echart自带渐变色方法
+                        borderColor: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
+                            offset: 0,
+                            color: '#1E986D'
+                        }, {
+                            offset: 1,
+                            color: '#93F9B9'
+                        }]),
+                        // 阴影颜色
+                        shadowColor: 'rgba(142,152,241,0.6)'
+                    }
+                }
+            }, {
+                // 中间深色断层的data
+                value: 3,
+                name: '',
+                itemStyle: placeHolderStyle
+            })
+        }
+        var seriesObj = [{
+            name: '',
+            type: 'pie',
+            clockWise: false,
+            // 内环大小，外环大小
+            radius: [135, 140],
+            // 悬浮放大的动画
+            hoverAnimation: false,
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true,
+                        position: 'outside',
+                        color: '#ddd',
+                        formatter: function (params) {
+                            var percent = 0;
+                            var total = 0;
+                            for (var i = 0; i < scaleData.length; i++) {
+                                total += scaleData[i].value;
+                            }
+                            percent = ((params.value / total) * 100).toFixed(0);
+                            if (params.name !== '') {
+                                return params.name + '\n{white|' + '占比' + percent + '%}';
+                            } else { 
+                                return '';
+                            }
+                        },
+                        rich: rich
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                }
+            },
+            data: data
+        }];
+        option = {
+            backgroundColor: '#04243E',
+            tooltip: {
+                show: false
+            },
+            legend: {
+                show: false
+            },
+            toolbox: {
+                show: false
+            },
+            series: seriesObj
+        }
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

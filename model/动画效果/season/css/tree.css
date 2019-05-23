@@ -1,0 +1,217 @@
+.land .tree .tree1 {
+    width: 40px;
+    height: 75px;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree2 {
+    width: 55px;
+    height: 90px;
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree3 {
+    width: 40px;
+    height: 55px;
+    position: absolute;
+    left: 85px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree4 {
+    width: 150px;
+    height: 240px;
+    position: absolute;
+    left: 120px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree5 {
+    width: 140px;
+    height: 320px;
+    position: absolute;
+    left: 210px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree6 {
+    width: 80px;
+    height: 145px;
+    position: absolute;
+    left: 250px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree7 {
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    left: 300px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree8 {
+    width: 135px;
+    height: 235px;
+    position: absolute;
+    left: 350px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree9 {
+    width: 35px;
+    height: 60px;
+    position: absolute;
+    left: 400px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree10 {
+    width: 40px;
+    height: 75px;
+    position: absolute;
+    left: 470px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree11 {
+    width: 115px;
+    height: 290px;
+    position: absolute;
+    left: 500px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree12 {
+    width: 80px;
+    height: 130px;
+    position: absolute;
+    left: 550px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree13 {
+    width: 130px;
+    height: 230px;
+    position: absolute;
+    left: 600px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree14 {
+    width: 95px;
+    height: 135px;
+    position: absolute;
+    left: 680px;
+    bottom: 25px;
+    background-color: #ccc;
+}
+
+.land .tree .tree15 {
+    width: 80px;
+    height: 185px;
+    position: absolute;
+    left: 750px;
+    bottom: 25px;
+    /* background-color: #ccc; */
+}
+.land .tree .tree15>div:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #555;
+}
+
+.land .tree .tree15>div:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 5px;
+    top: 25px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #777;
+}
+
+.land .tree .tree15>div:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #999;
+}
+.land .tree .tree15>div:nth-child(4) {
+    width: 10px;
+    height: 45px;
+    position: absolute;
+    left: 35px;
+    top: 130px;
+    background-color: #999;
+}
+.land .tree .tree16 {
+    width: 80px;
+    height: 135px;
+    position: absolute;
+    left: 820px;
+    bottom: 25px;
+    /* background-color: #ccc; */
+}
+
+.land .tree .tree16>div:nth-child(1) {
+    width: 80px;
+    height: 70px;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #555;
+}
+
+.land .tree .tree16>div:nth-child(2) {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #777;
+}
+
+.land .tree .tree16>div:nth-child(3) {
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #999;
+}
+.land .tree .tree16>div:nth-child(4) {
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    left: 35px;
+    top: 100px;
+    background-color: #999;
+}
