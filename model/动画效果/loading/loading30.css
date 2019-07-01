@@ -1,0 +1,1851 @@
+.block1 div {
+    width: 100px;
+    height: 100px;
+    margin: 25px auto;
+    background-color: #eee;
+    transform-style: preserve-3d;
+    transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+    animation: ani1 1s ease-in-out infinite;
+}
+
+@keyframes ani1 {
+    0% {
+        transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(300px) rotateX(180deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(300px) rotateX(180deg) rotateY(180deg);
+    }
+}
+
+/* ************************************************** */
+.block2 div {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #eee;
+    transform: rotate(45deg) translateX(0px) translateY(0px) scale(1);
+    animation: ani2 1s ease-in var(--flag2_4) infinite alternate;
+}
+
+.block2 div:nth-child(1) {
+    transform: rotate(45deg) translateX(0px) translateY(0px) scale(3);
+    --flag2_1: 0px;
+    --flag2_2: 0px;
+    --flag2_3: 1;
+    --flag2_4: 0s;
+}
+
+.block2 div:nth-child(2) {
+    --flag2_1: -30px;
+    --flag2_2: -30px;
+    --flag2_3: 1;
+    --flag2_4: 0.08s;
+}
+
+.block2 div:nth-child(3) {
+    --flag2_1: 0px;
+    --flag2_2: -30px;
+    --flag2_3: 1;
+    --flag2_4: 0.16s;
+}
+
+.block2 div:nth-child(4) {
+    --flag2_1: 30px;
+    --flag2_2: -30px;
+    --flag2_3: 1;
+    --flag2_4: 0.24s;
+}
+
+.block2 div:nth-child(5) {
+    --flag2_1: 30px;
+    --flag2_2: 0px;
+    --flag2_3: 1;
+    --flag2_4: 0.32s;
+}
+
+.block2 div:nth-child(6) {
+    --flag2_1: 30px;
+    --flag2_2: 30px;
+    --flag2_3: 1;
+    --flag2_4: 0.4s;
+}
+
+.block2 div:nth-child(7) {
+    --flag2_1: 0px;
+    --flag2_2: 30px;
+    --flag2_3: 1;
+    --flag2_4: 0.48s;
+}
+
+.block2 div:nth-child(8) {
+    --flag2_1: -30px;
+    --flag2_2: 30px;
+    --flag2_3: 1;
+    --flag2_4: 0.56s;
+}
+
+.block2 div:nth-child(9) {
+    --flag2_1: -30px;
+    --flag2_2: 0px;
+    --flag2_3: 1;
+    --flag2_4: 0.64s;
+}
+
+@keyframes ani2 {
+    100% {
+        transform: rotate(45deg) translateX(var(--flag2_1)) translateY(var(--flag2_2)) scale(var(--flag2_3));
+    }
+}
+
+/* ************************************************** */
+.block3 div {
+    border: 5px solid #eee;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    transform: perspective(300px) translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+}
+
+.block3 div:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    --flag3_1: 180deg;
+    --flag3_2: 0deg;
+    --flag3_3: 180deg;
+    --flag3_4: 180deg;
+    animation: ani3 2s ease-in-out infinite;
+}
+
+.block3 div:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    --flag3_1: -180deg;
+    --flag3_2: 0deg;
+    --flag3_3: -180deg;
+    --flag3_4: -180deg;
+    animation: ani3 2s ease-in-out infinite;
+}
+
+.block3 div:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    --flag3_1: 180deg;
+    --flag3_2: 0deg;
+    --flag3_3: 180deg;
+    --flag3_4: 180deg;
+    animation: ani3 2s ease-in-out infinite;
+}
+
+@keyframes ani3 {
+    0% {
+        transform: perspective(300px) translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(300px) translate(-50%, -50%) rotateX(var(--flag3_1)) rotateY(var(--flag3_2));
+    }
+
+    100% {
+        transform: perspective(300px) translate(-50%, -50%) rotateX(var(--flag3_3)) rotateY(var(--flag3_4));
+    }
+}
+
+/* ************************************************** */
+.block4 div {
+    width: 24px;
+    height: 24px;
+    border: 5px solid #eee;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.block4 div:nth-child(1) {
+    transform: translate(-50%, -50%) translateX(36px) translateY(36px) scale(2);
+    --flag4_1: 0px;
+    --flag4_2: 0px;
+    --flag4_3: 1;
+    animation: ani4 1s ease-in-out infinite alternate;
+}
+
+.block4 div:nth-child(2) {
+    transform: translate(-50%, -50%) translateX(-36px) translateY(-36px) scale(2);
+    --flag4_1: 0px;
+    --flag4_2: 0px;
+    --flag4_3: 1;
+    animation: ani4 1s ease-in-out infinite alternate;
+}
+
+.block4 div:nth-child(3) {
+    transform: translate(-50%, -50%) translateX(0px) translateY(0px);
+    --flag4_1: 36px;
+    --flag4_2: -36px;
+    --flag4_3: 2;
+    animation: ani4 1s ease-in-out infinite alternate;
+}
+
+.block4 div:nth-child(4) {
+    transform: translate(-50%, -50%) translateX(0px) translateY(0px);
+    --flag4_1: -36px;
+    --flag4_2: 36px;
+    --flag4_3: 2;
+    animation: ani4 1s ease-in-out infinite alternate;
+}
+
+@keyframes ani4 {
+    100% {
+        transform: translate(-50%, -50%) translateX(var(--flag4_1)) translateY(var(--flag4_2)) scale(var(--flag4_3));
+    }
+}
+
+/* ************************************************** */
+.block5 div {
+    width: 35px;
+    height: 35px;
+    background-color: #eee;
+    float: left;
+    margin-left: 11px;
+    margin-top: 11px;
+    animation: ani5 1s linear infinite alternate;
+}
+
+.block5 div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.block5 div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.block5 div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.block5 div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.block5 div:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.block5 div:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.block5 div:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.block5 div:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.block5 div:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+@keyframes ani5 {
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+/* ************************************************** */
+.block6 div {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+}
+
+.block6 div:nth-child(1),
+.block6 div:nth-child(4) {
+    margin-top: -10px;
+}
+
+.block6 div:nth-child(2),
+.block6 div:nth-child(5) {
+    margin-top: -60px;
+}
+
+.block6 div:nth-child(3),
+.block6 div:nth-child(6) {
+    margin-top: 40px;
+}
+
+.block6 div:nth-child(1),
+.block6 div:nth-child(2),
+.block6 div:nth-child(3) {
+    left: 50px;
+    animation: ani6_1 1s ease-in infinite alternate;
+}
+
+@keyframes ani6_1 {
+    100% {
+        left: 10px;
+        margin-top: -10px;
+        transform: rotate(360deg);
+    }
+}
+
+.block6 div:nth-child(4),
+.block6 div:nth-child(5),
+.block6 div:nth-child(6) {
+    right: 50px;
+    animation: ani6_2 1s ease-in infinite alternate;
+}
+
+@keyframes ani6_2 {
+    100% {
+        right: 10px;
+        margin-top: -10px;
+        transform: rotate(-360deg);
+    }
+}
+
+/* ************************************************** */
+.block7 div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+}
+
+.block7 div:nth-child(1) {
+    left: 20px;
+    top: 20px;
+    --flag7_1: 90px;
+    --flag7_2: 0px;
+    --flag7_3: 90px;
+    --flag7_4: 90px;
+    --flag7_5: 0px;
+    --flag7_6: 90px;
+    animation: ani7 2s ease-in infinite;
+}
+
+.block7 div:nth-child(2) {
+    left: 20px;
+    bottom: 20px;
+    --flag7_1: 0px;
+    --flag7_2: -90px;
+    --flag7_3: 90px;
+    --flag7_4: -90px;
+    --flag7_5: 90px;
+    --flag7_6: 0px;
+    animation: ani7 2s ease-in infinite;
+}
+
+.block7 div:nth-child(3) {
+    right: 20px;
+    top: 20px;
+    --flag7_1: 0px;
+    --flag7_2: 90px;
+    --flag7_3: -90px;
+    --flag7_4: 90px;
+    --flag7_5: -90px;
+    --flag7_6: 0px;
+    animation: ani7 2s ease-in infinite;
+}
+
+.block7 div:nth-child(4) {
+    right: 20px;
+    bottom: 20px;
+    --flag7_1: -90px;
+    --flag7_2: 0px;
+    --flag7_3: -90px;
+    --flag7_4: -90px;
+    --flag7_5: 0px;
+    --flag7_6: -90px;
+    animation: ani7 2s ease-in infinite;
+}
+
+@keyframes ani7 {
+    0% {
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translateX(var(--flag7_1)) translateY(var(--flag7_2)) rotate(90deg) scale(0.5);
+    }
+
+    50% {
+        transform: translateX(var(--flag7_3)) translateY(var(--flag7_4)) rotate(-90deg) scale(1);
+    }
+
+    75% {
+        transform: translateX(var(--flag7_5)) translateY(var(--flag7_6)) rotate(0deg) scale(0.5);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px) rotate(180deg) scale(1);
+    }
+}
+
+/* ************************************************** */
+
+.block8>div {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.block8 div div {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    float: left;
+    animation: ani8 1s ease-in infinite alternate;
+}
+
+.block8 div div:nth-child(1) {
+    --flag8_1: 0px;
+    --flag8_2: -40px;
+}
+
+.block8 div div:nth-child(2) {
+    --flag8_1: 40px;
+    --flag8_2: 0px;
+}
+
+.block8 div div:nth-child(3) {
+    --flag8_1: -40px;
+    --flag8_2: 0px;
+}
+
+.block8 div div:nth-child(4) {
+    --flag8_1: 0px;
+    --flag8_2: 40px;
+}
+
+@keyframes ani8 {
+    100% {
+        transform: translateX(var(--flag8_1)) translateY(var(--flag8_2)) rotate(180deg);
+    }
+}
+
+/* ************************************************** */
+.block9 {
+    transform: rotate(45deg);
+}
+
+.block9 div {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    position: absolute;
+    animation: ani9_1 2s ease-in infinite;
+}
+
+.block9 div:nth-child(1) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: ani9_2 0.5s ease-in infinite alternate;
+}
+
+.block9 div:nth-child(2) {
+    left: 20px;
+    top: 20px;
+    --flag9_1: 90px;
+    --flag9_2: 0px;
+    --flag9_3: 90px;
+    --flag9_4: 90px;
+    --flag9_5: 0px;
+    --flag9_6: 90px;
+}
+
+.block9 div:nth-child(3) {
+    right: 20px;
+    top: 20px;
+    --flag9_1: 0px;
+    --flag9_2: 90px;
+    --flag9_3: -90px;
+    --flag9_4: 90px;
+    --flag9_5: -90px;
+    --flag9_6: 0px;
+}
+
+.block9 div:nth-child(4) {
+    right: 20px;
+    bottom: 20px;
+    --flag9_1: -90px;
+    --flag9_2: 0px;
+    --flag9_3: -90px;
+    --flag9_4: -90px;
+    --flag9_5: 0px;
+    --flag9_6: -90px;
+}
+
+.block9 div:nth-child(5) {
+    left: 20px;
+    bottom: 20px;
+    --flag9_1: 0px;
+    --flag9_2: -90px;
+    --flag9_3: 90px;
+    --flag9_4: -90px;
+    --flag9_5: 90px;
+    --flag9_6: 0px;
+}
+
+@keyframes ani9_1 {
+    0% {
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translateX(var(--flag9_1)) translateY(var(--flag9_2)) rotate(90deg);
+    }
+
+    25% {
+        transform: translateX(var(--flag9_1)) translateY(var(--flag9_2)) rotate(90deg);
+    }
+
+    45% {
+        transform: translateX(var(--flag9_3)) translateY(var(--flag9_4)) rotate(180deg);
+    }
+
+    50% {
+        transform: translateX(var(--flag9_3)) translateY(var(--flag9_4)) rotate(180deg);
+    }
+
+    70% {
+        transform: translateX(var(--flag9_5)) translateY(var(--flag9_6)) rotate(270deg);
+    }
+
+    75% {
+        transform: translateX(var(--flag9_5)) translateY(var(--flag9_6)) rotate(270deg);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px) rotate(360deg);
+    }
+}
+
+@keyframes ani9_2 {
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+    }
+}
+
+/* ************************************************** */
+.block10 div {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    float: left;
+    margin-left: 20px;
+    margin-right: 35px;
+    margin-top: 5px;
+    --flag10_1: 30px;
+    animation: ani10 0.25s ease-in var(--flag10_2) infinite alternate;
+}
+
+.block10 div:nth-child(odd) {
+    float: right;
+    margin-right: 20px;
+    margin-left: 35px;
+    --flag10_1: -30px;
+}
+
+.block10 div:nth-child(1),
+.block10 div:nth-child(2) {
+    --flag10_2: 0s;
+}
+
+.block10 div:nth-child(3),
+.block10 div:nth-child(4) {
+    --flag10_2: 0.1s;
+}
+
+.block10 div:nth-child(5),
+.block10 div:nth-child(6) {
+    --flag10_2: 0.2s;
+}
+
+.block10 div:nth-child(7),
+.block10 div:nth-child(8) {
+    --flag10_2: 0.3s;
+}
+
+.block10 div:nth-child(9),
+.block10 div:nth-child(10) {
+    --flag10_2: 0.4s;
+}
+
+.block10 div:nth-child(11),
+.block10 div:nth-child(12) {
+    --flag10_2: 0.5s;
+}
+
+@keyframes ani10 {
+    100% {
+        transform: translateX(var(--flag10_1)) rotate(45deg);
+    }
+}
+
+/* ************************************************** */
+.block11 div {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    float: left;
+    border-radius: 50%;
+    margin-left: 22.5px;
+    margin-top: 65px;
+    animation: ani11 0.5s ease-in var(--flag11_1) infinite alternate;
+}
+
+.block11 div:nth-child(1) {
+    --flag11_1: 0s;
+}
+
+.block11 div:nth-child(2) {
+    --flag11_1: 0.25s;
+}
+
+.block11 div:nth-child(3) {
+    margin-right: 22.5px;
+    --flag11_1: 0.5s;
+}
+
+@keyframes ani11 {
+    100% {
+        transform: scale(0);
+    }
+}
+
+/* ************************************************** */
+.block12 div {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #eee;
+    border-radius: 50%;
+    transform: rotate(45deg) translateX(0px) translateY(0px) scale(1);
+    animation: ani12 1s ease-in var(--flag12_4) infinite alternate;
+}
+
+.block12 div:nth-child(1) {
+    transform: rotate(45deg) translateX(0px) translateY(0px) scale(3);
+    --flag12_1: 0px;
+    --flag12_2: 0px;
+    --flag12_3: 1;
+    --flag12_4: 0s;
+}
+
+.block12 div:nth-child(2) {
+    --flag12_1: -30px;
+    --flag12_2: -30px;
+    --flag12_3: 1;
+    --flag12_4: 0.08s;
+}
+
+.block12 div:nth-child(3) {
+    --flag12_1: 0px;
+    --flag12_2: -30px;
+    --flag12_3: 1;
+    --flag12_4: 0.16s;
+}
+
+.block12 div:nth-child(4) {
+    --flag12_1: 30px;
+    --flag12_2: -30px;
+    --flag12_3: 1;
+    --flag12_4: 0.24s;
+}
+
+.block12 div:nth-child(5) {
+    --flag12_1: 30px;
+    --flag12_2: 0px;
+    --flag12_3: 1;
+    --flag12_4: 0.32s;
+}
+
+.block12 div:nth-child(6) {
+    --flag12_1: 30px;
+    --flag12_2: 30px;
+    --flag12_3: 1;
+    --flag12_4: 0.4s;
+}
+
+.block12 div:nth-child(7) {
+    --flag12_1: 0px;
+    --flag12_2: 30px;
+    --flag12_3: 1;
+    --flag12_4: 0.48s;
+}
+
+.block12 div:nth-child(8) {
+    --flag12_1: -30px;
+    --flag12_2: 30px;
+    --flag12_3: 1;
+    --flag12_4: 0.56s;
+}
+
+.block12 div:nth-child(9) {
+    --flag12_1: -30px;
+    --flag12_2: 0px;
+    --flag12_3: 1;
+    --flag12_4: 0.64s;
+}
+
+@keyframes ani12 {
+    100% {
+        transform: rotate(45deg) translateX(var(--flag12_1)) translateY(var(--flag12_2)) scale(var(--flag12_3));
+    }
+}
+
+/* ************************************************** */
+.block13 div {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: ani13 0.5s ease-in-out infinite alternate;
+}
+
+.block13 div:nth-child(1) {
+    --flag11_1: 40px;
+    left: 20px;
+}
+
+.block13 div:nth-child(2) {
+    --flag11_1: -40px;
+    right: 20px;
+}
+
+@keyframes ani13 {
+    100% {
+        width: 30px;
+        height: 30px;
+        transform: translateY(-50%) translateX(var(--flag11_1));
+    }
+}
+
+/* ************************************************** */
+.block14 div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #eee;
+    float: left;
+    margin-top: 70px;
+    margin-left: 6px;
+    animation: ani14 1s linear var(--flag14_1) infinite;
+}
+
+.block14 div:nth-child(1) {
+    --flag14_1: 0s;
+}
+
+.block14 div:nth-child(2) {
+    --flag14_1: 0.2s;
+}
+
+.block14 div:nth-child(3) {
+    --flag14_1: 0.4s;
+}
+
+.block14 div:nth-child(4) {
+    --flag14_1: 0.6s;
+}
+
+.block14 div:nth-child(5) {
+    --flag14_1: 0.8s;
+}
+
+.block14 div:nth-child(6) {
+    --flag14_1: 1.0s;
+}
+
+.block14 div:nth-child(7) {
+    --flag14_1: 1.2s;
+}
+
+.block14 div:nth-child(8) {
+    --flag14_1: 1.4s;
+}
+
+.block14 div:nth-child(9) {
+    --flag14_1: 1.6s;
+}
+
+@keyframes ani14 {
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* ************************************************** */
+.block15 div {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    float: left;
+    margin-left: 20px;
+    margin-right: 35px;
+    margin-top: 5px;
+    --flag15_1: 30px;
+    animation: ani15 0.25s ease-in var(--flag15_2) infinite alternate;
+}
+
+.block15 div:nth-child(odd) {
+    float: right;
+    margin-right: 20px;
+    margin-left: 35px;
+    --flag15_1: -30px;
+}
+
+.block15 div:nth-child(1),
+.block15 div:nth-child(2) {
+    --flag15_2: 0s;
+}
+
+.block15 div:nth-child(3),
+.block15 div:nth-child(4) {
+    --flag15_2: 0.1s;
+}
+
+.block15 div:nth-child(5),
+.block15 div:nth-child(6) {
+    --flag15_2: 0.2s;
+}
+
+.block15 div:nth-child(7),
+.block15 div:nth-child(8) {
+    --flag15_2: 0.3s;
+}
+
+.block15 div:nth-child(9),
+.block15 div:nth-child(10) {
+    --flag15_2: 0.4s;
+}
+
+.block15 div:nth-child(11),
+.block15 div:nth-child(12) {
+    --flag15_2: 0.5s;
+}
+
+@keyframes ani15 {
+    100% {
+        transform: translateX(var(--flag15_1)) rotate(45deg);
+    }
+}
+
+/* ************************************************** */
+.block16>div {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: ani16_2 0.5s ease-in-out infinite;
+}
+
+.block16 div div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    animation: ani16_1 0.5s ease-in-out infinite alternate;
+}
+
+.block16 div div:nth-child(1) {
+    left: 0px;
+    top: 0px;
+    --flag16_1: 25px;
+    --flag16_2: 25px;
+}
+
+.block16 div div:nth-child(2) {
+    right: 0px;
+    top: 0px;
+    --flag16_1: -25px;
+    --flag16_2: 25px;
+}
+
+.block16 div div:nth-child(3) {
+    right: 0px;
+    bottom: 0px;
+    --flag16_1: -25px;
+    --flag16_2: -25px;
+}
+
+.block16 div div:nth-child(4) {
+    left: 0px;
+    bottom: 0px;
+    --flag16_1: 25px;
+    --flag16_2: -25px;
+}
+
+@keyframes ani16_1 {
+    100% {
+        transform: translateX(var(--flag16_1)) translateY(var(--flag16_2));
+    }
+}
+
+@keyframes ani16_2 {
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
+
+/* ************************************************** */
+.block17>div {
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: ani17_2 1s linear infinite;
+}
+
+.block17 div div {
+    width: 20px;
+    height: 20px;
+    float: left;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-left: 15px;
+    animation: ani17_1 0.5s ease-in-out infinite alternate;
+}
+
+.block17 div div:nth-child(1),
+.block17 div div:nth-child(3) {
+    --flag17_1: 15px;
+}
+
+.block17 div div:nth-child(2),
+.block17 div div:nth-child(4) {
+    --flag17_1: -15px;
+}
+
+@keyframes ani17_1 {
+    100% {
+        transform: translateX(var(--flag17_1));
+    }
+}
+
+@keyframes ani17_2 {
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
+
+/* ************************************************** */
+.block18>div {
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.block18 div div {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    /* animation: ani18 1s linear var(--flag18_1) infinite; */
+}
+
+/* animation表示动画跳过前几秒的过程，直接进入动画周期 */
+.block18 div div:nth-child(1) {
+    left: 0px;
+    animation: ani18 2s linear infinite;
+}
+
+.block18 div div:nth-child(2) {
+    left: 20px;
+    animation: ani18 2s linear infinite -0.4s;
+}
+
+.block18 div div:nth-child(3) {
+    left: 40px;
+    animation: ani18 2s linear infinite -0.8s;
+}
+
+.block18 div div:nth-child(4) {
+    left: 60px;
+    animation: ani18 2s linear infinite -1.2s;
+}
+
+.block18 div div:nth-child(5) {
+    left: 80px;
+    animation: ani18 2s linear infinite -1.6s;
+}
+
+@keyframes ani18 {
+
+    /* 0到80是圆球向左平移的过程 */
+    /* 瞬移到100px的位置，在80%的时间里向左恢复 */
+    /* 80%的时间是1.6秒，从第一个的瞬移到最后一个圆球的瞬移，需要的时间不同 */
+    /* animation中延迟时间为负数，表示第二个圆球跳过动画前0.4秒的动作，直接从0.4秒开始 */
+    0% {
+        left: 100px;
+        top: 0;
+    }
+
+    80% {
+        left: 0;
+        top: 0;
+    }
+
+    /* 到达最前端之后，向上平移 */
+    85% {
+        left: 0;
+        top: -20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* 圆球形变 */
+    90% {
+        width: 40px;
+        height: 15px;
+    }
+
+    /* 回到最后的位置，恢复圆球形状 */
+    95% {
+        left: 100px;
+        top: -20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    100% {
+        left: 100px;
+        top: 0;
+    }
+}
+
+/* ************************************************** */
+.block19 div {
+    width: 35px;
+    height: 35px;
+    background-color: #eee;
+    float: left;
+    margin-left: 11px;
+    margin-top: 11px;
+    border-radius: 50%;
+    animation: ani19 1s linear infinite alternate;
+}
+
+.block19 div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.block19 div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.block19 div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.block19 div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.block19 div:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.block19 div:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.block19 div:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.block19 div:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.block19 div:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+@keyframes ani19 {
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+/* ************************************************** */
+.block20 div {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    animation: ani20 1s linear infinite alternate;
+}
+
+.block20 div:nth-child(1) {
+    transform: rotate(0deg) translateX(50px);
+    animation-delay: 0s;
+    --flag20_1: 0deg;
+}
+
+.block20 div:nth-child(2) {
+    transform: rotate(45deg) translateX(50px);
+    animation-delay: 0.1s;
+    --flag20_1: 45deg;
+}
+
+.block20 div:nth-child(3) {
+    transform: rotate(90deg) translateX(50px);
+    animation-delay: 0.2s;
+    --flag20_1: 90deg;
+}
+
+.block20 div:nth-child(4) {
+    transform: rotate(135deg) translateX(50px);
+    animation-delay: 0.3s;
+    --flag20_1: 135deg;
+}
+
+.block20 div:nth-child(5) {
+    transform: rotate(180deg) translateX(50px);
+    animation-delay: 0.4s;
+    --flag20_1: 180deg;
+}
+
+.block20 div:nth-child(6) {
+    transform: rotate(225deg) translateX(50px);
+    animation-delay: 0.5s;
+    --flag20_1: 225deg;
+}
+
+.block20 div:nth-child(7) {
+    transform: rotate(270deg) translateX(50px);
+    animation-delay: 0.6s;
+    --flag20_1: 270deg;
+}
+
+.block20 div:nth-child(8) {
+    transform: rotate(315deg) translateX(50px);
+    animation-delay: 0.7s;
+    --flag20_1: 315deg;
+}
+
+@keyframes ani20 {
+    100% {
+        transform: rotate(var(--flag20_1)) translateX(50px) scale(0.5);
+    }
+}
+
+/* ************************************************** */
+.block21 div {
+    width: 80px;
+    height: 10px;
+    background-color: #eee;
+    margin: 30px auto;
+    animation: ani21 0.5s linear infinite alternate;
+}
+
+.block21 div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.block21 div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes ani21 {
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+/* ************************************************** */
+.block22 div {
+    width: 60px;
+    height: 10px;
+    background-color: #eee;
+    margin: 20px auto;
+    animation: ani22 1s linear infinite;
+}
+
+.block22 div:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+@keyframes ani22 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    40% {
+        transform: translateX(30px);
+    }
+
+    80% {
+        transform: translateX(0px);
+    }
+
+    90% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+/* ************************************************** */
+div.block23 {
+    width: 300px;
+}
+
+.block23 div {
+    width: 60px;
+    height: 6px;
+    background-color: #eee;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    animation: ani23 1s ease-in-out infinite alternate;
+}
+
+@keyframes ani23 {
+    100% {
+        transform: translateX(200px) rotate(360deg);
+    }
+}
+
+/* ************************************************** */
+.block24 div {
+    width: 8px;
+    height: 80px;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ani24 0.5s ease-in infinite alternate;
+}
+
+.block24 div:nth-child(1) {
+    margin-left: -60px;
+}
+
+.block24 div:nth-child(2) {
+    margin-left: -45px;
+    animation-delay: 0.1s;
+}
+
+.block24 div:nth-child(3) {
+    margin-left: -30px;
+    animation-delay: 0.2s;
+}
+
+.block24 div:nth-child(4) {
+    margin-left: -15px;
+    animation-delay: 0.3s;
+}
+
+.block24 div:nth-child(5) {
+    margin-left: 0px;
+    animation-delay: 0.4s;
+}
+
+.block24 div:nth-child(6) {
+    margin-left: 15px;
+    animation-delay: 0.5s;
+}
+
+.block24 div:nth-child(7) {
+    margin-left: 30px;
+    animation-delay: 0.6s;
+}
+
+.block24 div:nth-child(8) {
+    margin-left: 45px;
+    animation-delay: 0.7s;
+}
+
+.block24 div:nth-child(9) {
+    margin-left: 60px;
+    animation-delay: 0.8s;
+}
+
+@keyframes ani24 {
+    100% {
+        height: 1px;
+    }
+}
+
+/* ************************************************** */
+.block25 div {
+    width: 8px;
+    height: 80px;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ani25 0.5s ease-in infinite alternate;
+}
+
+.block25 div:nth-child(1) {
+    margin-left: -60px;
+}
+
+.block25 div:nth-child(2) {
+    margin-left: -45px;
+    animation-delay: 0.1s;
+}
+
+.block25 div:nth-child(3) {
+    margin-left: -30px;
+    animation-delay: 0.2s;
+}
+
+.block25 div:nth-child(4) {
+    margin-left: -15px;
+    animation-delay: 0.3s;
+}
+
+.block25 div:nth-child(5) {
+    margin-left: 0px;
+    animation-delay: 0.4s;
+}
+
+.block25 div:nth-child(6) {
+    margin-left: 15px;
+    animation-delay: 0.5s;
+}
+
+.block25 div:nth-child(7) {
+    margin-left: 30px;
+    animation-delay: 0.6s;
+}
+
+.block25 div:nth-child(8) {
+    margin-left: 45px;
+    animation-delay: 0.7s;
+}
+
+.block25 div:nth-child(9) {
+    margin-left: 60px;
+    animation-delay: 0.8s;
+}
+
+@keyframes ani25 {
+    100% {
+        transform: translate(calc(-50% - 25px), -50%) scaleY(0.5);
+    }
+}
+
+/* ************************************************** */
+.block26 div {
+    width: 8px;
+    height: 80px;
+    background-color: #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ani26 0.5s ease-in infinite alternate;
+}
+
+.block26 div:nth-child(1) {
+    margin-left: -60px;
+}
+
+.block26 div:nth-child(2) {
+    margin-left: -45px;
+    animation-delay: 0.1s;
+}
+
+.block26 div:nth-child(3) {
+    margin-left: -30px;
+    animation-delay: 0.2s;
+}
+
+.block26 div:nth-child(4) {
+    margin-left: -15px;
+    animation-delay: 0.3s;
+}
+
+.block26 div:nth-child(5) {
+    margin-left: 0px;
+    animation-delay: 0.4s;
+}
+
+.block26 div:nth-child(6) {
+    margin-left: 15px;
+    animation-delay: 0.5s;
+}
+
+.block26 div:nth-child(7) {
+    margin-left: 30px;
+    animation-delay: 0.6s;
+}
+
+.block26 div:nth-child(8) {
+    margin-left: 45px;
+    animation-delay: 0.7s;
+}
+
+.block26 div:nth-child(9) {
+    margin-left: 60px;
+    animation-delay: 0.8s;
+}
+
+@keyframes ani26 {
+    100% {
+        transform: translate(calc(-50% - 25px), -50%) scaleY(2);
+    }
+}
+
+/* ************************************************** */
+.block27 div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-top: 5px solid #eee;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #eee;
+    border-left: 5px solid transparent;
+    animation: ani27 1s linear infinite alternate;
+}
+
+.block27 div:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+
+.block27 div:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    animation-delay: 0.2s;
+}
+
+.block27 div:nth-child(3) {
+    width: 110px;
+    height: 110px;
+    animation-delay: 0.4s;
+}
+
+.block27 div:nth-child(4) {
+    width: 140px;
+    height: 140px;
+    animation-delay: 0.6s;
+}
+
+@keyframes ani27 {
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
+
+/* ************************************************** */
+.block28 div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    box-sizing: border-box;
+    border-top: 5px solid #eee;
+    border-right: 5px solid #eee;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    animation: ani28 1s linear infinite alternate;
+}
+
+.block28 div:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+
+.block28 div:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    animation-delay: 0.2s;
+}
+
+.block28 div:nth-child(3) {
+    width: 110px;
+    height: 110px;
+    animation-delay: 0.4s;
+}
+
+.block28 div:nth-child(4) {
+    width: 140px;
+    height: 140px;
+    animation-delay: 0.6s;
+}
+
+@keyframes ani28 {
+    100% {
+        transform: translate(-50%, -50%) rotate(225deg);
+    }
+}
+
+/* ************************************************** */
+div.block29 {
+    width: 200px;
+    height: 200px;
+    padding-top: 100px;
+    padding-left: 70px;
+    box-sizing: border-box;
+}
+
+.block29>div {
+    width: 30px;
+    float: left;
+
+}
+
+.block29 div div {
+    width: 30px;
+    height: 10px;
+    background-color: #eee;
+}
+
+.block29>div:nth-child(1) div {
+    animation: ani29_1 2s ease-out infinite alternate;
+}
+
+.block29>div:nth-child(2) div {
+    animation: ani29_2 2s ease-out infinite alternate;
+}
+
+.block29>div div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.block29>div div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.block29>div div:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.block29>div div:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.block29>div div:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.block29>div div:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.block29>div div:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.block29>div div:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.block29>div div:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes ani29_1 {
+    50% {
+        transform: translateX(-80px) translateY(-80px) rotate(-180deg);
+    }
+}
+
+@keyframes ani29_2 {
+    50% {
+        transform: translateX(80px) translateY(-80px) rotate(180deg);
+    }
+}
+
+/* ************************************************** */
+div.block30 {
+    width: 200px;
+    height: 200px;
+}
+
+.block30 div {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #eee;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: ani30 1s ease-in-out infinite alternate;
+}
+
+.block30 div:nth-child(1) {
+    left: 50px;
+    top: 180px;
+    --flag30_1: -60px;
+    --flag30_2: -20px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(2) {
+    left: 70px;
+    top: 180px;
+    --flag30_1: -30px;
+    --flag30_2: -20px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(3) {
+    left: 90px;
+    top: 180px;
+    --flag30_1: 0px;
+    --flag30_2: -20px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(4) {
+    left: 110px;
+    top: 180px;
+    --flag30_1: 30px;
+    --flag30_2: -20px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(5) {
+    left: 130px;
+    top: 180px;
+    --flag30_1: 60px;
+    --flag30_2: -20px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(6) {
+    left: 60px;
+    top: 180px;
+    --flag30_1: -50px;
+    --flag30_2: -10px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(7) {
+    left: 80px;
+    top: 180px;
+    --flag30_1: -10px;
+    --flag30_2: -10px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(8) {
+    left: 100px;
+    top: 180px;
+    --flag30_1: 10px;
+    --flag30_2: -10px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(9) {
+    left: 120px;
+    top: 180px;
+    --flag30_1: 50px;
+    --flag30_2: -10px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(10) {
+    left: 60px;
+    top: 160px;
+    --flag30_1: -50px;
+    --flag30_2: -30px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(11) {
+    left: 80px;
+    top: 160px;
+    --flag30_1: -10px;
+    --flag30_2: -30px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(12) {
+    left: 100px;
+    top: 160px;
+    --flag30_1: 10px;
+    --flag30_2: -30px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(13) {
+    left: 120px;
+    top: 160px;
+    --flag30_1: 50px;
+    --flag30_2: -30px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(14) {
+    left: 70px;
+    top: 160px;
+    --flag30_1: -30px;
+    --flag30_2: -40px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(15) {
+    left: 90px;
+    top: 160px;
+    --flag30_1: 0px;
+    --flag30_2: -40px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(16) {
+    left: 110px;
+    top: 160px;
+    --flag30_1: 30px;
+    --flag30_2: -40px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(17) {
+    left: 70px;
+    top: 140px;
+    --flag30_1: -40px;
+    --flag30_2: -50px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(18) {
+    left: 90px;
+    top: 140px;
+    --flag30_1: 0px;
+    --flag30_2: -60px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(19) {
+    left: 110px;
+    top: 140px;
+    --flag30_1: 40px;
+    --flag30_2: -50px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(20) {
+    left: 80px;
+    top: 140px;
+    --flag30_1: -30px;
+    --flag30_2: -70px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(21) {
+    left: 100px;
+    top: 140px;
+    --flag30_1: 30px;
+    --flag30_2: -70px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(22) {
+    left: 80px;
+    top: 120px;
+    --flag30_1: -20px;
+    --flag30_2: -90px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(23) {
+    left: 100px;
+    top: 120px;
+    --flag30_1: 20px;
+    --flag30_2: -90px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.block30 div:nth-child(24) {
+    left: 90px;
+    top: 120px;
+    --flag30_1: 0px;
+    --flag30_2: -80px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(180deg);
+}
+
+.block30 div:nth-child(25) {
+    left: 90px;
+    top: 100px;
+    --flag30_1: 0px;
+    --flag30_2: -100px;
+    --flag30_3: 180deg;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+@keyframes ani30 {
+    100% {
+        transform: translate(var(--flag30_1), var(--flag30_2)) rotate(var(--flag30_3));
+    }
+}

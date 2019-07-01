@@ -1,0 +1,415 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.container .block {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    position: relative;
+    margin: 20px;
+    float: left;
+}
+
+.container .block .msg {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -110px;
+    margin-top: -110px;
+    text-align: center;
+}
+
+.container .block .msg .content {
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
+    width: 160px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: cursive;
+    border-bottom: 1px solid #fff;
+}
+
+.container .block .msg .person {
+    padding: 10px 0;
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 1);
+    font-family: cursive;
+}
+
+.container .block .msg .link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    font-family: cursive;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.container .block .msg .link:hover {
+    color: #DAE139;
+}
+
+/* 模块1 */
+.block1 {
+    background: url("./img/1.jpg") no-repeat center;
+    transition: border 1s;
+}
+
+.block1 .msg {
+    background-color: rgba(63, 147, 147, .8);
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+
+.block.block1 .msg .person {
+    color: rgba(255, 255, 255, 0);
+    transition: color 1s;
+    transition-delay: 0.5s;
+}
+
+.block.block1 .msg .link {
+    color: rgba(255, 255, 255, 0);
+    transition: color 1s;
+    transition-delay: 0.5s;
+}
+
+/* 模块1hover样式 */
+.block1:hover {
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    ;
+}
+
+.block1:hover .msg {
+    transform: scale(1);
+}
+
+.block1:hover .msg .person {
+    color: rgba(255, 255, 255, 1);
+}
+
+.block1:hover .msg .link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 模块2 */
+.block2 {
+    background: url("./img/2.jpg") no-repeat center;
+    transition: box-shadow 1s;
+}
+
+.block2 .msg {
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+
+.block2 .msg .person {
+    color: rgba(255, 255, 255, 1);
+}
+
+.block2 .msg .link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 模块2hover样式 */
+.block2:hover {
+    box-shadow: inset 0 0 0 110px rgba(200, 95, 66, .8);
+}
+
+.block2:hover .msg {
+    transform: scale(1);
+}
+
+/* 模块3 */
+.block.block3 {
+    border: none;
+    background-color: #C9512E;
+}
+
+.block3 .msg {
+    overflow: hidden;
+}
+
+.block3 .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    position: absolute;
+    background: url("./img/3.jpg") no-repeat center;
+    transform: rotate(0deg);
+    transform-origin: 210px 110px;
+    transition: transform 0.5s;
+}
+
+.block3 .img::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    right: -15px;
+    top: 85px;
+}
+
+.block3 .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.block.block3 .link {
+    position: absolute;
+    font-size: 14px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px 4px;
+    box-sizing: border-box;
+    left: 220px;
+    bottom: 5px;
+    transform: translateX(0px) rotate(0deg);
+    transform-origin: center;
+    transition: transform 1s;
+}
+
+.block3:hover .img {
+    transform: rotate(-120deg);
+}
+
+.block3:hover .msg .link {
+    transform: translateX(-145px) rotate(360deg);
+}
+
+.block.block4 {
+    background: url("./img/4.jpg") no-repeat center;
+    border: 20px solid transparent;
+}
+
+.block4 .mask {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #333;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, .2);
+    transition: box-shadow 0.5s;
+}
+
+.block4 .img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: url("./img/4.jpg") no-repeat center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(3px);
+}
+
+.block4 .ro4 .msg {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    left: 110px;
+    top: 110px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(180deg) translateZ(-3px);
+}
+
+.block4 .ro4 .msg .person {
+    padding: 0;
+}
+
+.block4 .ro4 .msg .link {
+    width: 130px;
+    margin: 0 auto;
+}
+
+.block4 .ro4 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.5s;
+}
+
+.block4:hover .mask {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .8);
+}
+
+.block4:hover .ro4 {
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.block5 {
+    background: url("./img/5.jpg") no-repeat center;
+}
+
+.block5 .mask {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.block5 .img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: url("./img/5.jpg") no-repeat center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.block.block5 .msg {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #223e87;
+    position: absolute;
+    left: 110px;
+    top: 110px;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: opacity 0.5s, transform 0.5s;
+    transition-delay: 0.2s;
+}
+
+.block.block5 .msg .person {
+    padding: 0;
+}
+
+.block.block5 .msg .link {
+    width: 130px;
+    margin: 0 auto;
+}
+
+.block5:hover .msg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.block5:hover .img {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.block6 {
+    background: url("./img/6.jpg") no-repeat center;
+}
+
+.block6 .mask {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.block.block6 .msg {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: 110px;
+    top: 110px;
+    transition: background-color 1s;
+}
+
+.block.block6 .msg .person {
+    padding: 0;
+}
+
+.block.block6 .msg .link {
+    width: 130px;
+    margin: 0 auto;
+}
+
+.block6 .img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: url("./img/6.jpg") no-repeat center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: inset 2px 1px 4px rgba(0, 0, 0, .1);
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+    transition: transform 1s;
+}
+
+.block6:hover .msg {
+    background-color: rgba(230, 132, 107, .6);
+}
+
+.block6:hover .img {
+    transform: perspective(300px) rotateX(180deg);
+}
+
+.block.block7 {
+    border: none;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+    transition: transform 0.5s;
+    transform-origin: bottom;
+}
+
+.block7 .img {
+    width: 220px;
+    height: 220px;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: url("./img/7.jpg") no-repeat center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.block7 .msg {
+    background-color: #D3AA15;
+    transform-style: preserve-3d;
+    transform: translateY(-110px) translateZ(-110px) rotateX(-90deg);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.block7:hover {
+    transform: rotateX(-90deg);
+}
+.block7:hover .img{
+    opacity: 0;
+    
+}
+
+.block7:hover .msg {
+    opacity: 1;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #app-vue {
+        width: 400px;
+        height: 400px;
+        border: 1px solid #333;
+        margin: 20px auto;
+        /* padding: 200px 200px; */
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app-vue" @mousemove="getpath">
+      {{ x }},{{ y }}
+      <div @mousemove="stopmove">stopMoving</div>
+      <div @mousemove.stop>stopMoving222</div>
+      <input ref="name" type="text" @keyup="clgname" />
+      <span>{{ name }}</span>
+      <input ref="age" type="text" @keyup="clgage" />
+      <span>{{ age }}</span>
+      <input type="text" v-model="all" />
+      <span>{{ all }}</span>
+      <ul>
+        <li v-for="(data,index) in mydata">
+          {{ index }}~{{ data.name }}--{{ data.age }}
+        </li>
+      </ul>
+      <template v-for="(data,index) in mydata">
+        {{ index }}~{{ data.name }}--{{ data.age }}
+      </template>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app-vue",
+        data: {
+          x: 0,
+          y: 0,
+          name: "",
+          age: "",
+          all: "",
+          mydata: [
+            { name: "qwe", age: 123 },
+            { name: "asd", age: 456 },
+            { name: "zxc", age: 789 }
+          ]
+        },
+        methods: {
+          getpath: function(event) {
+            this.x = event.offsetX;
+            this.y = event.offsetY;
+          },
+          stopmove: function(event) {
+            event.stopPropagation();
+          },
+          clgname: function() {
+            this.name = this.$refs.name.value;
+          },
+          clgage: function() {
+            this.age = this.$refs.age.value;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
